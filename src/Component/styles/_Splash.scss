@@ -1,0 +1,56 @@
+.background {
+  background: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Hme4C4_7iosf3emf/stars-in-the-sky-looped-animation-beautiful-night-with-twinkling-flares-hd-1080_sr8wih9v__F0000.png);
+  height: 1000px;
+  overflow: hidden;
+}
+.logo {
+  display: flex;
+  align-content: center;
+  img {
+    margin: 30px auto 0px;
+    height: 300px;
+  }
+}
+
+.crawl {
+  padding: 50px 220px 0px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  top: -25px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.756),rgba(0, 0, 0, 0.625), transparent 70%);
+  z-index: 1;
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+
+@keyframes crawl {
+	0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+	100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
