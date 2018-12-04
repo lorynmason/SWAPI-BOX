@@ -18,9 +18,11 @@ class App extends Component {
   }
   
   render() {
+    const randomMovie = Math.floor(Math.random() * Math.floor(6));
     const text = this.state.films.map((film) => {
       return film.text
-    })[0]
+    })[randomMovie]
+    
     return (
       <div className="App">
       <section className='background'>
