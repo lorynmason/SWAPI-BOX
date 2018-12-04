@@ -15,6 +15,11 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it.skip('ComponentDidMount should update state with films array', () => {
+
+
+  })
+
 
 })
 
