@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      films: []
+      films: [],
+      favorites: []
     }
   }
   async componentDidMount() {
@@ -22,32 +23,35 @@ class App extends Component {
     const text = this.state.films.map((film) => {
       return film.text
     })[randomMovie]
-    
-    return (
-      <div className="App">
-      <section className='background'>
-      <div className="fade">
-        <div className="logo">
-        <img alt='StarWars logo' src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/> 
-        </div>
-        </div>
-        <div className="crawl">
-        {text}
-        </div>
-      </section>
-      </div>
-    );
+
     // return (
     //   <div className="App">
-    //     <header>
-    //       <Nav />
-    //       <div className="logo">
-    //         <img alt='StarWars logo'                       
-    //              src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/>
-    //       </div>
-    //     </header>
+    //   <section className='background'>
+    //   <div className="fade">
+    //     <div className="logo">
+    //     <img alt='StarWars logo' src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/> 
+    //     </div>
+    //     </div>
+    //     <div className="crawl">
+    //     {text}
+    //     </div>
+    //     <button className='enter-btn'>
+    //     Enter </button>
+    //   </section>
     //   </div>
     // );
+    return (
+      <div className="App">
+        <header>
+          <Nav 
+          favorites={this.state.favorites} />
+          <div className="logo">
+            <img alt='StarWars logo'                       
+                 src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/>
+          </div>
+        </header>
+      </div>
+    );
 
   }
 }

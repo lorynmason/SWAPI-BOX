@@ -54,3 +54,17 @@
     transform: rotateX(25deg) translateZ(-2500px);
   }
 }
+
+.enter-btn {
+  outline: none;
+  border: solid 3px green;
+  background: rgba(3, 246, 3, 0.733);
+  color: white;
+  position: absolute;
+  top: 90vh;
+  z-index: 10;
+  height: 75px;
+  width: 200px;
+  left: 50vw;
+  right: 50vw;
+}
