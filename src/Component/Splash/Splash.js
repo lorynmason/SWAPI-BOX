@@ -1,24 +1,24 @@
-import React from 'react'
+import React from 'react';
 import '../styles/main.scss';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-const Splash = ({exitSplash, films}) => {
-  const randomMovie = Math.floor(Math.random() * Math.floor(6));
-    const text = films.map((film) => {
-      return film.text
-    })[randomMovie]
+const Splash = ({exitSplash, film}) => {
   return (
     <section className='background'>
           <div className="fade">
             <div className="logo">
-            <img alt='StarWars logo' src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/> 
+            <img alt='StarWars logo'
+                 onClick={() => exitSplash()} 
+                 src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/> 
             </div>
             </div>
             <div className="crawl">
-            {text}
+            {film.text}
+            <p>{film.title}</p>
+            <p>{film.date}</p>
             </div>
             <button onClick={() => exitSplash()}className='enter-btn'>
-            Enter </button>
+            ENTER </button>
           </section>
   )
 }
