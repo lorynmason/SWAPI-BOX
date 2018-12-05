@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import '../styles/main.scss';
 import { fetchScroll } from '../../helper.js';
-import Nav from '../Nav/Nav.js'
+import Nav from '../Nav/Nav.js';
+import Splash from '../Splash/Splash.js';
+import CardContainer from '../CardContainer/CardContainer.js'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
       films: [],
-      favorites: []
+      favorites: [],
+      activePage: '',
+      splash: true
     }
   }
   async componentDidMount() {
@@ -17,42 +21,37 @@ class App extends Component {
       films
     })
   }
+
+  exitSplash = () => {
+    this.setState({
+      splash: false,
+      activePage: 'Home'
+    })
+  }
+
+  changePage=(str)=> {
+    this.setState({
+      activePage: str
+    })
+  }
   
   render() {
-    const randomMovie = Math.floor(Math.random() * Math.floor(6));
-    const text = this.state.films.map((film) => {
-      return film.text
-    })[randomMovie]
-
-    // return (
-    //   <div className="App">
-    //   <section className='background'>
-    //   <div className="fade">
-    //     <div className="logo">
-    //     <img alt='StarWars logo' src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/> 
-    //     </div>
-    //     </div>
-    //     <div className="crawl">
-    //     {text}
-    //     </div>
-    //     <button className='enter-btn'>
-    //     Enter </button>
-    //   </section>
-    //   </div>
-    // );
-    return (
-      <div className="App">
-        <header>
-          <Nav 
-          favorites={this.state.favorites} />
-          <div className="logo">
-            <img alt='StarWars logo'                       
-                 src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/>
-          </div>
-        </header>
-      </div>
-    );
-
+    if(this.state.splash) {
+      return (
+        <div className="splash">
+        <Splash exitSplash={this.exitSplash} films={this.state.films}/>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <header></header>
+          <Nav favorites={this.state.favorites} 
+               changePage={this.changePage}/>
+          <CardContainer />
+        </div>
+      )
+    }
   }
 }
 
