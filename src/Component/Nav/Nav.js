@@ -7,10 +7,9 @@ const Nav = ( {favorites, changePage} ) => {
   return (
     <nav>
       <button onClick={() => changePage('Characters')} >Characters</button>
-      <button>Planets</button>
-      <button>Vehicles</button>
+      <button onClick={() => changePage('Planets')}>Planets</button>
+      <button onClick={() => changePage('Vehicles')}>Vehicles</button>
       <button>Favorites: {favorites.length}</button>
-  
     </nav>
   )
 }
