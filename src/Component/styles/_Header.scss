@@ -1,20 +1,18 @@
 header {
   background: url('https://images5.alphacoders.com/672/thumb-1920-672012.jpg');
-  height: 100vh;
+  height: 60vh;
   width: 100%;
-  background-position: top -150px center;
+  background-position: 49% 78%;
   display: flex;
-  // justify-content: center;
   flex-direction: column;
   align-content: center;
 }
 
-.logo {
-  // align-self: flex-start;
+.header-logo {
   display: flex;
   align-content: center;
   img {
-    margin: 100px auto 0px;
+    margin: 125px auto 0px;
     height: 300px;
   }
 }
