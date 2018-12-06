@@ -14,7 +14,7 @@ class App extends Component {
       film: {},
       favorites: [],
       activePage: '',
-      splash: false,
+      splash: true,
       characters: []
     }
   }
