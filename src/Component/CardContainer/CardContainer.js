@@ -9,7 +9,7 @@ const CardContainer = ({activePage, characters}) => {
   })
   console.log(cards)
   return (
-  <section>
+  <section className="cardContainer">
     {cards}
   </section>
   )
