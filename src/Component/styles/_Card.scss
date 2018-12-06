@@ -1,4 +1,25 @@
-.card h1{
-  color: white;
-  font-size: 4em;
+.card {
+  border: solid 2px rgba(51, 247, 33, 0.692);
+  background: rgba(3, 246, 3, 0.733);
+  width: 400px;
+  border-radius: 20px;
+  box-shadow:  
+               rgba(89, 250, 74, 0.61) 2px 5px 6px,
+               rgba(89, 250, 74, 0.61) -2px 5px 6px,
+               rgba(89, 250, 74, 0.61) 2px -5px 6px,
+               rgba(89, 250, 74, 0.61) -2px -5px 6px ;
+  h1{
+    color: white;
+    font-size: 4em;
+    text-align: center;
+  }
+  p {
+    color: white;
+    font-size: 2em;
+    padding: 0px 0px 0px 20px;
+  }
 }
+
+
+
+

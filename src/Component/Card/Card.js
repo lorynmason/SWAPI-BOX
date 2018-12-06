@@ -15,9 +15,9 @@ class Card extends Component {
        <h1>
          {this.props.character.name}
        </h1>
-       <p>{this.props.character.species}</p>
-       <p>{this.props.character.homeworld}</p>
-       <p>{this.props.character.population}</p>
+       <p> Species: {this.props.character.species}</p>
+       <p> Homeworld: {this.props.character.homeworld}</p>
+       <p> Population: {this.props.character.population}</p>
       </div>
     )
   }
