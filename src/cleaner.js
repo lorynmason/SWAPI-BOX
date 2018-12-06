@@ -9,11 +9,15 @@ export const cleanFilmsData = (data) => {
   })[randomNum]
 }
 
-// export const cleanCharacterData = (data) => {
-//   const getHomeworlds = await API.fetchHomeworld(characterData)
-//   return data.results.map((character) => {
-
-//   })
-// }
+export const cleanVehiclesData = (data) => {
+  return data.results.map(vehicle => {
+    return {
+      Name: vehicle.name,
+      Model: vehicle.model,
+      Class: vehicle.vehicle_class,
+      Passengers: vehicle.passengers
+    }
+  })
+}
  
 

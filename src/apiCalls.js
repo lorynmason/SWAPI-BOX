@@ -1,8 +1,12 @@
 export const fetchScroll = async () => {
  const url = 'https://swapi.co/api/films';
  const response = await fetch(url);
- const filmsData = await response.json();
- return filmsData
+ if(response.ok) {
+  const filmsData = await response.json();
+  return filmsData
+  } else {
+    throw new Error('Yoda- ERROR has detected, API returned okay NOT')
+  }
 }
 
 export const fetchCharacters = async () => {
@@ -24,6 +28,13 @@ export const fetchNestedInfo = (characterData) => {
               name: character.name}
   } )
   return Promise.all(sadPromises)
+}
+
+export const fetchVehicles = async () => {
+  const url = 'https://swapi.co/api/vehicles'
+  const response = await fetch(url);
+  const vehicleData = await response.json()
+  return vehicleData
 }
 
 
