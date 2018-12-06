@@ -4,6 +4,7 @@ exports[`Nav should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Nav
+    changePage={[MockFunction]}
     favorites={Array []}
   />,
   Symbol(enzyme.__renderer__): Object {

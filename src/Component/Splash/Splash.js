@@ -24,7 +24,8 @@ const Splash = ({exitSplash, film}) => {
 }
 
 Splash.propTypes = {
-
+exitSplash: PropTypes.func.isRequired,
+film: PropTypes.object.isRequired
 }
 
 export default Splash;

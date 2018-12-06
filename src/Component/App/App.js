@@ -49,7 +49,7 @@ class App extends Component {
     })
   }
 
-  changePage=(str)=> {
+  changePage = (str) => {
     this.setState({
       activePage: str
     })

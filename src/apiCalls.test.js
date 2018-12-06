@@ -11,14 +11,14 @@ describe('API', () => {
   describe('fetchScroll', () => {
     beforeEach(() => {
       mockFilmsData = [ 
-        { homeworld: 'Earth',
-          population: 2345678,
-          species: 'human',
-          name: 'bob'}, 
-        { homeworld: 'Venus',
-          population: 3,
-          species: 'yet to be determined',
-          name: 'we call him alien'} 
+        { title: 'A New Hope',
+          text: 'A Long Time Ago...',
+          date: '1976',
+          somethingToRemove: 'we do not want this when cleaned, but good for fetching'}, 
+       { title: 'The Empire',
+          text: 'A Long Time Ago... but not so long as the last one',
+          date: '1979',
+          somethingToRemove: 'we do not want this when cleaned, but good for fetching'},  
         ]
         window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
           ok: true,
@@ -58,6 +58,47 @@ describe('API', () => {
       //execution and expectation
       await expect(API.fetchScroll(url)).rejects.toEqual(expectedError)
     })
+  })
+
+  describe('fetchCharacters', () => {
+    beforeEach(() => {
+      mockCharacterData = [ 
+        { homeworld: 'https://swapi.co/api/planets/1/',
+          population: 2345678,
+          species: 'https://swapi.co/api/species/1/',
+          name: 'bob'}, 
+        { homeworld: 'https://swapi.co/api/planets/1/',
+          population: 3,
+          species: 'https://swapi.co/api/species/1/',
+          name: 'we call him alien'} 
+        ]
+        window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(
+            mockCharacterData)
+          })
+        )
+    })
+
+    it('calls fetch with the correct params', () => {
+       //set-up
+      url = 'https://swapi.co/api/people';
+      const expected = 'https://swapi.co/api/people'
+      //execution
+      API.fetchCharacters(url)
+      //expectation
+      expect(window.fetch).toHaveBeenCalledWith(expected)
+    })
+
+    it('should return a list of Characters, if response is okay', async() => {
+      //set-up
+      const expected = mockCharacterData
+      //execution
+      const result = await API.fetchCharacters(url)
+      //expection
+      expect(result).toEqual(expected)
+    })
+
   })
       //set-up
       //execution
