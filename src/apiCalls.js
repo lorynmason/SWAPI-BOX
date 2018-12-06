@@ -26,6 +26,13 @@ export const fetchNestedInfo = (characterData) => {
   return Promise.all(sadPromises)
 }
 
+export const fetchVehicles = async () => {
+  const url = 'https://swapi.co/api/vehicles'
+  const response = await fetch(url);
+  const vehicleData = await response.json()
+  return vehicleData
+}
+
 
 
 

@@ -15,7 +15,8 @@ class App extends Component {
       favorites: [],
       activePage: '',
       splash: true,
-      characters: []
+      characters: [],
+      vehicles: []
     }
   }
   async componentDidMount() {
@@ -27,17 +28,23 @@ class App extends Component {
   }
 
   async componentDidUpdate() {
-    if(this.state.activePage === 'Characters' && this.state.characters.length === 0) {
+    if(this.state.activePage === 'characters' && this.state.characters.length === 0) {
       const  characterData= await API.fetchCharacters()
       const characters = await API.fetchNestedInfo(characterData)
       this.setState({characters})
     }
+    if(this.state.activePage === 'vehicles' && this.state.vehicles.length === 0) {
+      const vehicleData = await API.fetchVehicles()
+      const vehicles = Cleaner.cleanVehiclesData(vehicleData)
+      this.setState({vehicles})
+    }
+    
   }
 
   exitSplash = () => {
     this.setState({
       splash: false,
-      activePage: 'Home'
+      activePage: 'home'
     })
   }
 
@@ -60,7 +67,8 @@ class App extends Component {
           <Header/>
           <Nav favorites={this.state.favorites} 
                changePage={this.changePage}/>
-          <CardContainer activePage={this.state.activePage}                     characters={this.state.characters}/>
+          <CardContainer  activePage={this.state.activePage}              characters={this.state.characters}
+                          vehicles={this.state.vehicles}/>
         </div>
       )
     }
