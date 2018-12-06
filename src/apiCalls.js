@@ -12,8 +12,12 @@ export const fetchScroll = async () => {
 export const fetchCharacters = async () => {
   const url = 'https://swapi.co/api/people'
   const response = await fetch(url);
+  if(response.ok) {
   const characterData = await response.json()
   return characterData
+  } else {
+    throw new Error('Chewbacca- AGERUYEHSFG: translation, Error, API returned not okay')
+  }
 }
 
 export const fetchNestedInfo = (characterData) => {

@@ -99,9 +99,17 @@ describe('API', () => {
       expect(result).toEqual(expected)
     })
 
+    it('should return an error message if response was not okay', async() => {
+      const expectedError = Error('Chewbacca- AGERUYEHSFG: translation, Error, API returned not okay')
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          okay: false
+        })
+      })
+      await expect(API.fetchCharacters(url)).rejects.toEqual(expectedError)
+    })
+
   })
-      //set-up
-      //execution
-      //expectation
+    
 
 })
