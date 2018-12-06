@@ -28,12 +28,13 @@ class App extends Component {
   }
 
   async componentDidUpdate() {
-    if(this.state.activePage === 'characters' && this.state.characters.length === 0) {
+    const { characters, activePage, vehicles } = this.state;
+    if(activePage === 'characters' && characters.length === 0) {
       const  characterData= await API.fetchCharacters()
       const characters = await API.fetchNestedInfo(characterData)
       this.setState({characters})
     }
-    if(this.state.activePage === 'vehicles' && this.state.vehicles.length === 0) {
+    if(activePage === 'vehicles' && vehicles.length === 0) {
       const vehicleData = await API.fetchVehicles()
       const vehicles = Cleaner.cleanVehiclesData(vehicleData)
       this.setState({vehicles})
