@@ -60,7 +60,7 @@ class App extends Component {
           <Header/>
           <Nav favorites={this.state.favorites} 
                changePage={this.changePage}/>
-          <CardContainer activePage={this.state.activePage}/>
+          <CardContainer activePage={this.state.activePage}                     characters={this.state.characters}/>
         </div>
       )
     }
