@@ -30,23 +30,25 @@ class App extends Component {
   }
 
   async componentDidUpdate() {
-    if(this.state.activePage === 'characters' && this.state.characters.length === 0) {
-      const characterData= await API.fetchCharacters()
-      const characters = await API.fetchNestedInfo(characterData)
+    const { characters, activePage, vehicles, planets } = this.state;
+    if(activePage === 'characters' && characters.length === 0) {
+      const characterData = await API.fetchCharacters()
+      const characterData2 = await API.fetchCharactersHomeWorld(characterData)
+      const characterData3 = await API.fetchCharactersSpecies(characterData2)
+      const characters = await Cleaner.cleanCharacterData(characterData3)
       this.setState({characters})
     }
-    if(this.state.activePage === 'vehicles' && this.state.vehicles.length === 0) {
+    if(activePage === 'vehicles' && vehicles.length === 0) {
       const vehicleData = await API.fetchVehicles()
       const vehicles = Cleaner.cleanVehiclesData(vehicleData)
       this.setState({vehicles})
     }
-    if(this.state.activePage === 'planets' && this.state.planets.length === 0) {
+    if(activePage === 'planets' && planets.length === 0) {
       const planetData = await API.fetchPlanets()
       const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
       const planets = Cleaner.cleanPlanetData(uncleanPlanets)
       this.setState({planets})
     }
-    
   }
 
   exitSplash = () => {
@@ -56,7 +58,7 @@ class App extends Component {
     })
   }
 
-  changePage=(str)=> {
+  changePage = (str) => {
     this.setState({
       activePage: str
     })

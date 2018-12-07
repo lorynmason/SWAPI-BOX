@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Splash should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Splash
+    exitSplash={[MockFunction]}
+    film={
+      Object {
+        "date": "1976",
+        "text": "A Long Time Ago...",
+        "title": "A New Hope",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="fade"
+        >
+          <div
+            className="logo"
+          >
+            <img
+              alt="StarWars logo"
+              onClick={[Function]}
+              src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+            />
+          </div>
+        </div>,
+        <div
+          className="crawl"
+        >
+          A Long Time Ago...
+          <p>
+            A New Hope
+          </p>
+          <p>
+            1976
+          </p>
+        </div>,
+        <button
+          className="enter-btn"
+          onClick={[Function]}
+        >
+          ENTER 
+        </button>,
+      ],
+      "className": "background",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="logo"
+          >
+            <img
+              alt="StarWars logo"
+              onClick={[Function]}
+              src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+            />
+          </div>,
+          "className": "fade",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              alt="StarWars logo"
+              onClick={[Function]}
+              src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+            />,
+            "className": "logo",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "StarWars logo",
+              "onClick": [Function],
+              "src": "http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "A Long Time Ago...",
+            <p>
+              A New Hope
+            </p>,
+            <p>
+              1976
+            </p>,
+          ],
+          "className": "crawl",
+        },
+        "ref": null,
+        "rendered": Array [
+          "A Long Time Ago...",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "A New Hope",
+            },
+            "ref": null,
+            "rendered": "A New Hope",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "1976",
+            },
+            "ref": null,
+            "rendered": "1976",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "ENTER ",
+          "className": "enter-btn",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "ENTER ",
+        "type": "button",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="fade"
+          >
+            <div
+              className="logo"
+            >
+              <img
+                alt="StarWars logo"
+                onClick={[Function]}
+                src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+              />
+            </div>
+          </div>,
+          <div
+            className="crawl"
+          >
+            A Long Time Ago...
+            <p>
+              A New Hope
+            </p>
+            <p>
+              1976
+            </p>
+          </div>,
+          <button
+            className="enter-btn"
+            onClick={[Function]}
+          >
+            ENTER 
+          </button>,
+        ],
+        "className": "background",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="logo"
+            >
+              <img
+                alt="StarWars logo"
+                onClick={[Function]}
+                src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+              />
+            </div>,
+            "className": "fade",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="StarWars logo"
+                onClick={[Function]}
+                src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+              />,
+              "className": "logo",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "StarWars logo",
+                "onClick": [Function],
+                "src": "http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "A Long Time Ago...",
+              <p>
+                A New Hope
+              </p>,
+              <p>
+                1976
+              </p>,
+            ],
+            "className": "crawl",
+          },
+          "ref": null,
+          "rendered": Array [
+            "A Long Time Ago...",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "A New Hope",
+              },
+              "ref": null,
+              "rendered": "A New Hope",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "1976",
+              },
+              "ref": null,
+              "rendered": "1976",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "ENTER ",
+            "className": "enter-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "ENTER ",
+          "type": "button",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
