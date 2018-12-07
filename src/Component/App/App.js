@@ -30,8 +30,10 @@ class App extends Component {
   async componentDidUpdate() {
     const { characters, activePage, vehicles } = this.state;
     if(activePage === 'characters' && characters.length === 0) {
-      const  characterData= await API.fetchCharacters()
-      const characters = await API.fetchNestedInfo(characterData)
+      const characterData = await API.fetchCharacters()
+      const characterData2 = await API.fetchCharactersHomeWorld(characterData)
+      const characterData3 = await API.fetchCharactersSpecies(characterData2)
+      const characters = await Cleaner.cleanCharacterData(characterData3)
       this.setState({characters})
     }
     if(activePage === 'vehicles' && vehicles.length === 0) {

@@ -9,6 +9,18 @@ export const cleanFilmsData = (data) => {
   })[randomNum]
 }
 
+export const cleanCharacterData = (data) => {
+  console.log(data)
+  return data.map((character) => {
+    console.log(character.population)
+    return {
+      homeworld: character.homeworld,
+      population: character.population,
+      species: character.species,
+      name: character.name}
+  })
+}
+
 export const cleanVehiclesData = (data) => {
   return data.results.map(vehicle => {
     return {

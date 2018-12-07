@@ -7,7 +7,6 @@ const CardContainer = ({activePage, characters}) => {
   const cards = characters.map( character => {
     return (<Card character={character}/>)
   })
-  console.log(cards)
   return (
   <section className="cardContainer">
     {cards}
