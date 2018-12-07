@@ -26,15 +26,43 @@ export const fetchNestedInfo = (characterData) => {
               population: homeworlds.population,
               species: species.name,
               name: character.name}
-  } )
+  })
   return Promise.all(sadPromises)
 }
+
 
 export const fetchVehicles = async () => {
   const url = 'https://swapi.co/api/vehicles'
   const response = await fetch(url);
   const vehicleData = await response.json()
   return vehicleData
+}
+
+export const fetchPlanets = async () => {
+  const url = 'https://swapi.co/api/planets'
+  const response = await fetch(url);
+  const planetData = await response.json()
+  return planetData
+}
+
+export const fetchNestedInfoPlanets = (data) => {
+  const sadPromises = data.results.map( async (planetObj) => {
+   
+    const residentsData = await fetchPlanetResidents(planetObj.residents)
+    return {...planetObj, residents: residentsData}
+
+    })
+    return Promise.all(sadPromises)
+}
+
+
+export const fetchPlanetResidents = (data) => {
+  const residents =  data.map( async (resident) => {
+      const response = await fetch(resident)
+      const residents = await response.json()
+      return residents.name
+    })
+    return Promise.all(residents)
 }
 
 
