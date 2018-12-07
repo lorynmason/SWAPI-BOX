@@ -31,5 +31,17 @@ export const cleanVehiclesData = (data) => {
     }
   })
 }
+
+export const cleanPlanetData = (data) => {
+  return data.map( planet => {
+    return {
+      planet: planet.name,
+      terrain: planet.terrain,
+      population: planet.population,
+      climate: planet.climate,
+      residents: planet.residents
+    }
+  })
+}
  
 
