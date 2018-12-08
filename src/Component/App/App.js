@@ -14,40 +14,35 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      film: {},
+      films: [],
       favorites: [],
-      activePage: '',
-      splash: true,
+      activePage: 'splash',
       characters: [],
       vehicles: [],
-      planets: []
+      planets: [],
+      localStorageKeys:['characters', 'planets', 'vehicles', 'favorites', 'films']
     }
   }
+
   async componentDidMount() {
-    const filmsData = await API.fetchScroll()
-    const film = Cleaner.cleanFilmsData(filmsData)
-    this.setState({film})
+    this.getLocalStorage(this.state.localStorageKeys)
+    if(this.state.films.length === 0) {
+      const filmsData = await API.fetchScroll()
+      const films = Cleaner.cleanFilmsData(filmsData)
+      this.setState({films}, this.addLocalStorage(films)) 
+    }
   }
 
   async componentDidUpdate() {
     const { characters, activePage, vehicles, planets } = this.state;
     if(activePage === 'characters' && characters.length === 0) {
-      const characterData = await API.fetchCharacters()
-      const characterData2 = await API.fetchCharactersHomeWorld(characterData)
-      const characterData3 = await API.fetchCharactersSpecies(characterData2)
-      const characters = await Cleaner.cleanCharacterData(characterData3)
-      this.setState({characters}, this.addLocalStorage(characters))
+      this.setCharacterData();
     }
     if(activePage === 'vehicles' && vehicles.length === 0) {
-      const vehicleData = await API.fetchVehicles()
-      const vehicles = Cleaner.cleanVehiclesData(vehicleData)
-      this.setState({vehicles}, this.addLocalStorage(vehicles))
+      this.setVehicleData();
     }
     if(activePage === 'planets' && planets.length === 0) {
-      const planetData = await API.fetchPlanets()
-      const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
-      const planets = Cleaner.cleanPlanetData(uncleanPlanets)
-      this.setState({planets}, this.addLocalStorage(planets))
+      this.setPlanetData();
     }
   }
 
@@ -56,6 +51,27 @@ class App extends Component {
       splash: false,
       activePage: 'home'
     })
+  }
+
+  setCharacterData = async () => {
+    const characterData = await API.fetchCharacters()
+    const characterData2 = await API.fetchCharactersHomeWorld(characterData)
+    const characterData3 = await API.fetchCharactersSpecies(characterData2)
+    const characters = await Cleaner.cleanCharacterData(characterData3)
+    this.setState({characters}, this.addLocalStorage(characters))
+  }
+
+  setVehicleData = async () => {
+    const vehicleData = await API.fetchVehicles()
+    const vehicles = Cleaner.cleanVehiclesData(vehicleData)
+    this.setState({vehicles}, this.addLocalStorage(vehicles))
+  }
+
+  setPlanetData = async () => {
+    const planetData = await API.fetchPlanets()
+    const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
+    const planets = Cleaner.cleanPlanetData(uncleanPlanets)
+    this.setState({planets}, this.addLocalStorage(planets))
   }
 
   changePage = (str) => {
@@ -72,69 +88,70 @@ class App extends Component {
     data = JSON.stringify(data);
     localStorage.setItem(`${this.state.activePage}`, data)
   }
+
+  getLocalStorage = (keyNames) => {
+    const parsedData = keyNames.map(keyName =>{
+      const retrievedData = localStorage.getItem(keyName);
+      const parsedData = JSON.parse(retrievedData)
+      if(parsedData){
+        this.setState({[keyName]: parsedData})}
+    })
+  }
   
   render() {
-    if(this.state.splash) {
+
+    switch(this.state.activePage) {
+
+      case 'splash':
       return (
-        <div className="splash">
-        <Splash exitSplash={this.exitSplash} film={this.state.film}/>
+      <div className="splash">
+      <Splash exitSplash={this.exitSplash} films={this.state.films}/>
+      </div>
+    );
+
+      case 'home':
+      return (
+        <div className="App">
+          <Header/>
+          <Nav favorites={this.state.favorites} 
+                changePage={this.changePage}/>
         </div>
-      );
-    } else {
-      // return (
-      //   <div className="App">
-      //     <Header/>
-      //     <Nav favorites={this.state.favorites} 
-      //          changePage={this.changePage}/>
-      //     <CardContainer  activePage={this.state.activePage}              characters={this.state.characters}
-      //                     vehicles={this.state.vehicles}/>
-      //   </div>
-      // )
-      switch(this.state.activePage) {
-        case 'home':
-        return (
-          <div className="App">
-            <Header/>
-            <Nav favorites={this.state.favorites} 
-                  changePage={this.changePage}/>
-          </div>
-        )
+      )
 
-        case 'characters':
-        return (
-          <div className="App">
-            <Header/>
-            <Nav favorites={this.state.favorites} 
-                  changePage={this.changePage}/>
-            <Characters characters={this.state.characters}
-                        addFavorites={this.addFavorites}/>
-                             
-          </div>
-        )
-        
-        case 'vehicles':
-        return (
-          <div className="App">
-            <Header/>
-            <Nav favorites={this.state.favorites} 
-                  changePage={this.changePage}/>
-            <Vehicles vehicles={this.state.vehicles}
-                      addFavorites={this.addFavorites}/>              
-          </div>
-        )
+      case 'characters':
+      return (
+        <div className="App">
+          <Header/>
+          <Nav favorites={this.state.favorites} 
+                changePage={this.changePage}/>
+          <Characters characters={this.state.characters}
+                      addFavorites={this.addFavorites}/>
+                           
+        </div>
+      )
+      
+      case 'vehicles':
+      return (
+        <div className="App">
+          <Header/>
+          <Nav favorites={this.state.favorites} 
+                changePage={this.changePage}/>
+          <Vehicles vehicles={this.state.vehicles}
+                    addFavorites={this.addFavorites}/>              
+        </div>
+      )
 
-        case 'planets':
-        return (
-          <div className="App">
-            <Header/>
-            <Nav favorites={this.state.favorites} 
-                  changePage={this.changePage}/>  
-            <Planets planets={this.state.planets}
-                      addFavorites={this.addFavorites}/>         
-          </div>
-        )
+      case 'planets':
+      return (
+        <div className="App">
+          <Header/>
+          <Nav favorites={this.state.favorites} 
+                changePage={this.changePage}/>  
+          <Planets planets={this.state.planets}
+                    addFavorites={this.addFavorites}/>         
+        </div>
+      )
 
-      }
     }
   }
 }
