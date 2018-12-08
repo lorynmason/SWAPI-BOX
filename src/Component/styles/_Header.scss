@@ -1,8 +1,8 @@
 header {
   background: url('https://images5.alphacoders.com/672/thumb-1920-672012.jpg');
-  height: 60vh;
+  height: 65vh;
   width: 100%;
-  background-position: 49% 78%;
+  background-position: 50% 14%;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -11,6 +11,7 @@ header {
 .header-logo {
   display: flex;
   align-content: center;
+  filter: drop-shadow(rgba(2, 246, 15, 0.4) 1px 1px 3px);
   img {
     margin: 125px auto 0px;
     height: 300px;

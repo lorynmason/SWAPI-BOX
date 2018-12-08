@@ -1,5 +1,5 @@
 nav {
-  background: rgba(3, 246, 3, 0.733);
+  background: rgba(3, 246, 3, 0.514);
   height: 60px;
   border-top: solid 2px rgba(51, 247, 33, 0.8);
   border-bottom: solid 2px rgba(51, 247, 33, 0.8);
@@ -17,5 +17,13 @@ nav {
     font-size: 3em;
     padding-bottom: 30px;
     height: 50px;
+    &:hover  {
+      cursor: pointer;
+      color: #000;
+      text-shadow: none;
+    }
   }
 }
+
+
+// rgba(245, 3, 3, 0.699)
