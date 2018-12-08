@@ -15,11 +15,26 @@
   img {
     margin: 50px auto 0px;
     height: 300px;
+    animation: flyin 3s linear;
     &:hover {
-    filter: drop-shadow(rgba(51, 247, 33, 0.911) 2px 3px 8px);
+    filter: drop-shadow(rgba(51, 247, 33, 0.911) 2px 3px 10px);
     cursor: pointer;
     }
   } 
+}
+
+@keyframes flyin {
+  0% {
+    opacity: 0.2;
+    top: -100px;
+    transform: rotateX(20deg) translateZ(-2500px);
+  }
+  
+	100% { 
+    opacity: 1;
+    top: -6000px;
+    transform: rotateX(23deg) translateZ(0px);
+  }
 }
 
 .crawl {
@@ -39,7 +54,7 @@
   transform-origin: 50% 100%;
   animation: crawl 45s linear;
   p {
-    margin: -80px 0px;
+    margin: -70px 0px;
     font-size: 80%;
   }
 }
@@ -51,9 +66,9 @@
   top: -25px;
   z-index: 1;
   background-image: 
-  linear-gradient(rgba(0, 0, 0, 0.95), 
-                  rgba(0, 0, 0, 0.9),
-                  rgba(0, 0, 0, 0.85), 
+  linear-gradient(rgba(0, 0, 0, 0.93), 
+                  rgba(0, 0, 0, 0.87),
+                  rgba(0, 0, 0, 0.83), 
                   transparent 70%);
 }
 
@@ -83,7 +98,7 @@
   font-size: 3em;
   box-shadow: rgba(51, 247, 33, 0.8) 2px 3px 5px,
               rgba(51, 247, 33, 0.8) -2px -3px 5px;
-  animation: fadein 30s;
+  animation: fadein 34s;
 }
 
 @keyframes fadein {
