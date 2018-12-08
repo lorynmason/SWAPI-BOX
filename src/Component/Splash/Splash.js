@@ -17,8 +17,10 @@ const Splash = ({exitSplash, film}) => {
             <p>{film.title}</p>
             <p>{film.date}</p>
             </div>
+            <div className="button-div">
             <button onClick={() => exitSplash()}className='enter-btn'>
             ENTER </button>
+            </div>
           </section>
   )
 }
