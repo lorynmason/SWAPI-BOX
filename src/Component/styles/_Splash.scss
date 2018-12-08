@@ -23,48 +23,49 @@
 }
 
 .crawl {
-  padding: 97vh 220px 0px;
+  margin-top: 150vh;
   display: flex;
   justify-content: center;
   position: relative;
   height: 800px;
   color: #feda4a;
-  font-size: 500%;
+  font-size: 1200%;
   font-weight: 600;
-  line-height: 150%;
-  perspective: 400px;
-  letter-spacing: 1px;
+  line-height: 300px;
+  letter-spacing: 5px;
   text-align: center;
   flex-direction: column;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 45s linear;
   p {
-    margin: 15px 0px;
+    margin: -80px 0px;
+    font-size: 80%;
   }
 }
 
 .fade {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 85vh;
   top: -25px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.959), rgba(0, 0, 0, 0.87),rgba(0, 0, 0, 0.76), transparent 70%);
   z-index: 1;
-}
-
-.crawl {
-  position: relative;
-  top: 99999px;
-  transform-origin: 50% 100%;
-  animation: crawl 55s linear;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.95), 
+                  rgba(0, 0, 0, 0.9),
+                  rgba(0, 0, 0, 0.85), 
+                  transparent 70%);
 }
 
 @keyframes crawl {
 	0% {
     top: -100px;
-    transform: rotateX(20deg)  translateZ(0);
+    transform: perspective(1500px) rotateX(20deg)  translateZ(0);
   }
+  
 	100% { 
     top: -6000px;
-    transform: perspective(200px) rotateX(25deg) translateZ(-2500px);
+    transform: perspective(1000px) rotateX(23deg) translateZ(-2500px);
   }
 }
 
@@ -82,7 +83,7 @@
   font-size: 3em;
   box-shadow: rgba(51, 247, 33, 0.8) 2px 3px 5px,
               rgba(51, 247, 33, 0.8) -2px -3px 5px;
-  animation: fadein 22s;
+  animation: fadein 30s;
 }
 
 @keyframes fadein {
