@@ -106,7 +106,7 @@ describe('API', () => {
     })
 
   })
-    
+  
   describe('fetchCharactersHomeWorld', () => {
     beforeEach(() => {
       mockCharacterData = {results: [ 
@@ -239,5 +239,59 @@ describe('API', () => {
   //   it.skip('should call fetch with the correct params', )
   // }
 
+      await expect(API.fetchPlanets(url)).rejects.toEqual(expectedError)
+    })
+  })
+  describe('fetchPlanets', () => {
+    beforeEach(() => {
+      mockPlanetData = [ 
+        { name: 'Alderaan',
+          population: 2000000000,
+          residents: [
+            "https://swapi.co/api/people/5/",
+            "https://swapi.co/api/people/68/",
+            "https://swapi.co/api/people/81/"],
+          terrain: "grasslands, mountains"}, 
+        { name: 'Alderaan',
+          population: 2000000000,
+          residents: [
+            "https://swapi.co/api/people/5/",
+            "https://swapi.co/api/people/68/",
+            "https://swapi.co/api/people/81/"],
+          terrain: "grasslands, mountains"} 
+        ]
+        window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(
+            mockPlanetData)
+          })
+        )
+    })
 
+    it('calls fetch with the correct params', () => {
+         url = 'https://swapi.co/api/planets';
+         const expected = 'https://swapi.co/api/planets'
+        
+         API.fetchPlanets(url)
+         
+         expect(window.fetch).toHaveBeenCalledWith(expected)
+    })
+
+    it('should return a list of Planets, if response is okay', async () => {
+        const expected = mockPlanetData
+     
+        const result = await API.fetchPlanets(url)
+    
+        expect(result).toEqual(expected)
+    })
+
+    it('should return an error message if response was not okay', async() => {
+      
+      const expectedError = Error('Chewbacca- AGERUYEHSFG: translation, Error, planet not okay')
+      
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: false
+        })
+      })
 })
