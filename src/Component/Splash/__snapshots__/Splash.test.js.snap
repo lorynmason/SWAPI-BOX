@@ -37,6 +37,7 @@ ShallowWrapper {
               alt="StarWars logo"
               onClick={[Function]}
               src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+              title="click to enter site"
             />
           </div>
         </div>,
@@ -51,12 +52,16 @@ ShallowWrapper {
             1976
           </p>
         </div>,
-        <button
-          className="enter-btn"
-          onClick={[Function]}
+        <div
+          className="button-div"
         >
-          ENTER 
-        </button>,
+          <button
+            className="enter-btn"
+            onClick={[Function]}
+          >
+            ENTER 
+          </button>
+        </div>,
       ],
       "className": "background",
     },
@@ -74,6 +79,7 @@ ShallowWrapper {
               alt="StarWars logo"
               onClick={[Function]}
               src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+              title="click to enter site"
             />
           </div>,
           "className": "fade",
@@ -88,6 +94,7 @@ ShallowWrapper {
               alt="StarWars logo"
               onClick={[Function]}
               src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+              title="click to enter site"
             />,
             "className": "logo",
           },
@@ -100,6 +107,7 @@ ShallowWrapper {
               "alt": "StarWars logo",
               "onClick": [Function],
               "src": "http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png",
+              "title": "click to enter site",
             },
             "ref": null,
             "rendered": null,
@@ -158,13 +166,29 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "ENTER ",
-          "className": "enter-btn",
-          "onClick": [Function],
+          "children": <button
+            className="enter-btn"
+            onClick={[Function]}
+          >
+            ENTER 
+          </button>,
+          "className": "button-div",
         },
         "ref": null,
-        "rendered": "ENTER ",
-        "type": "button",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "ENTER ",
+            "className": "enter-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "ENTER ",
+          "type": "button",
+        },
+        "type": "div",
       },
     ],
     "type": "section",
@@ -186,6 +210,7 @@ ShallowWrapper {
                 alt="StarWars logo"
                 onClick={[Function]}
                 src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+                title="click to enter site"
               />
             </div>
           </div>,
@@ -200,12 +225,16 @@ ShallowWrapper {
               1976
             </p>
           </div>,
-          <button
-            className="enter-btn"
-            onClick={[Function]}
+          <div
+            className="button-div"
           >
-            ENTER 
-          </button>,
+            <button
+              className="enter-btn"
+              onClick={[Function]}
+            >
+              ENTER 
+            </button>
+          </div>,
         ],
         "className": "background",
       },
@@ -223,6 +252,7 @@ ShallowWrapper {
                 alt="StarWars logo"
                 onClick={[Function]}
                 src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+                title="click to enter site"
               />
             </div>,
             "className": "fade",
@@ -237,6 +267,7 @@ ShallowWrapper {
                 alt="StarWars logo"
                 onClick={[Function]}
                 src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
+                title="click to enter site"
               />,
               "className": "logo",
             },
@@ -249,6 +280,7 @@ ShallowWrapper {
                 "alt": "StarWars logo",
                 "onClick": [Function],
                 "src": "http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png",
+                "title": "click to enter site",
               },
               "ref": null,
               "rendered": null,
@@ -307,13 +339,29 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "ENTER ",
-            "className": "enter-btn",
-            "onClick": [Function],
+            "children": <button
+              className="enter-btn"
+              onClick={[Function]}
+            >
+              ENTER 
+            </button>,
+            "className": "button-div",
           },
           "ref": null,
-          "rendered": "ENTER ",
-          "type": "button",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "ENTER ",
+              "className": "enter-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "ENTER ",
+            "type": "button",
+          },
+          "type": "div",
         },
       ],
       "type": "section",

@@ -58,8 +58,12 @@ export const fetchVehicles = async () => {
 export const fetchPlanets = async () => {
   const url = 'https://swapi.co/api/planets'
   const response = await fetch(url);
-  const planetData = await response.json()
-  return planetData
+  if(response.ok) {
+    const planetData = await response.json()
+    return planetData
+  } else {
+    throw new Error('Chewbacca- AGERUYEHSFG: translation, Error, planet not okay')
+  }
 }
 
 export const fetchNestedInfoPlanets = (data) => {
