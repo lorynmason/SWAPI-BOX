@@ -3,11 +3,12 @@ import * as API from './apiCalls.js';
 describe('API', () => { 
   let mockFilmsData;
   let mockCharacterData;
-  let mockhomeworlds;
-  let mockspecies; 
-  let mockPlanetData;
   let mockVehicleData;
   let url;
+  let mockCharacterDataEnd;
+  let characterData;
+  let mockCharacterData2;
+  let mockCharacterData2End;
   
   describe('fetchScroll', () => {
     beforeEach(() => {
@@ -20,8 +21,8 @@ describe('API', () => {
           text: 'A Long Time Ago... but not so long as the last one',
           date: '1979',
           somethingToRemove: 'we do not want this when cleaned, but good for fetching'},  
-        ]
-        window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ];
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
           ok: true,
           json: () => Promise.resolve(
             mockFilmsData)
@@ -63,16 +64,16 @@ describe('API', () => {
 
   describe('fetchCharacters', () => {
     beforeEach(() => {
-      mockCharacterData = [ 
+      mockCharacterData = {results: [ 
         { homeworld: 'https://swapi.co/api/planets/1/',
-          population: 2345678,
+          population: 'https://swapi.co/api/planets/1/',
           species: 'https://swapi.co/api/species/1/',
           name: 'bob'}, 
         { homeworld: 'https://swapi.co/api/planets/1/',
-          population: 3,
+          population: 'https://swapi.co/api/planets/1/',
           species: 'https://swapi.co/api/species/1/',
           name: 'we call him alien'} 
-        ]
+        ]}
         window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
           ok: true,
           json: () => Promise.resolve(
@@ -82,21 +83,15 @@ describe('API', () => {
     })
 
     it('calls fetch with the correct params', () => {
-       //set-up
       url = 'https://swapi.co/api/people';
       const expected = 'https://swapi.co/api/people'
-      //execution
       API.fetchCharacters(url)
-      //expectation
       expect(window.fetch).toHaveBeenCalledWith(expected)
     })
 
     it('should return a list of Characters, if response is okay', async() => {
-      //set-up
       const expected = mockCharacterData
-      //execution
       const result = await API.fetchCharacters(url)
-      //expection
       expect(result).toEqual(expected)
     })
 
@@ -112,6 +107,141 @@ describe('API', () => {
 
   })
   
+  describe('fetchCharactersHomeWorld', () => {
+    beforeEach(() => {
+      mockCharacterData = {results: [ 
+        { homeworld: 'https://swapi.co/api/planets/1/',
+          population: 'https://swapi.co/api/planets/1/',
+          species: 'https://swapi.co/api/species/1/',
+          name: 'bob'}, 
+        { homeworld: 'https://swapi.co/api/planets/1/',
+          population: 'https://swapi.co/api/planets/1/',
+          species: 'https://swapi.co/api/species/1/',
+          name: 'we call him alien'} 
+        ]}
+      mockCharacterDataEnd = [ 
+        { homeworld: 'Earth',
+          population: '123456789',
+          species: 'https://swapi.co/api/species/1/',
+          name: 'bob'}, 
+        { homeworld: 'Venus',
+          population: '32',
+          species: 'https://swapi.co/api/species/1/',
+          name: 'we call him alien'} 
+        ]
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true, 
+        json: () => Promise.resolve(
+          mockCharacterDataEnd)
+        })
+      )
+    })
+    it('calls fetch with the correct params', () => {
+      const expected = 'https://swapi.co/api/planets/1/'
+      API.fetchCharactersHomeWorld(mockCharacterData)
+      expect(window.fetch).toHaveBeenCalledWith(expected)
+    })
+
+    it('should return a list of Characters that now have homeworld and population endpoints, if the response is okay', async() => {
+      const expected = mockCharacterDataEnd.map(character => Object.keys(character))
+      const mockFetchCall = await API.fetchCharactersHomeWorld(mockCharacterData)
+      const result = mockFetchCall.map(call => Object.keys(call))
+      expect(result).toEqual(expected)
+    })
+
+    it('should return an error message if response was not okay', async() => {
+      const expectedError = Error('Chewbacca- 2AGERUYEHSFG: translation, Error, API2 returned not okay')
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          okay: false
+        })
+      })
+      await expect(API.fetchCharactersHomeWorld(mockCharacterData)).rejects.toEqual(expectedError)
+    })
+  })
+
+  describe('fetchCharacterSpecies', () =>{
+    beforeEach(() => {
+      mockCharacterData2 = [ 
+        { homeworld: 'Earth',
+          population: '123456789',
+          species: 'https://swapi.co/api/species/1/',
+          name: 'bob'}, 
+        { homeworld: 'Venus',
+          population: '32',
+          species: 'https://swapi.co/api/species/1/',
+          name: 'we call him alien'} 
+        ]
+      mockCharacterData2End = [ 
+        { homeworld: 'Earth',
+          population: '123456789',
+          species: 'human',
+          name: 'bob'}, 
+        { homeworld: 'Venus',
+          population: '32',
+          species: 'K-9',
+          name: 'we call him alien'} 
+        ]
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(
+          mockCharacterData2End)
+      }))
+    })
+
+    it('calls fetch with the correct params', () => {
+      const expected = 'https://swapi.co/api/species/1/'
+      API.fetchCharactersSpecies(mockCharacterData2)
+      expect(window.fetch).toHaveBeenCalledWith(expected)
+    })
+
+    it('should return a list of Characters that now has species endpoints, if the response is okay', async() => {
+      const expected = mockCharacterData2End.map(character => Object.keys(character))
+      const mockFetchCall = await API.fetchCharactersSpecies(mockCharacterData2)
+      const result = mockFetchCall.map(call => Object.keys(call))
+      expect(result).toEqual(expected)
+    })
+
+    it('shoiuld return an error message if response was not okay', async() => {
+      const expectedError = Error('Chewbacca- 3AGERUYEHSFG: translation, Error, API3 returned not okay')
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          okay: false
+        })
+      })
+      await expect(API.fetchCharactersSpecies(mockCharacterData2)).rejects.toEqual(expectedError)
+    })
+  })
+
+  // describe('fetchVehicles', () => {
+  //   beforeEach(() => {
+  //     mockVehicleData = [{
+  //       Name: 'Ford',
+  //       Model: 'Explorer',
+  //       Class: 'wheeled',
+  //       Passengers: 3
+  //       somethingToRemove: 'take this out in cleaner'}, 
+  //       {
+  //       Name: 'Ford',
+  //       Model: 'Explorer',
+  //       Class: 'wheeled',
+  //       Passengers: 3
+  //       somethingToRemove: 'take this out in cleaner'}];
+  //     url = 'https://swapi.co/api/vehicles';
+  //     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+  //       ok: true,
+  //       json: () => Promise.resolve(
+  //         mockVehicleData)
+  //     })
+  //     )
+  //   })
+
+  //   it.skip('should call fetch with the correct params', )
+  // }
+
+      await expect(API.fetchPlanets(url)).rejects.toEqual(expectedError)
+    })
+  })
   describe('fetchPlanets', () => {
     beforeEach(() => {
       mockPlanetData = [ 
@@ -164,8 +294,4 @@ describe('API', () => {
           ok: false
         })
       })
-
-      await expect(API.fetchPlanets(url)).rejects.toEqual(expectedError)
-    })
-  })
 })
