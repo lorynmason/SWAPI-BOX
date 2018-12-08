@@ -7,9 +7,9 @@ const Splash = ({exitSplash, film}) => {
     <section className='background'>
           <div className="fade">
             <div className="logo">
-            <img alt='StarWars logo'
-                 onClick={() => exitSplash()} 
-                 src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/> 
+              <img alt='StarWars logo'
+                  onClick={() => exitSplash()} 
+                  src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/> 
             </div>
             </div>
             <div className="crawl">
