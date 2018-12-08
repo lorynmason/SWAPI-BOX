@@ -9,6 +9,7 @@ describe('API', () => {
   let characterData;
   let mockCharacterData2;
   let mockCharacterData2End;
+  let mockPlanetData;
   
   describe('fetchScroll', () => {
     beforeEach(() => {
@@ -213,35 +214,38 @@ describe('API', () => {
     })
   })
 
-  // describe('fetchVehicles', () => {
-  //   beforeEach(() => {
-  //     mockVehicleData = [{
-  //       Name: 'Ford',
-  //       Model: 'Explorer',
-  //       Class: 'wheeled',
-  //       Passengers: 3
-  //       somethingToRemove: 'take this out in cleaner'}, 
-  //       {
-  //       Name: 'Ford',
-  //       Model: 'Explorer',
-  //       Class: 'wheeled',
-  //       Passengers: 3
-  //       somethingToRemove: 'take this out in cleaner'}];
-  //     url = 'https://swapi.co/api/vehicles';
-  //     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-  //       ok: true,
-  //       json: () => Promise.resolve(
-  //         mockVehicleData)
-  //     })
-  //     )
-  //   })
+  describe('fetchVehicles', () => {
+    beforeEach(() => {
+      mockVehicleData = [{
+        Name: 'Ford',
+        Model: 'Explorer',
+        Class: 'wheeled',
+        Passengers: 3,
+        somethingToRemove: 'take this out in cleaner'}, 
+        {
+        Name: 'Ford',
+        Model: 'Explorer',
+        Class: 'wheeled',
+        Passengers: 3,
+        somethingToRemove: 'take this out in cleaner'}];
+      url = 'https://swapi.co/api/vehicles';
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(
+          mockVehicleData)
+      })
+      )
+    })
 
-  //   it.skip('should call fetch with the correct params', )
-  // }
+    it('should call fetch with the correct params', () => {
+      const expected = 'https://swapi.co/api/vehicles'
 
-      await expect(API.fetchPlanets(url)).rejects.toEqual(expectedError)
+      API.fetchVehicles(url)
+
+      expect(window.fetch).toHaveBeenCalledWith(expected)
     })
   })
+
   describe('fetchPlanets', () => {
     beforeEach(() => {
       mockPlanetData = [ 
@@ -294,4 +298,6 @@ describe('API', () => {
           ok: false
         })
       })
+    })
+  })
 })
