@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 const Characters = ({characters}) => {
   const cards = characters.map( character => {
     return (<div className="character-card card">
+      <button className="favorite-btn"><i className="fas fa-jedi"></i></button>
       <h1>{character.name}</h1>
       <p> Species: {character.species}</p>
       <p> Homeworld: {character.homeworld}</p>

@@ -9,7 +9,7 @@ const Splash = ({exitSplash, film}) => {
             <div className="logo">
               <img alt='StarWars logo'
                   onClick={() => exitSplash()} 
-                  src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"/> 
+                  src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png" title="click to enter site"/> 
             </div>
             </div>
             <div className="crawl">

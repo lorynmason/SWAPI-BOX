@@ -10,14 +10,28 @@
                rgba(89, 250, 74, 0.61) -2px -5px 6px ;
   h1{
     color: white;
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
+    margin-top: 60px;
   }
   
   p {
+    font-weight: bolder;
     color: white;
     font-size: 2em;
     padding: 0px 0px 0px 20px;
+  }
+}
+
+.favorite-btn {
+  outline: none;
+  border: none;
+  background: transparent;
+  float: right;
+  padding: 10px 15px 0px 0px;
+  i {
+    font-size: 4em;
+    color: #fff;
   }
 }
 
