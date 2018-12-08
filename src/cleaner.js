@@ -1,12 +1,13 @@
 export const cleanFilmsData = (data) => {
-  const randomNum = Math.floor(Math.random() * Math.floor(6))
-  return data.results.map((film) => {
+  const films = data.results.map((film) => {
     return {
       title: film.title,
       text: film.opening_crawl,
       date: film.release_date 
     }
-  })[randomNum]
+  })
+  return films
+
 }
 
 export const cleanCharacterData = (data) => {
@@ -15,7 +16,9 @@ export const cleanCharacterData = (data) => {
       homeworld: character.homeworld,
       population: character.population,
       species: character.species,
-      name: character.name}
+      name: character.name,
+      id: character.name
+    }
   })
 }
 
@@ -25,7 +28,8 @@ export const cleanVehiclesData = (data) => {
       Name: vehicle.name,
       Model: vehicle.model,
       Class: vehicle.vehicle_class,
-      Passengers: vehicle.passengers
+      Passengers: vehicle.passengers,
+      id: vehicle.name
     }
   })
 }
@@ -37,7 +41,8 @@ export const cleanPlanetData = (data) => {
       terrain: planet.terrain,
       population: planet.population,
       climate: planet.climate,
-      residents: planet.residents
+      residents: planet.residents,
+      id: planet.name
     }
   })
 }
