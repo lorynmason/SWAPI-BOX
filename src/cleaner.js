@@ -15,7 +15,9 @@ export const cleanCharacterData = (data) => {
       homeworld: character.homeworld,
       population: character.population,
       species: character.species,
-      name: character.name}
+      name: character.name,
+      id: character.name
+    }
   })
 }
 
@@ -25,7 +27,8 @@ export const cleanVehiclesData = (data) => {
       Name: vehicle.name,
       Model: vehicle.model,
       Class: vehicle.vehicle_class,
-      Passengers: vehicle.passengers
+      Passengers: vehicle.passengers,
+      id: vehicle.name
     }
   })
 }
@@ -37,7 +40,8 @@ export const cleanPlanetData = (data) => {
       terrain: planet.terrain,
       population: planet.population,
       climate: planet.climate,
-      residents: planet.residents
+      residents: planet.residents,
+      id: planet.name
     }
   })
 }

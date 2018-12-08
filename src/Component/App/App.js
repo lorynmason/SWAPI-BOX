@@ -36,18 +36,18 @@ class App extends Component {
       const characterData2 = await API.fetchCharactersHomeWorld(characterData)
       const characterData3 = await API.fetchCharactersSpecies(characterData2)
       const characters = await Cleaner.cleanCharacterData(characterData3)
-      this.setState({characters})
+      this.setState({characters}, this.addLocalStorage(characters))
     }
     if(activePage === 'vehicles' && vehicles.length === 0) {
       const vehicleData = await API.fetchVehicles()
       const vehicles = Cleaner.cleanVehiclesData(vehicleData)
-      this.setState({vehicles})
+      this.setState({vehicles}, this.addLocalStorage(vehicles))
     }
     if(activePage === 'planets' && planets.length === 0) {
       const planetData = await API.fetchPlanets()
       const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
       const planets = Cleaner.cleanPlanetData(uncleanPlanets)
-      this.setState({planets})
+      this.setState({planets}, this.addLocalStorage(planets))
     }
   }
 
@@ -62,6 +62,15 @@ class App extends Component {
     this.setState({
       activePage: str
     })
+  }
+
+  addFavorites = (card) => {
+    console.log(card)
+  }
+
+  addLocalStorage = (data) => {
+    data = JSON.stringify(data);
+    localStorage.setItem(`${this.state.activePage}`, data)
   }
   
   render() {
@@ -97,7 +106,8 @@ class App extends Component {
             <Header/>
             <Nav favorites={this.state.favorites} 
                   changePage={this.changePage}/>
-            <Characters characters={this.state.characters}/>
+            <Characters characters={this.state.characters}
+                        addFavorites={this.addFavorites}/>
                              
           </div>
         )
@@ -108,7 +118,8 @@ class App extends Component {
             <Header/>
             <Nav favorites={this.state.favorites} 
                   changePage={this.changePage}/>
-            <Vehicles vehicles={this.state.vehicles}/>              
+            <Vehicles vehicles={this.state.vehicles}
+                      addFavorites={this.addFavorites}/>              
           </div>
         )
 
@@ -118,7 +129,8 @@ class App extends Component {
             <Header/>
             <Nav favorites={this.state.favorites} 
                   changePage={this.changePage}/>  
-            <Planets planets={this.state.planets}/>         
+            <Planets planets={this.state.planets}
+                      addFavorites={this.addFavorites}/>         
           </div>
         )
 
