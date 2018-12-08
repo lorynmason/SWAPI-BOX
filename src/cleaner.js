@@ -11,7 +11,6 @@ export const cleanFilmsData = (data) => {
 
 export const cleanCharacterData = (data) => {
   return data.map((character) => {
-    console.log(character.population)
     return {
       homeworld: character.homeworld,
       population: character.population,
