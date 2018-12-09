@@ -54,8 +54,12 @@ export const fetchCharactersSpecies = (characterData2) => {
 export const fetchVehicles = async () => {
   const url = 'https://swapi.co/api/vehicles'
   const response = await fetch(url)
-  const vehicleData = await response.json()
-  return vehicleData
+  if(response.ok) {
+    const vehicleData = await response.json()
+    return vehicleData
+  } else {
+    throw new Error('Obi-Wan Kenobi says Error, these are not the droids you are looking for')
+  }
 }
 
 export const fetchPlanets = async () => {
