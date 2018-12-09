@@ -18,13 +18,15 @@ const Splash = ({ exitSplash, films }) => {
             />
           </div>
         </div>
-        <div className="crawl">
-          {film.text}
-          <p>{film.title}</p>
-          <p>{film.date}</p>
-        </div>
+        <section className="crawl-container">
+          <div className="crawl">
+            {film.text}
+            <p>{film.title}</p>
+            <p>{film.date}</p>
+          </div>
+        </section>
         <div className="button-div">
-          <button onClick={() => exitSplash} className="enter-btn" type="button">ENTER</button>
+          <button onClick={() => exitSplash()} className="enter-btn" type="button">ENTER</button>
         </div>
       </section>
     )
