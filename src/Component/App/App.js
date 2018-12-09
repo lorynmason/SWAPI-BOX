@@ -81,7 +81,7 @@ class App extends Component {
   }
 
   toggleFavorites = (cardId) => {
-    const { activePage, characters, vehicles, planets, favorites } = this.state
+    const { activePage, characters, vehicles, planets } = this.state
     let newFavorite
     if (activePage === 'characters') {
       newFavorite = characters.find(character => character.id === cardId)
@@ -92,18 +92,19 @@ class App extends Component {
     if (activePage === 'planets') {
       newFavorite = planets.find(planet => planet.id === cardId)
     }
+    this.setFavorites(newFavorite, cardId)
+  }
+
+  setFavorites = (newFavorite, cardId) => {
+    const { favorites } = this.state
     if(newFavorite && !favorites.includes(newFavorite)){
-       this.setState({favorites: [...this.state.favorites, newFavorite]})
+      this.setState({favorites: [...this.state.favorites, newFavorite]})
     } else {
       const newState = favorites.filter((favorite) => {
-        return !favorite === newFavorite
+      return favorite.id !== cardId
       })
       this.setState({favorites: newState})
     }
-  }
-
-  removeFavorites = (cardId) => {
-    console.log(cardId)
   }
 
   addLocalStorage = (data) => {
@@ -195,7 +196,6 @@ class App extends Component {
             />
             <Favorites
               favorites={favorites}
-              removeFavorites={this.removeFavorites}
               activePage={this.activePage}
               toggleFavorites={this.toggleFavorites}
             />

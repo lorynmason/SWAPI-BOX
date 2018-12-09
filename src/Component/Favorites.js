@@ -2,7 +2,7 @@ import React from 'react'
 import './styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Favorites = ({ favorites, removeFavorite, activePage, toggleFavorites }) => {
+const Favorites = ({ favorites, toggleFavorites }) => {
   let cards;
   if(favorites.length > 0) {
       cards = favorites.map((favorite) => {
@@ -60,7 +60,7 @@ const Favorites = ({ favorites, removeFavorite, activePage, toggleFavorites }) =
 
 Favorites.propTypes = {
   favorites: PropTypes.array.isRequired,
-  removeFavorite: PropTypes.func.isRequired
+  toggleFavorites: PropTypes.func.isRequired
 }
 
 export default Favorites
