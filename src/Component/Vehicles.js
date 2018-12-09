@@ -11,15 +11,15 @@ const Vehicles = ({ vehicles, addFavorites }) => {
         </button>
         <h1>{vehicle.Name}</h1>
         <p>
-          Model:
+          {`Model: `}
           {vehicle.Model}
         </p>
         <p>
-          Class:
+          {`Class: `}`
           {vehicle.Class}
         </p>
         <p>
-          Passengers:
+          {`Passengers: `}
           {vehicle.Passengers}
         </p>
       </div>)

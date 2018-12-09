@@ -13,15 +13,15 @@ const Characters = ({ characters, addFavorites }) => {
           {character.name}
         </h1>
         <p>
-          Species:
+          {`Species: `}
           {character.species}
         </p>
         <p>
-          Homeworld:
+          {`Homeworld: `}
           {character.homeworld}
         </p>
         <p>
-          Population:
+          {`Population: `}`
           {character.population}
         </p>
       </div>

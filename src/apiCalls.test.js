@@ -256,6 +256,23 @@ describe('API', () => {
       API.fetchVehicles(url)
       expect(window.fetch).toHaveBeenCalledWith(expected)
     })
+
+    it('should return a list of Vehicles', async() => {
+      const expected = mockVehicleData
+      const result = await API.fetchVehicles(url)
+      expect(result).toEqual(expected)
+
+    })
+
+    it ('should return an error message if response was not okay', async () => {
+      const expectedError = Error('Obi-Wan Kenobi says Error, these are not the droids you are looking for')
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          okay: false
+        })
+      })
+      await expect(API.fetchVehicles(url)).rejects.toEqual(expectedError)
+    })
   })
 
   describe('fetchPlanets', () => {
