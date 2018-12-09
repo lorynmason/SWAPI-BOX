@@ -18,9 +18,9 @@ nav {
     padding-bottom: 30px;
     height: 50px;
     &:hover  {
-      cursor: pointer;
       color: #000;
       text-shadow: none;
+      cursor: url(https://cdn2.iconfinder.com/data/icons/starwars/icons/128/Darth%20Mauls%20light-saber.png), auto;
     }
   }
 }

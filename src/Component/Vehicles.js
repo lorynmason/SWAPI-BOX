@@ -2,10 +2,13 @@ import React from 'react'
 import './styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Vehicles = ({ vehicles }) => {
+const Vehicles = ({ vehicles, addFavorites }) => {
   const cards = vehicles.map((vehicle) => {
     return (
       <div className="vehicle-card card">
+        <button className="favorite-btn" type="button" onClick={() => addFavorites(vehicle.id)}>
+          <i className="fas fa-jedi" />
+        </button>
         <h1>{vehicle.Name}</h1>
         <p>
           Model:

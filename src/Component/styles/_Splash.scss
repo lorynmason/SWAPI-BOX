@@ -33,8 +33,8 @@
     animation: flyin 2.5s linear;
     &:hover {
     filter: drop-shadow(rgba(51, 247, 33, 0.911) 2px 3px 10px);
-    cursor: pointer;
     height: 303px;
+    cursor: url(https://cdn2.iconfinder.com/data/icons/starwars/icons/128/Darth%20Mauls%20light-saber.png), auto;
     }
   } 
 }
@@ -80,8 +80,8 @@
   animation: crawl-in 35s linear;
   animation-delay: 3s;
   p {
-    margin: 0px 0px;
     font-size: 80%;
+    font-weight: bolder;
   }
 }
 
@@ -118,11 +118,11 @@
               rgba(51, 247, 33, 0.8) -2px -3px 5px;
   animation: fadein 30s;
   &:hover{
-    cursor: pointer;
     filter: brightness(105%);
     border: solid 2px rgb(253, 253, 253);
     box-shadow: rgba(51, 247, 33, 0.8) 4px 5px 30px,
     rgba(51, 247, 33, 0.8) -4px -5px 30px;
+    cursor: url(https://cdn2.iconfinder.com/data/icons/starwars/icons/128/Darth%20Mauls%20light-saber.png), auto;
   }
 }
 

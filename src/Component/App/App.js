@@ -158,7 +158,7 @@ class App extends Component {
             />
             <Planets
               planets={planets}
-              caddFavorites={this.addFavorites}
+              addFavorites={this.addFavorites}
             />
           </div>
         )

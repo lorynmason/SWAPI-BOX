@@ -2,7 +2,7 @@ import React from 'react'
 import './styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Planets = ({ planets }) => {
+const Planets = ({ planets, addFavorites }) => {
   const cards = planets.map((planet) => {
     let resident
     if (planet.residents.length === 0) {
@@ -14,6 +14,9 @@ const Planets = ({ planets }) => {
     }
     return (
       <div className="planet-card card">
+        <button className="favorite-btn" type="button" onClick={() => addFavorites(planet.id)}>
+          <i className="fas fa-jedi" />
+        </button>
         <h1>
           {planet.planet}
         </h1>
