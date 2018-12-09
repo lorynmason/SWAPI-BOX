@@ -21,11 +21,11 @@ const Planets = ({ planets, addFavorites }) => {
           {planet.planet}
         </h1>
         <p>
-          {`Climate: `}`
+          {`Climate: `}
           {planet.climate}
         </p>
         <p>
-          {`Population: `}`
+          {`Population: `}
           {planet.population}
         </p>
         <p>
