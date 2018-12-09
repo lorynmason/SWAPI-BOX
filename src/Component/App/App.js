@@ -191,6 +191,8 @@ class App extends Component {
             <Favorites
               favorites={favorites}
               removeFavorites={this.removeFavorites}
+              activePage={this.activePage}
+              addFavorites={this.addFavorites}
             />
           </div>
           )

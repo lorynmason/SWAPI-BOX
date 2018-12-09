@@ -2,45 +2,45 @@ import React from 'react'
 import './styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Favorites = ({ favorites, removeFavorite }) => {
+const Favorites = ({ favorites, removeFavorite, activePage, addFavorites }) => {
   const cards = favorites.map((favorite) => {
-    if(favorite.catagory === 'characters') {
+    if (favorite.category === 'characters') {
       return (
       <div className="character-card card">
-        <button className="favorite-btn" type="button" onClick={() => addFavorites(character.id)}>
-          <i className="fas fa-jedi" />
-        </button>
-        <h1>
-          {character.name}
-        </h1>
-        <p>
-          {`Species: `}
-          {character.species}
-        </p>
-        <p>
-          {`Homeworld: `}
-          {character.homeworld}
-        </p>
-        <p>
-          {`Population: `}
-          {character.population}
-        </p>
+        <h1>{favorite.name}</h1>
+        <p> {favorite.homeworld} </p>
       </div>
-    )
+      )
     }
-  })
+    if (favorite.category === 'planets') {
+       return (
+      <div className="character-card card">
+        <h1>{favorite.planet}</h1>
+        <p> {favorite.population} </p>
+      </div>
+      )
+    }
+    if(favorite.category === 'vehicles') {
+       return (
+      <div className="character-card card">
+        <h1>{favorite.name}</h1>
+        <p> {favorite.class} </p>
+      </div>
+      )
+    }
+})
 
-  return(
-    <section className="cardContainer">
-      {cards}
-    </section>
-  )
+return (
+  <section className="cardContainer">
+    {cards}
+  </section>
+)
 
 }
 
 Favorites.propTypes = {
-  favorites: PropTypes.array.isRequired
-  removeFavorite: propTypes.func.isRequired
+  favorites: PropTypes.array.isRequired,
+  removeFavorite: PropTypes.func.isRequired
 }
 
 export default Favorites

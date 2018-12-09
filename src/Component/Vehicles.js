@@ -9,18 +9,18 @@ const Vehicles = ({ vehicles, addFavorites }) => {
         <button className="favorite-btn" type="button" onClick={() => addFavorites(vehicle.id)}>
           <i className="fas fa-jedi" />
         </button>
-        <h1>{vehicle.Name}</h1>
+        <h1>{vehicle.name}</h1>
         <p>
           {`Model: `}
-          {vehicle.Model}
+          {vehicle.model}
         </p>
         <p>
-          {`Class: `}`
-          {vehicle.Class}
+          {`Class: `}
+          {vehicle.class}
         </p>
         <p>
           {`Passengers: `}
-          {vehicle.Passengers}
+          {vehicle.passengers}
         </p>
       </div>)
   })

@@ -2,7 +2,7 @@ import React from 'react'
 import './styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Characters = ({ characters, addFavorites }) => {
+const Characters = ({ characters, addFavorites, activePage, favorites }) => {
   const cards = characters.map((character) => {
     return (
       <div className="character-card card">
@@ -21,12 +21,13 @@ const Characters = ({ characters, addFavorites }) => {
           {character.homeworld}
         </p>
         <p>
-          {`Population: `}`
+          {`Population: `}
           {character.population}
         </p>
       </div>
     )
   })
+
 
   return (
     <section className="cardContainer">
