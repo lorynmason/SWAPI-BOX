@@ -23,21 +23,27 @@ ShallowWrapper {
       "children": Array [
         <button
           onClick={[Function]}
+          type="button"
         >
           Characters
         </button>,
         <button
           onClick={[Function]}
+          type="button"
         >
           Planets
         </button>,
         <button
           onClick={[Function]}
+          type="button"
         >
           Vehicles
         </button>,
-        <button>
-          Favorites: 
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Favorites:
           0
         </button>,
       ],
@@ -51,6 +57,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Characters",
           "onClick": [Function],
+          "type": "button",
         },
         "ref": null,
         "rendered": "Characters",
@@ -63,6 +70,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Planets",
           "onClick": [Function],
+          "type": "button",
         },
         "ref": null,
         "rendered": "Planets",
@@ -75,6 +83,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Vehicles",
           "onClick": [Function],
+          "type": "button",
         },
         "ref": null,
         "rendered": "Vehicles",
@@ -86,13 +95,15 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Favorites: ",
+            "Favorites:",
             0,
           ],
+          "onClick": [Function],
+          "type": "button",
         },
         "ref": null,
         "rendered": Array [
-          "Favorites: ",
+          "Favorites:",
           0,
         ],
         "type": "button",
@@ -109,21 +120,27 @@ ShallowWrapper {
         "children": Array [
           <button
             onClick={[Function]}
+            type="button"
           >
             Characters
           </button>,
           <button
             onClick={[Function]}
+            type="button"
           >
             Planets
           </button>,
           <button
             onClick={[Function]}
+            type="button"
           >
             Vehicles
           </button>,
-          <button>
-            Favorites: 
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+            Favorites:
             0
           </button>,
         ],
@@ -137,6 +154,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Characters",
             "onClick": [Function],
+            "type": "button",
           },
           "ref": null,
           "rendered": "Characters",
@@ -149,6 +167,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Planets",
             "onClick": [Function],
+            "type": "button",
           },
           "ref": null,
           "rendered": "Planets",
@@ -161,6 +180,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Vehicles",
             "onClick": [Function],
+            "type": "button",
           },
           "ref": null,
           "rendered": "Vehicles",
@@ -172,13 +192,15 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Favorites: ",
+              "Favorites:",
               0,
             ],
+            "onClick": [Function],
+            "type": "button",
           },
           "ref": null,
           "rendered": Array [
-            "Favorites: ",
+            "Favorites:",
             0,
           ],
           "type": "button",
