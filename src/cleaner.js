@@ -16,7 +16,8 @@ export const cleanCharacterData = (data) => {
       population: character.population,
       species: character.species,
       name: character.name,
-      id: character.name
+      id: character.name,
+      category: 'characters'
     }
   })
 }
@@ -24,11 +25,12 @@ export const cleanCharacterData = (data) => {
 export const cleanVehiclesData = (data) => {
   return data.results.map((vehicle) => {
     return {
-      Name: vehicle.name,
-      Model: vehicle.model,
-      Class: vehicle.vehicle_class,
-      Passengers: vehicle.passengers,
-      id: vehicle.name
+      name: vehicle.name,
+      model: vehicle.model,
+      class: vehicle.vehicle_class,
+      passengers: vehicle.passengers,
+      id: vehicle.name,
+      category: 'vehicles'
     }
   })
 }
@@ -41,7 +43,10 @@ export const cleanPlanetData = (data) => {
       population: planet.population,
       climate: planet.climate,
       residents: planet.residents,
-      id: planet.name
+      id: planet.name,
+      category: 'planets'
     }
   })
+
+
 }

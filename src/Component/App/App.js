@@ -8,6 +8,7 @@ import Header from '../Header/Header'
 import Characters from '../Characters'
 import Vehicles from '../Vehicles'
 import Planets from '../Planets'
+import Favorites from '../Favorites'
 
 class App extends Component {
   constructor() {
@@ -79,8 +80,25 @@ class App extends Component {
     })
   }
 
-  addFavorites = (card) => {
-    console.log(card)
+  addFavorites = (cardId) => {
+    const { activePage, characters, vehicles, planets, favorites } = this.state
+    let newFavorite
+    if (activePage === 'characters') {
+      newFavorite = characters.find(character => character.id === cardId)
+    }
+    if (activePage === 'vehicles') {
+      newFavorite = vehicles.find(vehicle => vehicle.id === cardId)
+    }
+    if (activePage === 'planets') {
+      newFavorite = planets.find(planet => planet.id === cardId)
+    }
+    if(!favorites.includes(newFavorite)){
+      this.setState({favorites: [...this.state.favorites, newFavorite]})
+    }
+  }
+
+  removeFavorites = (cardId) => {
+    console.log(cardId)
   }
 
   addLocalStorage = (data) => {
@@ -162,6 +180,22 @@ class App extends Component {
             />
           </div>
         )
+      case 'favorites':
+        return (
+          <div className="App">
+            <Header />
+            <Nav
+              favorites={favorites}
+              changePage={this.changePage}
+            />
+            <Favorites
+              favorites={favorites}
+              removeFavorites={this.removeFavorites}
+              activePage={this.activePage}
+              addFavorites={this.addFavorites}
+            />
+          </div>
+          )
     }
   }
 }
