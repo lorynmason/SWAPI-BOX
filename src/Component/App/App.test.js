@@ -1,43 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
+import App from './App'
 
 describe('App', () => {
+  let wrapper
 
-  let wrapper;
-
-  beforeEach(()=> {
+  beforeEach(() => {
     wrapper = shallow(<App />)
   })
   // add other mocks!
 
   it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot()
   })
 
   it.skip('ComponentDidMount should update state with films array', () => {
-
-
   })
 
   describe('componentDidMount', () => {
     it.skip('calls cleanFilmsData', () => {
-      let cleanFilmsData = jest.fn();
-      componentDidMount();
+      const cleanFilmsData = jest.fn()
+      componentDidMount()
       expect(cleanFilmsData).toHaveBeenCalled()
     })
 
     it.skip('calls sets state with a film', () => {
-      let filmsData = jest.fn();
-      let cleanFilmsData = jest.fn();
-      let expectedState
-      componentDidMount();
-      expect().toHaveBeenCalled()
+      // const filmsData = jest.fn()
+      // const cleanFilmsData = jest.fn()
+      // const expectedState
+      // componentDidMount()
+      // expect().toHaveBeenCalled()
     })
   })
-
-
 })
-
-

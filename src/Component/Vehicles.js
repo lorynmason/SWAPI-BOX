@@ -1,26 +1,39 @@
 import React from 'react'
-import './styles/main.scss';
+import './styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Vehicles = ({vehicles}) => {
-  const cards = vehicles.map( vehicle => {
-    return (<div className="vehicle-card card">
-      <h1>{vehicle.Name}</h1>
-      <p>Model: {vehicle.Model}</p>
-      <p>Class: {vehicle.Class}</p>
-      <p>Passengers: {vehicle.Passengers}</p>
-   </div>)
+const Vehicles = ({ vehicles, addFavorites }) => {
+  const cards = vehicles.map((vehicle) => {
+    return (
+      <div className="vehicle-card card">
+        <button className="favorite-btn" type="button" onClick={() => addFavorites(vehicle.id)}>
+          <i className="fas fa-jedi" />
+        </button>
+        <h1>{vehicle.Name}</h1>
+        <p>
+          Model:
+          {vehicle.Model}
+        </p>
+        <p>
+          Class:
+          {vehicle.Class}
+        </p>
+        <p>
+          Passengers:
+          {vehicle.Passengers}
+        </p>
+      </div>)
   })
- 
+
   return (
-  <section className="cardContainer">
-    {cards}
-  </section>
+    <section className="cardContainer">
+      {cards}
+    </section>
   )
 }
 
 Vehicles.propTypes = {
-  
+  vehicles: PropTypes.array.isRequired
 }
 
 export default Vehicles

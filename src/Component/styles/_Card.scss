@@ -28,10 +28,16 @@
   border: none;
   background: transparent;
   float: right;
-  padding: 10px 15px 0px 0px;
+  padding: 15px 15px 0px 0px;
   i {
     font-size: 4em;
     color: #fff;
+    text-shadow: #000 2px 2px 4px;
+    &:hover {
+      text-shadow: #fff 2px 2px 4px;
+      color: #000;
+      cursor: url(https://cdn2.iconfinder.com/data/icons/starwars/icons/128/Darth%20Mauls%20light-saber.png), auto;
+    }
   }
 }
 

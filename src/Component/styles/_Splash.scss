@@ -9,6 +9,20 @@
   height: 1000px;
   overflow: hidden;
 }
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  top: -25px;
+  z-index: 1;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.945), 
+                  rgba(0, 0, 0, 0.781),
+                  rgba(0, 0, 0, 0.76), 
+                  transparent 70%);
+}
+
 .logo {
   display: flex;
   align-content: center;
@@ -19,14 +33,15 @@
     animation: flyin 2.5s linear;
     &:hover {
     filter: drop-shadow(rgba(51, 247, 33, 0.911) 2px 3px 10px);
-    cursor: pointer;
     height: 303px;
+    cursor: url(https://cdn2.iconfinder.com/data/icons/starwars/icons/128/Darth%20Mauls%20light-saber.png), auto;
     }
   } 
 }
 
 @keyframes flyin {
   0% {
+    height: 100vh;
     opacity: 0.1;
     top: -100px;
     transform: rotateX(20deg) translateZ(-2500px);
@@ -42,51 +57,43 @@
   }
 }
 
-.crawl {
-  margin-top: 170vh;
+.crawl-container {
   display: flex;
   justify-content: center;
   position: relative;
   height: 800px;
-  // color: #feda4a;
   color: #ebe6e6;
+  font-family: 'Pathway Gothic One', sans-serif;
   font-size: 1200%;
   font-weight: 600;
-  line-height: 300px;
   letter-spacing: 5px;
+  line-height: 150%;
+  perspective: 1500px;
   text-align: center;
   flex-direction: column;
+}
+
+.crawl {
+  position: relative;
   top: 99999px;
-  transform-origin: 50% 100%;
-  animation: crawl 45s linear;
+  transform-origin: 25% 100%;
+  animation: crawl-in 35s linear;
+  animation-delay: 3s;
   p {
-    margin: -70px 0px;
-    font-size: 60%;
+    font-size: 80%;
+    font-weight: bolder;
   }
 }
 
-.fade {
-  position: relative;
-  width: 100%;
-  min-height: 85vh;
-  top: -25px;
-  z-index: 1;
-  background-image: 
-  linear-gradient(rgba(0, 0, 0, 0.945), 
-                  rgba(0, 0, 0, 0.781),
-                  rgba(0, 0, 0, 0.76), 
-                  transparent 70%);
-}
-
-@keyframes crawl {
+@keyframes crawl-in {
 	0% {
-    top: -100px;
-    transform: perspective(1500px) rotateX(20deg)  translateZ(0);
+    top: 230vh;
+    transform: rotateX(20deg)  translateZ(0);
   }
   
 	100% { 
-    top: -6000px;
-    transform: perspective(800px) rotateX(23deg) translateZ(-2000px);
+    top: -7000px;
+    transform: rotateX(35deg) translateZ(-2000px);
   }
 }
 
@@ -109,13 +116,13 @@
   font-size: 3em;
   box-shadow: rgba(51, 247, 33, 0.8) 2px 3px 5px,
               rgba(51, 247, 33, 0.8) -2px -3px 5px;
-  animation: fadein 34s;
+  animation: fadein 30s;
   &:hover{
-    cursor: pointer;
     filter: brightness(105%);
     border: solid 2px rgb(253, 253, 253);
     box-shadow: rgba(51, 247, 33, 0.8) 4px 5px 30px,
     rgba(51, 247, 33, 0.8) -4px -5px 30px;
+    cursor: url(https://cdn2.iconfinder.com/data/icons/starwars/icons/128/Darth%20Mauls%20light-saber.png), auto;
   }
 }
 
