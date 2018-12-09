@@ -80,7 +80,7 @@ class App extends Component {
     })
   }
 
-  addFavorites = (cardId) => {
+  toggleFavorites = (cardId) => {
     const { activePage, characters, vehicles, planets, favorites } = this.state
     let newFavorite
     if (activePage === 'characters') {
@@ -92,8 +92,13 @@ class App extends Component {
     if (activePage === 'planets') {
       newFavorite = planets.find(planet => planet.id === cardId)
     }
-    if(!favorites.includes(newFavorite)){
-      this.setState({favorites: [...this.state.favorites, newFavorite]})
+    if(newFavorite && !favorites.includes(newFavorite)){
+       this.setState({favorites: [...this.state.favorites, newFavorite]})
+    } else {
+      const newState = favorites.filter((favorite) => {
+        return !favorite === newFavorite
+      })
+      this.setState({favorites: newState})
     }
   }
 
@@ -146,7 +151,7 @@ class App extends Component {
             />
             <Characters
               characters={characters}
-              addFavorites={this.addFavorites}
+              toggleFavorites={this.toggleFavorites}
             />    
           </div>
         )
@@ -161,7 +166,7 @@ class App extends Component {
             />
             <Vehicles
               vehicles={vehicles}
-              addFavorites={this.addFavorites}
+              toggleFavorites={this.toggleFavorites}
             />
           </div>
         )
@@ -176,7 +181,7 @@ class App extends Component {
             />
             <Planets
               planets={planets}
-              addFavorites={this.addFavorites}
+              toggleFavorites={this.toggleFavorites}
             />
           </div>
         )
@@ -192,7 +197,7 @@ class App extends Component {
               favorites={favorites}
               removeFavorites={this.removeFavorites}
               activePage={this.activePage}
-              addFavorites={this.addFavorites}
+              toggleFavorites={this.toggleFavorites}
             />
           </div>
           )

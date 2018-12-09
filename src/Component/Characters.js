@@ -2,11 +2,11 @@ import React from 'react'
 import './styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Characters = ({ characters, addFavorites, activePage, favorites }) => {
+const Characters = ({ characters, toggleFavorites, activePage, favorites }) => {
   const cards = characters.map((character) => {
     return (
       <div className="character-card card">
-        <button className="favorite-btn" type="button" onClick={() => addFavorites(character.id)}>
+        <button className="favorite-btn" type="button" onClick={() => toggleFavorites(character.id)}>
           <i className="fas fa-jedi" />
         </button>
         <h1>
