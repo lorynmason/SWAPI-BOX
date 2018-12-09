@@ -15,7 +15,7 @@ const Vehicles = ({ vehicles, addFavorites }) => {
           {vehicle.model}
         </p>
         <p>
-          {`Class: `}
+          {`Class: `} 
           {vehicle.class}
         </p>
         <p>
