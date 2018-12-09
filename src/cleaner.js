@@ -3,11 +3,10 @@ export const cleanFilmsData = (data) => {
     return {
       title: film.title,
       text: film.opening_crawl,
-      date: film.release_date 
+      date: film.release_date
     }
   })
   return films
-
 }
 
 export const cleanCharacterData = (data) => {
@@ -23,7 +22,7 @@ export const cleanCharacterData = (data) => {
 }
 
 export const cleanVehiclesData = (data) => {
-  return data.results.map(vehicle => {
+  return data.results.map((vehicle) => {
     return {
       Name: vehicle.name,
       Model: vehicle.model,
@@ -35,7 +34,7 @@ export const cleanVehiclesData = (data) => {
 }
 
 export const cleanPlanetData = (data) => {
-  return data.map( planet => {
+  return data.map((planet) => {
     return {
       planet: planet.name,
       terrain: planet.terrain,
@@ -46,5 +45,3 @@ export const cleanPlanetData = (data) => {
     }
   })
 }
- 
-
