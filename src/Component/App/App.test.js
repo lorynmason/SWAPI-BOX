@@ -25,8 +25,8 @@ describe('App', () => {
     })
 
     it.skip('calls sets state with a film', () => {
-      const filmsData = jest.fn()
-      const cleanFilmsData = jest.fn()
+      // const filmsData = jest.fn()
+      // const cleanFilmsData = jest.fn()
       // const expectedState
       // componentDidMount()
       // expect().toHaveBeenCalled()

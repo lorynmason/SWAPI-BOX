@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import '../styles/main.scss';
-import * as API from '../../apiCalls.js';
-import * as Cleaner from '../../cleaner.js';
-import Nav from '../Nav/Nav.js';
-import Splash from '../Splash/Splash.js';
-// import CardContainer from '../CardContainer/CardContainer.js';
-import Header from '../Header/Header.js';
-import Characters from '../Characters.js';
-import Vehicles from '../Vehicles.js';
-import Planets from '../Planets.js';
+import React, { Component } from 'react'
+import '../styles/main.scss'
+import * as API from '../../apiCalls'
+import * as Cleaner from '../../cleaner'
+import Nav from '../Nav/Nav'
+import Splash from '../Splash/Splash'
+import Header from '../Header/Header'
+import Characters from '../Characters'
+import Vehicles from '../Vehicles'
+import Planets from '../Planets'
 
 class App extends Component {
   constructor() {
@@ -20,35 +19,35 @@ class App extends Component {
       characters: [],
       vehicles: [],
       planets: [],
-      localStorageKeys:['characters', 'planets', 'vehicles', 'favorites', 'films']
+      localStorageKeys: ['characters', 'planets', 'vehicles', 'favorites', 'films']
     }
   }
 
   async componentDidMount() {
-    this.getLocalStorage(this.state.localStorageKeys)
-    if(this.state.films.length === 0) {
+    const { localStorageKeys, films } = this.state
+    this.getLocalStorage(localStorageKeys)
+    if (films.length === 0) {
       const filmsData = await API.fetchScroll()
       const films = Cleaner.cleanFilmsData(filmsData)
-      this.setState({films}, this.addLocalStorage(films)) 
+      this.setState({ films }, this.addLocalStorage(films))
     }
   }
 
   async componentDidUpdate() {
-    const { characters, activePage, vehicles, planets } = this.state;
-    if(activePage === 'characters' && characters.length === 0) {
-      this.setCharacterData();
+    const { characters, activePage, vehicles, planets } = this.state
+    if (activePage === 'characters' && characters.length === 0) {
+      this.setCharacterData()
     }
-    if(activePage === 'vehicles' && vehicles.length === 0) {
-      this.setVehicleData();
+    if (activePage === 'vehicles' && vehicles.length === 0) {
+      this.setVehicleData()
     }
-    if(activePage === 'planets' && planets.length === 0) {
-      this.setPlanetData();
+    if (activePage === 'planets' && planets.length === 0) {
+      this.setPlanetData()
     }
   }
 
   exitSplash = () => {
     this.setState({
-      splash: false,
       activePage: 'home'
     })
   }
@@ -58,20 +57,20 @@ class App extends Component {
     const characterData2 = await API.fetchCharactersHomeWorld(characterData)
     const characterData3 = await API.fetchCharactersSpecies(characterData2)
     const characters = await Cleaner.cleanCharacterData(characterData3)
-    this.setState({characters}, this.addLocalStorage(characters))
+    this.setState({ characters }, this.addLocalStorage(characters))
   }
 
   setVehicleData = async () => {
     const vehicleData = await API.fetchVehicles()
     const vehicles = Cleaner.cleanVehiclesData(vehicleData)
-    this.setState({vehicles}, this.addLocalStorage(vehicles))
+    this.setState({ vehicles }, this.addLocalStorage(vehicles))
   }
 
   setPlanetData = async () => {
     const planetData = await API.fetchPlanets()
     const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
     const planets = Cleaner.cleanPlanetData(uncleanPlanets)
-    this.setState({planets}, this.addLocalStorage(planets))
+    this.setState({ planets }, this.addLocalStorage(planets))
   }
 
   changePage = (str) => {
@@ -85,75 +84,86 @@ class App extends Component {
   }
 
   addLocalStorage = (data) => {
-    data = JSON.stringify(data);
-    localStorage.setItem(`${this.state.activePage}`, data)
+    const { activePage } = this.state
+    const dataJson = JSON.stringify(data)
+    localStorage.setItem(`${activePage}`, dataJson)
   }
 
   getLocalStorage = (keyNames) => {
-    const parsedData = keyNames.map(keyName =>{
-      const retrievedData = localStorage.getItem(keyName);
+    return keyNames.map((keyName) => {
+      const retrievedData = localStorage.getItem(keyName)
       const parsedData = JSON.parse(retrievedData)
-      if(parsedData){
-        this.setState({[keyName]: parsedData})}
+      if (parsedData) {
+        this.setState({ [keyName]: parsedData })
+      }
     })
   }
-  
+
   render() {
-
-    switch(this.state.activePage) {
-
+    const { activePage, films, favorites, characters, vehicles, planets } = this.state
+    switch (activePage) {
       case 'splash':
-      return (
-      <div className="splash">
-      <Splash exitSplash={this.exitSplash} films={this.state.films}/>
-      </div>
-    );
+        return (
+          <Splash exitSplash={this.exitSplash} films={films} />
+        )
 
       case 'home':
-      return (
-        <div className="App">
-          <Header/>
-          <Nav favorites={this.state.favorites} 
-                changePage={this.changePage}/>
-        </div>
-      )
+        return (
+          <div className="App">
+            <Header />
+            <Nav
+              favorites={favorites}
+              changePage={this.changePage}
+            />
+          </div>
+        )
 
       case 'characters':
-      return (
-        <div className="App">
-          <Header/>
-          <Nav favorites={this.state.favorites} 
-                changePage={this.changePage}/>
-          <Characters characters={this.state.characters}
-                      addFavorites={this.addFavorites}/>
-                           
-        </div>
-      )
-      
+        return (
+          <div className="App">
+            <Header />
+            <Nav
+              favorites={favorites}
+              changePage={this.changePage}
+            />
+            <Characters
+              characters={characters}
+              addFavorites={this.addFavorites}
+            />    
+          </div>
+        )
+
       case 'vehicles':
-      return (
-        <div className="App">
-          <Header/>
-          <Nav favorites={this.state.favorites} 
-                changePage={this.changePage}/>
-          <Vehicles vehicles={this.state.vehicles}
-                    addFavorites={this.addFavorites}/>              
-        </div>
-      )
+        return (
+          <div className="App">
+            <Header />
+            <Nav
+              favorites={favorites}
+              changePage={this.changePage}
+            />
+            <Vehicles
+              vehicles={vehicles}
+              addFavorites={this.addFavorites}
+            />
+          </div>
+        )
 
       case 'planets':
-      return (
-        <div className="App">
-          <Header/>
-          <Nav favorites={this.state.favorites} 
-                changePage={this.changePage}/>  
-          <Planets planets={this.state.planets}
-                    addFavorites={this.addFavorites}/>         
-        </div>
-      )
-
+        return (
+          <div className="App">
+            <Header />
+            <Nav
+              favorites={favorites}
+              changePage={this.changePage}
+            />
+            <Planets
+              planets={planets}
+              caddFavorites={this.addFavorites}
+            />
+          </div>
+        )
     }
   }
 }
 
-export default App;
+export default App
