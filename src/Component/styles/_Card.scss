@@ -42,6 +42,16 @@
   }
 }
 
-
-
-
+.yoda-card {
+  background: url(https://www.sideshowtoy.com/wp-content/uploads/2014/05/400080-product-feature.jpg);
+  width: 650px;
+  height: 300px;
+  background-size: cover;
+  justify-self: center;
+  h1 {
+    color: #000;
+    margin: 210px 50px 0px;
+    text-shadow: #fff -1px 1px,
+                  #fff 1px -1px;
+  }
+}

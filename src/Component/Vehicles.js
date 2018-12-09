@@ -2,11 +2,11 @@ import React from 'react'
 import './styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Vehicles = ({ vehicles, addFavorites }) => {
+const Vehicles = ({ vehicles, toggleFavorites }) => {
   const cards = vehicles.map((vehicle) => {
     return (
       <div className="vehicle-card card">
-        <button className="favorite-btn" type="button" onClick={() => addFavorites(vehicle.id)}>
+        <button className="favorite-btn" type="button" onClick={() => toggleFavorites(vehicle.id)}>
           <i className="fas fa-jedi" />
         </button>
         <h1>{vehicle.name}</h1>
