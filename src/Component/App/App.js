@@ -9,6 +9,8 @@ import Characters from '../Characters'
 import Vehicles from '../Vehicles'
 import Planets from '../Planets'
 import Favorites from '../Favorites'
+import { Route, NavLink, Switch } from 'react-router-dom'
+import Home from '../Home'
 
 class App extends Component {
   constructor() {
@@ -123,85 +125,116 @@ class App extends Component {
     })
   }
 
+  // render() {
+  //   const { activePage, films, favorites, characters, vehicles, planets } = this.state
+  //   switch (activePage) {
+  //     case 'splash':
+  //       return (
+  //         <Splash exitSplash={this.exitSplash} films={films} />
+  //       )
+
+  //     case 'home':
+  //       return (
+  //         <div className="App">
+  //           <Header />
+  //           <Nav
+  //             favorites={favorites}
+  //             changePage={this.changePage}
+  //           />
+  //         </div>
+  //       )
+
+  //     case 'characters':
+  //       return (
+  //         <div className="App">
+  //           <Header />
+  //           <Nav
+  //             favorites={favorites}
+  //             changePage={this.changePage}
+  //           />
+  //           <Characters
+  //             characters={characters}
+  //             toggleFavorites={this.toggleFavorites}
+  //           />    
+  //         </div>
+  //       )
+
+  //     case 'vehicles':
+  //       return (
+  //         <div className="App">
+  //           <Header />
+  //           <Nav
+  //             favorites={favorites}
+  //             changePage={this.changePage}
+  //           />
+  //           <Vehicles
+  //             vehicles={vehicles}
+  //             toggleFavorites={this.toggleFavorites}
+  //           />
+  //         </div>
+  //       )
+
+  //     case 'planets':
+  //       return (
+  //         <div className="App">
+  //           <Header />
+  //           <Nav
+  //             favorites={favorites}
+  //             changePage={this.changePage}
+  //           />
+  //           <Planets
+  //             planets={planets}
+  //             toggleFavorites={this.toggleFavorites}
+  //           />
+  //         </div>
+  //       )
+  //     case 'favorites':
+  //       return (
+  //         <div className="App">
+  //           <Header />
+  //           <Nav
+  //             favorites={favorites}
+  //             changePage={this.changePage}
+  //           />
+  //           <Favorites
+  //             favorites={favorites}
+  //             activePage={this.activePage}
+  //             toggleFavorites={this.toggleFavorites}
+  //           />
+  //         </div>
+  //         )
+  //   }
+  // }
+
   render() {
     const { activePage, films, favorites, characters, vehicles, planets } = this.state
-    switch (activePage) {
-      case 'splash':
-        return (
-          <Splash exitSplash={this.exitSplash} films={films} />
-        )
-
-      case 'home':
-        return (
-          <div className="App">
-            <Header />
-            <Nav
-              favorites={favorites}
-              changePage={this.changePage}
-            />
+    return(
+      <div className="App">
+        <div className="Header-section">
+          <Header>
+          </Header>
+          <div className="nav">
+            <NavLink to='/characters' className='nav-link' onClick={() => this.changePage('characters')}>Characters</NavLink>
+            <NavLink to='/planets' className='nav-link' onClick={() => this.changePage('planets')}>Planets</NavLink>
+            <NavLink to='/vehicles' className='nav-link' onClick={() => this.changePage('vehicles')}>Vehicles</NavLink>
+            <NavLink to='/favorites' className='nav-link' onClick={() => this.changePage('favorites')}>Favorites</NavLink>
           </div>
-        )
-
-      case 'characters':
-        return (
-          <div className="App">
-            <Header />
-            <Nav
-              favorites={favorites}
-              changePage={this.changePage}
+          <Switch>
+            <Route exact path='/' render={(props) => <Splash {...props} exitSplash={this.exitSplash} films={films} />}
             />
-            <Characters
-              characters={characters}
-              toggleFavorites={this.toggleFavorites}
-            />    
-          </div>
-        )
-
-      case 'vehicles':
-        return (
-          <div className="App">
-            <Header />
-            <Nav
-              favorites={favorites}
-              changePage={this.changePage}
+            <Route path='/home' component={Home}/> 
+            <Route path='/characters' render={(props) => <Characters {...props} characters={characters} toggleFavorites={this.toggleFavorites} />} 
             />
-            <Vehicles
-              vehicles={vehicles}
-              toggleFavorites={this.toggleFavorites}
+            <Route path='/planets' render={(props) => <Planets {...props} planets={planets} toggleFavorites={this.toggleFavorites} />}
             />
-          </div>
-        )
-
-      case 'planets':
-        return (
-          <div className="App">
-            <Header />
-            <Nav
-              favorites={favorites}
-              changePage={this.changePage}
+            <Route path='/vehicles' render={(props) => <Vehicles {...props} vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
             />
-            <Planets
-              planets={planets}
-              toggleFavorites={this.toggleFavorites}
-            />
-          </div>
-        )
-      case 'favorites':
-        return (
-          <div className="App">
-            <Header />
-            <Nav
-              favorites={favorites}
-              changePage={this.changePage}
-            />
-            <Favorites
-              favorites={favorites}
-              activePage={this.activePage}
-              toggleFavorites={this.toggleFavorites}
-            />
-          </div>
-          )
-    }
+            <Route path='/favorites' render={(props) => <Favorites {...props} favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
+            /> 
+          </Switch>
+        </div>
+      </div>
+    )
   }
 }
 

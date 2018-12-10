@@ -1,4 +1,4 @@
-nav {
+.nav {
   background: rgba(3, 246, 3, 0.514);
   height: 60px;
   border-top: solid 2px rgba(51, 247, 33, 0.8);
@@ -9,7 +9,8 @@ nav {
   box-shadow:  rgba(89, 250, 74, 0.61) 2px 5px 6px,
   rgba(89, 250, 74, 0.61) -2px -5px 6px;
   cursor: url(http://www.iconninja.com/files/415/125/239/light-saber-obi-wans-icon.png), auto;
-  button {
+  .nav-link {
+    text-decoration: none;
     background: none;
     border: none;
     outline: none;
