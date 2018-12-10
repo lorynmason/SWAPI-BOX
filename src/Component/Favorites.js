@@ -4,23 +4,36 @@ import PropTypes from 'prop-types'
 
 const Favorites = ({ favorites, toggleFavorites }) => {
   let cards;
+  let infoValue
+  let infoKey
   if(favorites.length > 0) {
       cards = favorites.map((favorite) => { 
+        const infoValue = Object.values(favorite.info).map((fvInfo) => {
+          return(
+            <p>{fvInfo}</p>
+          )
+        })
+        const infoKey = Object.keys(favorite.info).map((fvInfo)=> {
+          return(
+            <p>{fvInfo}</p>
+            )
+        })
+
+
         return(
           <div className="character-card card" key={favorite.id}>
             <button className="favorite-btn" type="button" onClick={() => toggleFavorites(favorite.id)}>
               <i className="fas fa-jedi" />
             </button>
             <h1>{favorite.name}</h1>
-            <p>{favorite.homeworld}</p>
-            <p>{favorite.model}</p>
-            <p>{favorite.terrain}</p>
-            <p>{favorite.species}</p>
-            <p>{favorite.class}</p>
-            <p>{favorite.passengers}</p>
-            <p>{favorite.climate}</p>
-            <p>{favorite.population}</p>
-            <p>{favorite.residents}</p>
+            <div className='info'>
+              <p>
+                {infoKey}
+              </p>
+              <p>
+                {infoValue}
+              </p>
+            </div>
           </div>
         )
       })
