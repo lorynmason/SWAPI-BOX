@@ -18,7 +18,7 @@ const Planets = ({ planets, toggleFavorites }) => {
           <i className="fas fa-jedi" />
         </button>
         <h1>
-          {planet.planet}
+          {planet.name}
         </h1>
         <p>
           {`Climate: `}

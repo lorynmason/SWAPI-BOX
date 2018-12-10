@@ -125,89 +125,13 @@ class App extends Component {
     })
   }
 
-  // render() {
-  //   const { activePage, films, favorites, characters, vehicles, planets } = this.state
-  //   switch (activePage) {
-  //     case 'splash':
-  //       return (
-  //         <Splash exitSplash={this.exitSplash} films={films} />
-  //       )
-
-  //     case 'home':
-  //       return (
-  //         <div className="App">
-  //           <Header />
-  //           <Nav
-  //             favorites={favorites}
-  //             changePage={this.changePage}
-  //           />
-  //         </div>
-  //       )
-
-  //     case 'characters':
-  //       return (
-  //         <div className="App">
-  //           <Header />
-  //           <Nav
-  //             favorites={favorites}
-  //             changePage={this.changePage}
-  //           />
-  //           <Characters
-  //             characters={characters}
-  //             toggleFavorites={this.toggleFavorites}
-  //           />    
-  //         </div>
-  //       )
-
-  //     case 'vehicles':
-  //       return (
-  //         <div className="App">
-  //           <Header />
-  //           <Nav
-  //             favorites={favorites}
-  //             changePage={this.changePage}
-  //           />
-  //           <Vehicles
-  //             vehicles={vehicles}
-  //             toggleFavorites={this.toggleFavorites}
-  //           />
-  //         </div>
-  //       )
-
-  //     case 'planets':
-  //       return (
-  //         <div className="App">
-  //           <Header />
-  //           <Nav
-  //             favorites={favorites}
-  //             changePage={this.changePage}
-  //           />
-  //           <Planets
-  //             planets={planets}
-  //             toggleFavorites={this.toggleFavorites}
-  //           />
-  //         </div>
-  //       )
-  //     case 'favorites':
-  //       return (
-  //         <div className="App">
-  //           <Header />
-  //           <Nav
-  //             favorites={favorites}
-  //             changePage={this.changePage}
-  //           />
-  //           <Favorites
-  //             favorites={favorites}
-  //             activePage={this.activePage}
-  //             toggleFavorites={this.toggleFavorites}
-  //           />
-  //         </div>
-  //         )
-  //   }
-  // }
-
   render() {
     const { activePage, films, favorites, characters, vehicles, planets } = this.state
+    if (activePage === 'splash') {
+      return (
+        <Splash exitSplash={this.exitSplash} films={films} />
+      )
+    }
     return(
       <div className="App">
         <div className="Header-section">
@@ -220,9 +144,7 @@ class App extends Component {
             <NavLink to='/favorites' className='nav-link' onClick={() => this.changePage('favorites')}>Favorites</NavLink>
           </div>
           <Switch>
-            <Route exact path='/' render={(props) => <Splash {...props} exitSplash={this.exitSplash} films={films} />}
-            />
-            <Route path='/home' component={Home}/> 
+            <Route exact path='/' component={Home}/> 
             <Route path='/characters' render={(props) => <Characters {...props} characters={characters} toggleFavorites={this.toggleFavorites} />} 
             />
             <Route path='/planets' render={(props) => <Planets {...props} planets={planets} toggleFavorites={this.toggleFavorites} />}
