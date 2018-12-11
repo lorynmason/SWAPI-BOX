@@ -58,4 +58,9 @@ describe('Splash', () => {
 
     expect(mockExitSplash).toHaveBeenCalled()
   })
+
+  it('Should render backgound if no film', () => {
+    mockfilms = []
+    expect(wrapper).toMatchSnapshot()
+  })
 })
