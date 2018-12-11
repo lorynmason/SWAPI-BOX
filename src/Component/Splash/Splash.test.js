@@ -61,6 +61,7 @@ describe('Splash', () => {
 
   it('Should render backgound if no film', () => {
     mockfilms = []
+    wrapper = shallow(<Splash exitSplash={mockExitSplash} films={mockfilms} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
