@@ -43,20 +43,20 @@ describe('cleaner', () => {
       ]
       const expected = [
         {
-          homeworld: 'Earth',
-          population: '123456789',
-          species: 'human',
-          name: 'bob',
           id: 'bob',
-          category: 'characters'
+          category: 'characters',
+          info: {Homeworld: 'Homeworld:  Earth',
+            Population: 'Population:  123456789',
+            Species: 'Species:  human',
+            Name: 'Name:  bob'}
         },
         {
-          homeworld: 'Venus',
-          population: '32',
-          species: 'K-9',
-          name: 'we call him alien',
           id: 'we call him alien',
-          category: 'characters'
+          category: 'characters',
+          info: {Homeworld: 'Homeworld:  Venus',
+            Population: 'Population:  32',
+            Species: 'Species:  K-9',
+            Name: 'Name:  we call him alien'}
         }
       ]
 
@@ -83,20 +83,20 @@ describe('cleaner', () => {
         }]}
       const expected = [
         {
-          name: 'Ford',
-          model: 'Explorer',
-          class: 'wheeled',
-          passengers: 3,
           id: 'Ford',
-          category: 'vehicles'
+          category: 'vehicles',
+          info: {Name: 'Name:  Ford',
+                    Model: 'Model:  Explorer',
+                    Class: 'Class:  wheeled',
+                    Passengers: 'Passengers:  3'}
         },
         {
-          name: 'Chevy',
-          model: 'Tahoe',
-          class: 'wheeled',
-          passengers: 3,
           id: 'Chevy',
-          category: 'vehicles'
+          category: 'vehicles',
+          info: {Name: 'Name:  Chevy',
+                    Model: 'Model:  Tahoe',
+                    Class: 'Class:  wheeled',
+                    Passengers: 'Passengers:  3'}
         }]
       expect(Cleaner.cleanVehiclesData(mockVehicleData)).toEqual(expected)
     })
@@ -121,21 +121,23 @@ describe('cleaner', () => {
       somethingToRemove: 'blah blah'
       }]
 
-      const expected = [{planet: 'Earth',
-      terrain: 'Rocky',
-      population: 34,
-      climate: 'hot',
-      residents: ['bob', 'sally', 'yoda'],
-      id: 'Earth',
-      category: 'planets'
+      const expected = [
+      {id: 'Earth',
+      category: 'planets',
+      info: {Name: 'Name:  Earth',
+            Terrain: 'Terrain:  Rocky',
+            Population: 'Population:  34',
+            Climate: 'Climate:  hot',
+            Residents: 'Residents:  bob,sally,yoda'}
       },
-      {planet: 'Pluto',
-      terrain: 'water',
-      population: 1,
-      climate: 'cold',
-      residents: [],
+      {
       id: 'Pluto',
-      category: 'planets'
+      category: 'planets',
+      info: {Name: 'Name:  Pluto',
+            Terrain: 'Terrain:  water',
+            Population: 'Population:  1',
+            Climate: 'Climate:  cold',
+            Residents: 'Residents:  No known occupants'}
     }]
       expect(Cleaner.cleanPlanetData(mockPlanetData)).toEqual(expected)
     })

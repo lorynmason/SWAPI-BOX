@@ -6,12 +6,12 @@ const Characters = ({ characters, toggleFavorites, activePage, favorites }) => {
   const cards = characters.map((character) => {
     const infoValue = Object.values(character.info).map((chInfo) => {
       return(
-        <p>{chInfo}</p>
+        <p key={chInfo[0]}>{chInfo}</p>
         )
     })
 
     return (
-      <div className="character-card card">
+      <div className="character-card card" key={character.id}>
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(character.id)}>
           <i className="fas fa-jedi" />
         </button>
@@ -34,7 +34,9 @@ const Characters = ({ characters, toggleFavorites, activePage, favorites }) => {
 
 Characters.propTypes = {
   characters: PropTypes.array.isRequired,
-  addFavorites: PropTypes.func.isRequired
+  toggleFavorites: PropTypes.func.isRequired,
+  favorites: PropTypes.array.isRequired,
+  activePage: PropTypes.string.isRequired
 }
 
 export default Characters

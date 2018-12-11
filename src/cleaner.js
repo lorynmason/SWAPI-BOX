@@ -30,7 +30,7 @@ export const cleanVehiclesData = (data) => {
       category: 'vehicles',
       info: {Name: `Name:  ${vehicle.name}`,
             Model: `Model:  ${vehicle.model}`,
-            Class: `Vehicle:  ${vehicle.vehicle_class}`,
+            Class: `Class:  ${vehicle.vehicle_class}`,
             Passengers: `Passengers:  ${vehicle.passengers}`}
     }
   })
@@ -47,7 +47,7 @@ export const cleanPlanetData = (data) => {
       category: 'planets',
       info: {Name: `Name:  ${planet.name}`,
             Terrain: `Terrain:  ${planet.terrain}`,
-            Population: `Population: ${planet.population}`,
+            Population: `Population:  ${planet.population}`,
             Climate: `Climate:  ${planet.climate}`,
             Residents: `Residents:  ${planet.residents}`}
     }

@@ -10,7 +10,7 @@ const Favorites = ({ favorites, toggleFavorites }) => {
       cards = favorites.map((favorite) => { 
         const infoValue = Object.values(favorite.info).map((fvInfo) => {
           return(
-            <p>{fvInfo}</p>
+            <p key={favorite.info.Name}>{fvInfo}</p>
           )
         })
 
