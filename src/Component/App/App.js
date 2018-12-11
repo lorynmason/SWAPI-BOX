@@ -72,6 +72,7 @@ class App extends Component {
   setPlanetData = async () => {
     const planetData = await API.fetchPlanets()
     const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
+    console.log(uncleanPlanets)
     const planets = Cleaner.cleanPlanetData(uncleanPlanets)
     this.setState({ planets }, this.addLocalStorage(planets))
   }
@@ -135,8 +136,7 @@ class App extends Component {
     return(
       <div className="App">
         <div className="Header-section">
-          <Header>
-          </Header>
+          <Header/>
           <div className="nav">
             <NavLink to='/characters' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('characters')}>Characters</NavLink>
             <NavLink to='/planets' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('planets')}>Planets</NavLink>
@@ -145,13 +145,13 @@ class App extends Component {
           </div>
           <Switch>
             <Route exact path='/' component={Home}/> 
-            <Route path='/characters' render={(props) => <Characters {...props} characters={characters} toggleFavorites={this.toggleFavorites} />} 
+            <Route path='/characters' render={() => <Characters characters={characters} toggleFavorites={this.toggleFavorites} />} 
             />
-            <Route path='/planets' render={(props) => <Planets {...props} planets={planets} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/planets' render={() => <Planets planets={planets} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/vehicles' render={(props) => <Vehicles {...props} vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/vehicles' render={() => <Vehicles vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/favorites' render={(props) => <Favorites {...props} favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/favorites' render={() => <Favorites favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
             /> 
           </Switch>
         </div>
