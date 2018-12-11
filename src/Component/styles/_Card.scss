@@ -8,7 +8,7 @@
                rgba(89, 250, 74, 0.61) 2px 5px 6px,
                rgba(89, 250, 74, 0.61) -2px 5px 6px,
                rgba(89, 250, 74, 0.61) 2px -5px 6px,
-               rgba(89, 250, 74, 0.61) -2px -5px 6px ;
+               rgba(89, 250, 74, 0.61) -2px -5px 6px ;            
   h1{
     color: white;
     font-size: 3em;
@@ -19,8 +19,13 @@
   p {
     font-weight: bolder;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 0px 0px 0px 20px;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

@@ -4,14 +4,24 @@ import PropTypes from 'prop-types'
 
 const Planets = ({ planets, toggleFavorites }) => {
   const cards = planets.map((planet) => {
-    let resident
-    if (planet.residents.length === 0) {
-      resident = 'NO KNOWN OCCUPANTS'
-    } else {
-      resident = planet.residents.map((resident) => {
-        return resident + ' | '
-      })
-    }
+    const infoValue = Object.values(planet.info).map((plInfo) => {
+      let Resident
+      if (planet.info.Residents.length === 0) {
+        Resident = 'NO KNOWN OCCUPANTS'
+      } else {
+        Resident = planet.info.Residents.map((Resident) => {
+          return Resident + ' | '
+        })
+      }
+      return (
+        <p>{plInfo}</p>
+        )
+    })
+    const infoKey = Object.keys(planet.info).map((plInfo) => {
+      return(
+        <p>{plInfo}</p>
+        )
+    })
     return (
       <div className="planet-card card">
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(planet.id)}>
@@ -20,22 +30,14 @@ const Planets = ({ planets, toggleFavorites }) => {
         <h1>
           {planet.name}
         </h1>
-        <p>
-          {`Climate: `}
-          {planet.climate}
-        </p>
-        <p>
-          {`Population: `}
-          {planet.population}
-        </p>
-        <p>
-          {`Residents: `}
-          {resident}
-        </p>
-        <p>
-          {`Terrain: `}
-          {planet.terrain}
-        </p>
+        <div className='info'>
+          <p>
+            {infoKey}
+          </p>
+          <p>
+            {infoValue}
+          </p>
+        </div>
       </div>
     )
   })
