@@ -1,4 +1,5 @@
 import * as API from './apiCalls'
+import { exec } from 'child_process';
 
 describe('API', () => {
   let mockFilmsData
@@ -10,6 +11,7 @@ describe('API', () => {
   let mockCharacterData2
   let mockCharacterData2End
   let mockPlanetData
+  let rawPlanetData
 
   describe('fetchScroll', () => {
     beforeEach(() => {
@@ -299,6 +301,9 @@ describe('API', () => {
           terrain: 'grasslands, mountains'
         }
       ]
+      rawPlanetData = {
+        results: mockPlanetData
+      }
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockPlanetData)
@@ -325,6 +330,28 @@ describe('API', () => {
           ok: false
         })
       })
+      await expect(API.fetchPlanets(url)).rejects.toEqual(expectedError)
+    })
+
+    it.skip('fetchNestedInfoPlanets should be called with the correct params', async () => {
+      const results = [{
+        climate: "temperate",
+        created: "2014-12-10T11:35:48.479000Z",
+        diameter: "12500",
+        edited: "2014-12-20T20:58:18.420000Z",
+        films: ["https://swapi.co/api/films/6/", "https://swapi.co/api/films/1/"],
+        gravity: "1 standard",
+        name: "Alderaan",
+        orbital_period: "364",
+        population: "2000000000",
+        residents:["Leia Organa", "Bail Prestor Organa", "Raymus Antilles"],
+        rotation_period: "24",
+        surface_water: "40",
+        terrain: "grasslands, mountains",
+        url: "https://swapi.co/api/planets/2/"
+      }]
+      
+      expect(await API.fetchNestedInfoPlanets(rawPlanetData)).toEqual(results)
     })
   })
 })

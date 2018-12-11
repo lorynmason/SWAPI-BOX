@@ -1,11 +1,10 @@
 import React from 'react'
-import './styles/main.scss'
+import '../styles/main.scss'
 import PropTypes from 'prop-types'
 
 const Planets = ({ planets, toggleFavorites }) => {
   const cards = planets.map((planet) => {
     const infoValue = Object.values(planet.info).map((plInfo) => {
-      let Resident = planet.info.Residents
       return (
         <p>{plInfo}</p>
         )

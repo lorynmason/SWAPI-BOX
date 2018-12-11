@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 import '../styles/main.scss'
 import * as API from '../../apiCalls'
 import * as Cleaner from '../../cleaner'
-import Nav from '../Nav/Nav'
 import Splash from '../Splash/Splash'
 import Header from '../Header/Header'
 import Characters from '../Characters'
-import Vehicles from '../Vehicles'
-import Planets from '../Planets'
+import Vehicles from '../Vehicles/Vehicles'
+import Planets from '../Planets/Planets'
 import Favorites from '../Favorites'
+import Home from '../Home/Home'
 import { Route, NavLink, Switch } from 'react-router-dom'
-import Home from '../Home'
 
 class App extends Component {
   constructor() {
@@ -72,6 +71,7 @@ class App extends Component {
   setPlanetData = async () => {
     const planetData = await API.fetchPlanets()
     const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
+    console.log(uncleanPlanets)
     const planets = Cleaner.cleanPlanetData(uncleanPlanets)
     this.setState({ planets }, this.addLocalStorage(planets))
   }
@@ -135,8 +135,7 @@ class App extends Component {
     return(
       <div className="App">
         <div className="Header-section">
-          <Header>
-          </Header>
+          <Header/>
           <div className="nav">
             <NavLink to='/characters' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('characters')}>Characters</NavLink>
             <NavLink to='/planets' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('planets')}>Planets</NavLink>
@@ -145,13 +144,13 @@ class App extends Component {
           </div>
           <Switch>
             <Route exact path='/' component={Home}/> 
-            <Route path='/characters' render={(props) => <Characters {...props} characters={characters} toggleFavorites={this.toggleFavorites} />} 
+            <Route path='/characters' render={() => <Characters characters={characters} toggleFavorites={this.toggleFavorites} />} 
             />
-            <Route path='/planets' render={(props) => <Planets {...props} planets={planets} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/planets' render={() => <Planets planets={planets} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/vehicles' render={(props) => <Vehicles {...props} vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/vehicles' render={() => <Vehicles vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/favorites' render={(props) => <Favorites {...props} favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/favorites' render={() => <Favorites favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
             /> 
           </Switch>
         </div>
