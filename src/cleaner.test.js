@@ -48,7 +48,7 @@ describe('cleaner', () => {
           info: {Homeworld: 'Homeworld:  Earth',
             Population: 'Population:  123456789',
             Species: 'Species:  human',
-            Name: 'Name:  bob'}
+            Name: 'bob'}
         },
         {
           id: 'we call him alien',
@@ -56,7 +56,7 @@ describe('cleaner', () => {
           info: {Homeworld: 'Homeworld:  Venus',
             Population: 'Population:  32',
             Species: 'Species:  K-9',
-            Name: 'Name:  we call him alien'}
+            Name: 'we call him alien'}
         }
       ]
 
@@ -85,7 +85,7 @@ describe('cleaner', () => {
         {
           id: 'Ford',
           category: 'vehicles',
-          info: {Name: 'Name:  Ford',
+          info: {Name: 'Ford',
                     Model: 'Model:  Explorer',
                     Class: 'Class:  wheeled',
                     Passengers: 'Passengers:  3'}
@@ -93,7 +93,7 @@ describe('cleaner', () => {
         {
           id: 'Chevy',
           category: 'vehicles',
-          info: {Name: 'Name:  Chevy',
+          info: {Name: 'Chevy',
                     Model: 'Model:  Tahoe',
                     Class: 'Class:  wheeled',
                     Passengers: 'Passengers:  3'}
@@ -124,7 +124,7 @@ describe('cleaner', () => {
       const expected = [
       {id: 'Earth',
       category: 'planets',
-      info: {Name: 'Name:  Earth',
+      info: {Name: 'Earth',
             Terrain: 'Terrain:  Rocky',
             Population: 'Population:  34',
             Climate: 'Climate:  hot',
@@ -133,7 +133,7 @@ describe('cleaner', () => {
       {
       id: 'Pluto',
       category: 'planets',
-      info: {Name: 'Name:  Pluto',
+      info: {Name: 'Pluto',
             Terrain: 'Terrain:  water',
             Population: 'Population:  1',
             Climate: 'Climate:  cold',
