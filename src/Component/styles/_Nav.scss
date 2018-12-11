@@ -25,9 +25,10 @@
       cursor: url(https://cdn2.iconfinder.com/data/icons/starwars/icons/128/Darth%20Mauls%20light-saber.png), auto;
     }
   }
+  .active {
+    color:#5cbdfa;
+    text-shadow: none;
+  }
 }
 
-.active {
-  color: black;
-  text-shadow: none;
-}
+
