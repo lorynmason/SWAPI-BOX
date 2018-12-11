@@ -7,17 +7,41 @@ describe('Splash', () => {
   let mockExitSplash
   let mockfilms
 
-  beforeEach(async () => {
+  beforeEach(() => {
     mockExitSplash = jest.fn()
     mockfilms = [{
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
+    }, {
+      title: 'A New Hope',
+      text: 'A Long Time Ago...',
+      date: '1976'
+    }, {
+      title: 'A New Hope',
+      text: 'A Long Time Ago...',
+      date: '1976'
+    },{
+      title: 'A New Hope',
+      text: 'A Long Time Ago...',
+      date: '1976'
+    },{
+      title: 'A New Hope',
+      text: 'A Long Time Ago...',
+      date: '1976'
+    },{
+      title: 'A New Hope',
+      text: 'A Long Time Ago...',
+      date: '1976'
+    },{
+      title: 'A New Hope',
+      text: 'A Long Time Ago...',
+      date: '1976'
     }]
-    wrapper = await mount(<Splash exitSplash={mockExitSplash} films={mockfilms} />)
+    wrapper = mount(<Splash exitSplash={mockExitSplash} films={mockfilms} />)
   })
 
-  it.skip('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
@@ -29,7 +53,7 @@ describe('Splash', () => {
   })
 
   it('Enter button should call mockExitSplash on click', () => {
-    const button = wrapper.find('button')
+    const button = wrapper.find('[type="button"]')
     button.simulate('click')
 
     expect(mockExitSplash).toHaveBeenCalled()

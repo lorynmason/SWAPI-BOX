@@ -137,9 +137,9 @@ class App extends Component {
         <div className="Header-section">
           <Header/>
           <div className="nav">
-            <NavLink to='/characters' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('characters')}>Characters</NavLink>
-            <NavLink to='/planets' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('planets')}>Planets</NavLink>
-            <NavLink to='/vehicles' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('vehicles')}>Vehicles</NavLink>
+            <NavLink to='/characters'  className='nav-link' onClick={() => this.changePage('characters')}>Characters</NavLink>
+            <NavLink to='/planets' className='nav-link' onClick={() => this.changePage('planets')}>Planets</NavLink>
+            <NavLink to='/vehicles' className='nav-link' onClick={() => this.changePage('vehicles')}>Vehicles</NavLink>
             <NavLink to='/favorites' className='nav-link' onClick={() => this.changePage('favorites')}>Favorites {favorites.length}</NavLink>
           </div>
           <Switch>
