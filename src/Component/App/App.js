@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 import '../styles/main.scss'
 import * as API from '../../apiCalls'
 import * as Cleaner from '../../cleaner'
-import Nav from '../Nav/Nav'
 import Splash from '../Splash/Splash'
 import Header from '../Header/Header'
 import Characters from '../Characters'
 import Vehicles from '../Vehicles/Vehicles'
 import Planets from '../Planets/Planets'
 import Favorites from '../Favorites'
+import Home from '../Home/Home'
 import { Route, NavLink, Switch } from 'react-router-dom'
-import Home from '../Home'
 
 class App extends Component {
   constructor() {
