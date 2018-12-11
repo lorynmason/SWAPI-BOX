@@ -4,14 +4,9 @@ import PropTypes from 'prop-types'
 
 const Vehicles = ({ vehicles, toggleFavorites }) => {
   const cards = vehicles.map((vehicle) => {
-    const infoValue = Object.values(vehicle.info).map((chInfo) => {
+    const infoValue = Object.values(vehicle.info).map((vhInfo) => {
       return(
-        <p>{chInfo}</p>
-        )
-    })
-    const infoKey = Object.keys(vehicle.info).map((chInfo) => {
-      return(
-        <p>{chInfo}</p>
+        <p>{vhInfo}</p>
         )
     })
 
@@ -20,11 +15,7 @@ const Vehicles = ({ vehicles, toggleFavorites }) => {
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(vehicle.id)}>
           <i className="fas fa-jedi" />
         </button>
-        <h1>{vehicle.name}</h1>
         <div className='info'>
-          <p>
-            {infoKey}
-          </p>
           <p>
             {infoValue}
           </p>

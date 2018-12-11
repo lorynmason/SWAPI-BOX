@@ -13,23 +13,13 @@ const Favorites = ({ favorites, toggleFavorites }) => {
             <p>{fvInfo}</p>
           )
         })
-        const infoKey = Object.keys(favorite.info).map((fvInfo)=> {
-          return(
-            <p>{fvInfo}</p>
-            )
-        })
-
 
         return(
           <div className="character-card card" key={favorite.id}>
             <button className="favorite-btn" type="button" onClick={() => toggleFavorites(favorite.id)}>
               <i className="fas fa-jedi" />
             </button>
-            <h1>{favorite.name}</h1>
             <div className='info'>
-              <p>
-                {infoKey}
-              </p>
               <p>
                 {infoValue}
               </p>
