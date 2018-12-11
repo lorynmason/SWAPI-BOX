@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import Splash from './Splash'
 
 describe('Splash', () => {
@@ -7,14 +7,14 @@ describe('Splash', () => {
   let mockExitSplash
   let mockfilms
 
-  beforeEach(() => {
+  beforeEach(async () => {
     mockExitSplash = jest.fn()
     mockfilms = [{
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
     }]
-    wrapper = shallow(<Splash exitSplash={mockExitSplash} films={mockfilms} />)
+    wrapper = await mount(<Splash exitSplash={mockExitSplash} films={mockfilms} />)
   })
 
   it.skip('should match the snapshot', () => {

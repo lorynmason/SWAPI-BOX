@@ -140,7 +140,7 @@ class App extends Component {
             <NavLink to='/characters' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('characters')}>Characters</NavLink>
             <NavLink to='/planets' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('planets')}>Planets</NavLink>
             <NavLink to='/vehicles' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('vehicles')}>Vehicles</NavLink>
-            <NavLink to='/favorites' activeStyle={{color: "#5cbdfa"}} className='nav-link' onClick={() => this.changePage('favorites')}>Favorites {favorites.length}</NavLink>
+            <NavLink to='/favorites' className='nav-link' onClick={() => this.changePage('favorites')}>Favorites {favorites.length}</NavLink>
           </div>
           <Switch>
             <Route exact path='/' component={Home}/> 
