@@ -36,3 +36,5 @@ npm start
 ![swapi-vehicle](https://user-images.githubusercontent.com/39168394/49452610-bcd88500-f79e-11e8-9a50-a9fb3bf18d23.png)
 ![swapi-card](https://user-images.githubusercontent.com/39168394/49452612-bf3adf00-f79e-11e8-977a-71975ac15c99.png)
 
+<img width="1393" alt="screen shot 2018-12-12 at 9 05 06 am" src="https://user-images.githubusercontent.com/39168394/49882110-2420b580-fded-11e8-9232-7822c08e94f6.png">
+<img width="1374" alt="screen shot 2018-12-12 at 9 04 45 am" src="https://user-images.githubusercontent.com/39168394/49882113-25ea7900-fded-11e8-8e7a-f3a8262347c1.png">
