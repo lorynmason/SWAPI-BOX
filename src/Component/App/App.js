@@ -71,7 +71,6 @@ class App extends Component {
   setPlanetData = async () => {
     const planetData = await API.fetchPlanets()
     const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
-    console.log(uncleanPlanets)
     const planets = Cleaner.cleanPlanetData(uncleanPlanets)
     this.setState({ planets }, this.addLocalStorage(planets))
   }
@@ -144,13 +143,13 @@ class App extends Component {
           </div>
           <Switch>
             <Route exact path='/' component={Home}/> 
-            <Route path='/characters' render={() => <Characters characters={characters} toggleFavorites={this.toggleFavorites} />} 
+            <Route path='/characters' component={() => <Characters characters={characters} toggleFavorites={this.toggleFavorites} />} 
             />
-            <Route path='/planets' render={() => <Planets planets={planets} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/planets' component={() => <Planets planets={planets} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/vehicles' render={() => <Vehicles vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/vehicles' component={() => <Vehicles vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/favorites' render={() => <Favorites favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
+            <Route path='/favorites' component={() => <Favorites favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
             /> 
           </Switch>
         </div>
