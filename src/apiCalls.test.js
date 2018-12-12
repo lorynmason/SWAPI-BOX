@@ -426,7 +426,7 @@ describe('API', () => {
           other: 'something that gets removed in cleaner'
         }
       ]
-      mockNestedReturnResidentsArray = {
+      const mockNestedReturnResidentsArray = {
         residents: ['robert', 'susan', 'joel']
       }
       mockResidentData = [
@@ -439,12 +439,6 @@ describe('API', () => {
         ok: true,
         json: () => Promise.resolve(mockNestedReturnArrayOfObjects)
       }))
-    })
-
-    it.skip('fetchNestedInfoPlanets should be called with the correct params', () => {
-      const expected = mockPlanetData.residents
-      API.fetchNestedInfoPlanets(mockPlanetData)
-      expect(window.fetch).toHaveBeenCalled()
     })
 
     it('should return a list of planetInfo, if the response is okay', async () => {
