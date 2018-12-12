@@ -21,19 +21,19 @@ describe('Splash', () => {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
-    },{
+    }, {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
-    },{
+    }, {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
-    },{
+    }, {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
-    },{
+    }, {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'

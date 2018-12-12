@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 const Vehicles = ({ vehicles, toggleFavorites }) => {
   const cards = vehicles.map((vehicle) => {
     const infoValue = Object.values(vehicle.info).map((vhInfo) => {
-      return(
+      return (
         <p>{vhInfo}</p>
-        )
+      )
     })
 
     return (
@@ -15,13 +15,13 @@ const Vehicles = ({ vehicles, toggleFavorites }) => {
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(vehicle.id)}>
           <i className="fas fa-jedi" />
         </button>
-        <div className='info'>
+        <div className="info">
           <p>
             {infoValue}
           </p>
         </div>
       </div>
-      )
+    )
   })
 
   return (
@@ -32,7 +32,8 @@ const Vehicles = ({ vehicles, toggleFavorites }) => {
 }
 
 Vehicles.propTypes = {
-  vehicles: PropTypes.array.isRequired
+  vehicles: PropTypes.array.isRequired,
+  toggleFavorites: PropTypes.func.isRequired
 }
 
 export default Vehicles
