@@ -6,13 +6,18 @@ const Favorites = ({ favorites, toggleFavorites }) => {
   let cards
   if (favorites.length > 0) {
     cards = favorites.map((favorite) => {
+      let favoriteID = 'no'
       const infoValue = Object.values(favorite.info).map((fvInfo) => {
         return (
           <p key={favorite.info.Name}>{fvInfo}</p>
         )
       })
+      if(favorite.favorite === true) {
+        console.log(1)
+        favoriteID = 'favorite'
+      }
       return (
-        <div className="character-card card" key={favorite.id}>
+        <div className="character-card card"  id={favoriteID} key={favorite.id}>
           <button className="favorite-btn" type="button" onClick={() => toggleFavorites(favorite.id)}>
             <i className="fas fa-jedi" />
           </button>
