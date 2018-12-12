@@ -14,11 +14,12 @@ export const cleanCharacterData = (data) => {
     return {
       id: character.name,
       category: 'characters',
-
-      info: {Name: character.name,
-            Homeworld: `Homeworld:  ${character.homeworld}`,
-            Population: `Population:  ${character.population}`,
-            Species: `Species:  ${character.species}`}
+      info: {
+        Name: character.name,
+        Homeworld: `Homeworld:  ${character.homeworld}`,
+        Population: `Population:  ${character.population}`,
+        Species: `Species:  ${character.species}`
+      }
     }
   })
 }
@@ -28,10 +29,12 @@ export const cleanVehiclesData = (data) => {
     return {
       id: vehicle.name,
       category: 'vehicles',
-      info: {Name: vehicle.name,
-            Model: `Model:  ${vehicle.model}`,
-            Class: `Class:  ${vehicle.vehicle_class}`,
-            Passengers: `Passengers:  ${vehicle.passengers}`}
+      info: {
+        Name: vehicle.name,
+        Model: `Model:  ${vehicle.model}`,
+        Class: `Class:  ${vehicle.vehicle_class}`,
+        Passengers: `Passengers:  ${vehicle.passengers}`
+      }
     }
   })
 }
@@ -42,16 +45,15 @@ export const cleanPlanetData = (data) => {
       planet.residents = 'No known occupants'
     }
     return {
-
       id: planet.name,
       category: 'planets',
-      info: {Name: planet.name,
-            Terrain: `Terrain:  ${planet.terrain}`,
-            Population: `Population:  ${planet.population}`,
-            Climate: `Climate:  ${planet.climate}`,
-            Residents: `Residents:  ${planet.residents}`}
+      info: {
+        Name: planet.name,
+        Terrain: `Terrain:  ${planet.terrain}`,
+        Population: `Population:  ${planet.population}`,
+        Climate: `Climate:  ${planet.climate}`,
+        Residents: `Residents:  ${planet.residents}`
+      }
     }
   })
-
-
 }

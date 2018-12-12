@@ -1,5 +1,4 @@
 import * as API from './apiCalls'
-import { exec } from 'child_process';
 
 describe('API', () => {
   let mockFilmsData
@@ -7,13 +6,10 @@ describe('API', () => {
   let mockVehicleData
   let url
   let mockCharacterDataEnd
-  let characterData
   let mockCharacterData2
   let mockCharacterData2End
   let mockPlanetData
-  let rawPlanetData
   let mockNestedReturnArrayOfObjects
-  let mockNestedReturnResidentsArray
   let mockResidentData
   let mockResidentArray
 
@@ -263,14 +259,13 @@ describe('API', () => {
       expect(window.fetch).toHaveBeenCalledWith(expected)
     })
 
-    it('should return a list of Vehicles if the response is ok', async() => {
+    it('should return a list of Vehicles if the response is ok', async () => {
       const expected = mockVehicleData
       const result = await API.fetchVehicles(url)
       expect(result).toEqual(expected)
-
     })
 
-    it ('should return an error message if response was not okay', async () => {
+    it('should return an error message if response was not okay', async () => {
       const expectedError = Error('Obi-Wan Kenobi says Error, these are not the droids you are looking for')
       window.fetch = jest.fn().mockImplementation(() => {
         return Promise.resolve({
@@ -283,28 +278,30 @@ describe('API', () => {
 
   describe('fetchPlanets', () => {
     beforeEach(() => {
-      mockPlanetData = {results: [
-        {
-          name: 'Alderaan',
-          population: 2000000000,
-          residents: [
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/68/',
-            'https://swapi.co/api/people/81/'
-          ],
-          terrain: 'grasslands, mountains'
-        },
-        {
-          name: 'Saturn',
-          population: 200,
-          residents: [
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/68/',
-            'https://swapi.co/api/people/81/'
-          ],
-          terrain: 'grasslands, mountains'
-        }
-      ]}
+      mockPlanetData = {
+        results: [
+          {
+            name: 'Alderaan',
+            population: 2000000000,
+            residents: [
+              'https://swapi.co/api/people/5/',
+              'https://swapi.co/api/people/68/',
+              'https://swapi.co/api/people/81/'
+            ],
+            terrain: 'grasslands, mountains'
+          },
+          {
+            name: 'Saturn',
+            population: 200,
+            residents: [
+              'https://swapi.co/api/people/5/',
+              'https://swapi.co/api/people/68/',
+              'https://swapi.co/api/people/81/'
+            ],
+            terrain: 'grasslands, mountains'
+          }
+        ]
+      }
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
@@ -337,20 +334,30 @@ describe('API', () => {
   })
 
   describe('fetchPlanetResidents', () => {
-   beforeEach(() => {
-      mockResidentData = 
-          [
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/5/'
-          ]
-      mockResidentArray = {residents: [{name: 'robert', somethingelse: 'x'}, {name: 'susan', somethingelse: 'x'}, {name: 'joe', somethingelse: 'x'}]}
+    beforeEach(() => {
+      mockResidentData = [
+        'https://swapi.co/api/people/5/',
+        'https://swapi.co/api/people/5/',
+        'https://swapi.co/api/people/5/'
+      ]
+      mockResidentArray = {
+        residents:
+        [
+          {
+            name: 'robert', somethingelse: 'x'
+          }, {
+            name: 'susan', somethingelse: 'x'
+          }, {
+            name: 'joe', somethingelse: 'x'
+          }
+        ]
+      }
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockResidentArray)
       }))
-    }) 
+    })
 
     it('fetchPlanetResidents should be called with the correct params', () => {
       const expected = 'https://swapi.co/api/people/5/'
@@ -360,7 +367,7 @@ describe('API', () => {
 
     it.skip('should return a list of residents, if the response is okay', async () => {
       const expected = ['robert', 'susan', 'joe']
-      const result = await API.fetchPlanetResidents(mockResidentData) 
+      const result = await API.fetchPlanetResidents(mockResidentData)
       expect(result).toEqual(expected)
     })
 
@@ -373,35 +380,36 @@ describe('API', () => {
       })
       await expect(API.fetchPlanetResidents(mockResidentData)).rejects.toEqual(expectedError)
     })
-    
   })
 
   describe('fetchNestedInfoPlanets', () => {
-   beforeEach(() => {
-      mockPlanetData = {results: [
-        {
-          name: 'Alderaan',
-          population: 2000000000,
-          residents: [
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/5/'
-          ],
-          terrain: 'grasslands, mountains',
-          other: 'something that gets removed in cleaner'
-        },
-        {
-          name: 'Saturn',
-          population: 200,
-          residents: [
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/5/'
-          ],
-          terrain: 'grasslands, mountains',
-          other: 'something that gets removed in cleaner'
-        }
-      ]}
+    beforeEach(() => {
+      mockPlanetData = {
+        results: [
+          {
+            name: 'Alderaan',
+            population: 2000000000,
+            residents: [
+              'https://swapi.co/api/people/5/',
+              'https://swapi.co/api/people/5/',
+              'https://swapi.co/api/people/5/'
+            ],
+            terrain: 'grasslands, mountains',
+            other: 'something that gets removed in cleaner'
+          },
+          {
+            name: 'Saturn',
+            population: 200,
+            residents: [
+              'https://swapi.co/api/people/5/',
+              'https://swapi.co/api/people/5/',
+              'https://swapi.co/api/people/5/'
+            ],
+            terrain: 'grasslands, mountains',
+            other: 'something that gets removed in cleaner'
+          }
+        ]
+      }
       mockNestedReturnArrayOfObjects = [
         {
           name: 'Alderaan',
@@ -416,35 +424,28 @@ describe('API', () => {
           residents: ['bob', 'sally', 'joe'],
           terrain: 'grasslands, mountains',
           other: 'something that gets removed in cleaner'
-        }]
-      mockNestedReturnResidentsArray = {
-          residents: ['robert', 'susan', 'joel']
         }
-      mockResidentData = 
-          [
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/5/',
-            'https://swapi.co/api/people/5/'
-          ]
+      ]
+      const mockNestedReturnResidentsArray = {
+        residents: ['robert', 'susan', 'joel']
+      }
+      mockResidentData = [
+        'https://swapi.co/api/people/5/',
+        'https://swapi.co/api/people/5/',
+        'https://swapi.co/api/people/5/'
+      ]
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockNestedReturnArrayOfObjects)
       }))
-    }) 
-
-    it.skip('fetchNestedInfoPlanets should be called with the correct params', () => {
-      const expected = mockPlanetData.residents
-      API.fetchNestedInfoPlanets(mockPlanetData)
-      expect(window.fetch).toHaveBeenCalled()
     })
 
     it('should return a list of planetInfo, if the response is okay', async () => {
-      const expected = mockNestedReturnArrayOfObjects.map((planets) => Object.keys(planets))
+      const expected = mockNestedReturnArrayOfObjects.map(planets => Object.keys(planets))
       const mockFetchCall = await API.fetchNestedInfoPlanets(mockPlanetData)
       const result = mockFetchCall.map(call => Object.keys(call))
       expect(result).toEqual(expected)
     })
-    
   })
 })

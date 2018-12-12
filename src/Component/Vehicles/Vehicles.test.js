@@ -1,22 +1,22 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Vehicles from './Vehicles';
+import Vehicles from './Vehicles'
 
 describe('Vehicles', () => {
   const toggleFavorites = jest.fn()
-  let wrapper;
-  let mockVehicleData = [
+  let wrapper
+  const mockVehicleData = [
     {
       info: {
-        Class:"Vehicle:  wheeled",
-        Model:"Model:  Digger Crawler",
-        Name:"Sand Crawler",
-        Passengers:"Passengers:  30"
+        Class: 'Vehicle:  wheeled',
+        Model: 'Model:  Digger Crawler',
+        Name: 'Sand Crawler',
+        Passengers: 'Passengers:  30'
       }
     }
   ]
   beforeEach(() => {
-    wrapper = shallow(<Vehicles vehicles={mockVehicleData} toggleFavorites={toggleFavorites}/>)
+    wrapper = shallow(<Vehicles vehicles={mockVehicleData} toggleFavorites={toggleFavorites} />)
   })
 
   it('should match snapshot', () => {

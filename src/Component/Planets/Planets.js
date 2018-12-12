@@ -7,7 +7,7 @@ const Planets = ({ planets, toggleFavorites }) => {
     const infoValue = Object.values(planet.info).map((plInfo) => {
       return (
         <p>{plInfo}</p>
-        )
+      )
     })
 
     return (
@@ -15,7 +15,7 @@ const Planets = ({ planets, toggleFavorites }) => {
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(planet.id)}>
           <i className="fas fa-jedi" />
         </button>
-        <div className='info'>
+        <div className="info">
           <p>
             {infoValue}
           </p>
@@ -32,7 +32,8 @@ const Planets = ({ planets, toggleFavorites }) => {
 }
 
 Planets.propTypes = {
-  planets: PropTypes.array.isRequired
+  planets: PropTypes.array.isRequired,
+  toggleFavorites: PropTypes.func.isRequired
 }
 
 export default Planets

@@ -1,21 +1,20 @@
 import React from 'react'
-import './styles/main.scss'
+import '../styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Characters = ({ characters, toggleFavorites, activePage, favorites }) => {
+const Characters = ({ characters, toggleFavorites }) => {
   const cards = characters.map((character) => {
     const infoValue = Object.values(character.info).map((chInfo) => {
-      return(
+      return (
         <p key={chInfo[0]}>{chInfo}</p>
-        )
+      )
     })
-
     return (
       <div className="character-card card" key={character.id}>
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(character.id)}>
           <i className="fas fa-jedi" />
         </button>
-       <div className='info'>
+        <div className="info">
           <p>
             {infoValue}
           </p>
@@ -23,8 +22,6 @@ const Characters = ({ characters, toggleFavorites, activePage, favorites }) => {
       </div>
     )
   })
-
-
   return (
     <section className="cardContainer">
       {cards}
@@ -34,9 +31,7 @@ const Characters = ({ characters, toggleFavorites, activePage, favorites }) => {
 
 Characters.propTypes = {
   characters: PropTypes.array.isRequired,
-  toggleFavorites: PropTypes.func.isRequired,
-  favorites: PropTypes.array.isRequired,
-  activePage: PropTypes.string.isRequired
+  toggleFavorites: PropTypes.func.isRequired
 }
 
 export default Characters

@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import '../styles/main.scss'
+import { Route, NavLink, Switch } from 'react-router-dom'
 import * as API from '../../apiCalls'
 import * as Cleaner from '../../cleaner'
 import Splash from '../Splash/Splash'
 import Header from '../Header/Header'
-import Characters from '../Characters'
+import Characters from '../Characters/Characters'
 import Vehicles from '../Vehicles/Vehicles'
 import Planets from '../Planets/Planets'
-import Favorites from '../Favorites'
+import Favorites from '../Favorites/Favorites'
 import Home from '../Home/Home'
-import { Route, NavLink, Switch } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -71,7 +71,6 @@ class App extends Component {
   setPlanetData = async () => {
     const planetData = await API.fetchPlanets()
     const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
-    console.log(uncleanPlanets)
     const planets = Cleaner.cleanPlanetData(uncleanPlanets)
     this.setState({ planets }, this.addLocalStorage(planets))
   }
@@ -99,13 +98,13 @@ class App extends Component {
 
   setFavorites = (newFavorite, cardId) => {
     const { favorites } = this.state
-    if(newFavorite && !favorites.includes(newFavorite)){
-      this.setState({favorites: [...this.state.favorites, newFavorite]})
+    if (newFavorite && !favorites.includes(newFavorite)) {
+      this.setState({ favorites: [...favorites, newFavorite] })
     } else {
       const newState = favorites.filter((favorite) => {
-      return favorite.id !== cardId
+        return favorite.id !== cardId
       })
-      this.setState({favorites: newState})
+      this.setState({ favorites: newState })
     }
   }
 
@@ -132,26 +131,36 @@ class App extends Component {
         <Splash exitSplash={this.exitSplash} films={films} />
       )
     }
-    return(
+    return (
       <div className="App">
         <div className="Header-section">
-          <Header/>
+          <Header />
           <div className="nav">
-            <NavLink to='/characters'  className='nav-link' onClick={() => this.changePage('characters')}>Characters</NavLink>
-            <NavLink to='/planets' className='nav-link' onClick={() => this.changePage('planets')}>Planets</NavLink>
-            <NavLink to='/vehicles' className='nav-link' onClick={() => this.changePage('vehicles')}>Vehicles</NavLink>
-            <NavLink to='/favorites' className='nav-link' onClick={() => this.changePage('favorites')}>Favorites {favorites.length}</NavLink>
+            <NavLink to="/characters" className="nav-link" onClick={() => this.changePage('characters')}>Characters</NavLink>
+            <NavLink to="/planets" className="nav-link" onClick={() => this.changePage('planets')}>Planets</NavLink>
+            <NavLink to="/vehicles" className="nav-link" onClick={() => this.changePage('vehicles')}>Vehicles</NavLink>
+            <NavLink to="/favorites" className="nav-link" onClick={() => this.changePage('favorites')}>
+            Favorites {favorites.length}
+            </NavLink>
           </div>
           <Switch>
-            <Route exact path='/' component={Home}/> 
-            <Route path='/characters' render={() => <Characters characters={characters} toggleFavorites={this.toggleFavorites} />} 
+            <Route exact path="/" component={Home} />
+            <Route
+              path="/characters"
+              component={() => <Characters characters={characters} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/planets' render={() => <Planets planets={planets} toggleFavorites={this.toggleFavorites} />}
+            <Route
+              path="/planets"
+              component={() => <Planets planets={planets} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/vehicles' render={() => <Vehicles vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
+            <Route
+              path="/vehicles"
+              component={() => <Vehicles vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
             />
-            <Route path='/favorites' render={() => <Favorites favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
-            /> 
+            <Route
+              path="/favorites"
+              component={() => <Favorites favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
+            />
           </Switch>
         </div>
       </div>

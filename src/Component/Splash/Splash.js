@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Splash = ({ exitSplash, films }) => {
   const randomNum = Math.floor(Math.random() * Math.floor(6))
-  const film = films[randomNum];
+  const film = films[randomNum]
   if (film) {
     return (
       <section className="background">
@@ -30,18 +30,17 @@ const Splash = ({ exitSplash, films }) => {
         </div>
       </section>
     )
-  } else {
+  }
   return (
     <section className="background">
       <div className="fade" />
     </section>
   )
-  }
 }
 
 Splash.propTypes = {
   exitSplash: PropTypes.func.isRequired,
-  films: PropTypes.array
+  films: PropTypes.array.isRequired
 }
 
 export default Splash

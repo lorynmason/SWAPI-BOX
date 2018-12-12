@@ -21,19 +21,19 @@ describe('Splash', () => {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
-    },{
+    }, {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
-    },{
+    }, {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
-    },{
+    }, {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
-    },{
+    }, {
       title: 'A New Hope',
       text: 'A Long Time Ago...',
       date: '1976'
@@ -61,6 +61,7 @@ describe('Splash', () => {
 
   it('Should render backgound if no film', () => {
     mockfilms = []
+    wrapper = shallow(<Splash exitSplash={mockExitSplash} films={mockfilms} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
