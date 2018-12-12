@@ -16,7 +16,7 @@ const cards = planets.map((planet) => {
     }
     return (
 
-      <div className="planet-card card" key={`${planet.id}-${index} id={favoriteID}>
+      <div className="planet-card card" key={`${planet.id}-${index}`} id={favoriteID}>
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(planet.id)}>
           <i className="fas fa-jedi" />
         </button>
