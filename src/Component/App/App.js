@@ -37,6 +37,7 @@ class App extends Component {
 
   async componentDidUpdate() {
     const { characters, activePage, vehicles, planets } = this.state
+
     if (activePage === 'characters' && characters.length === 0) {
       this.setCharacterData()
     }

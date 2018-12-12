@@ -70,7 +70,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "undefined-0",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -178,7 +178,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "V-0",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Vehicle:  wheeled",
@@ -189,7 +189,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "M-1",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Model:  Digger Crawler",
@@ -200,7 +200,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "S-2",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Sand Crawler",
@@ -211,7 +211,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "P-3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Passengers:  30",
@@ -276,7 +276,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "undefined-0",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -384,7 +384,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "V-0",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Vehicle:  wheeled",
@@ -395,7 +395,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "M-1",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Model:  Digger Crawler",
@@ -406,7 +406,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "S-2",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Sand Crawler",
@@ -417,7 +417,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "P-3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Passengers:  30",
