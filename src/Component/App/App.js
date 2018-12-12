@@ -5,10 +5,10 @@ import * as API from '../../apiCalls'
 import * as Cleaner from '../../cleaner'
 import Splash from '../Splash/Splash'
 import Header from '../Header/Header'
-import Characters from '../Characters'
+import Characters from '../Characters/Characters'
 import Vehicles from '../Vehicles/Vehicles'
 import Planets from '../Planets/Planets'
-import Favorites from '../Favorites'
+import Favorites from '../Favorites/Favorites'
 import Home from '../Home/Home'
 
 class App extends Component {
