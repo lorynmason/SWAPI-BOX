@@ -13,6 +13,7 @@ export const cleanCharacterData = (data) => {
   return data.map((character) => {
     return {
       id: character.name,
+      favorite: false,
       category: 'characters',
       info: {
         Name: character.name,
@@ -29,6 +30,7 @@ export const cleanVehiclesData = (data) => {
     return {
       id: vehicle.name,
       category: 'vehicles',
+      favorite: false,
       info: {
         Name: vehicle.name,
         Model: `Model:  ${vehicle.model}`,
@@ -47,6 +49,7 @@ export const cleanPlanetData = (data) => {
     return {
       id: planet.name,
       category: 'planets',
+      favorite: false,
       info: {
         Name: planet.name,
         Terrain: `Terrain:  ${planet.terrain}`,

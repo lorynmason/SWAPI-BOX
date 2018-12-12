@@ -86,12 +86,16 @@ class App extends Component {
     let newFavorite
     if (activePage === 'characters') {
       newFavorite = characters.find(character => character.id === cardId)
+      newFavorite.favorite = true
     }
     if (activePage === 'vehicles') {
       newFavorite = vehicles.find(vehicle => vehicle.id === cardId)
+      newFavorite.favorite = true
     }
     if (activePage === 'planets') {
       newFavorite = planets.find(planet => planet.id === cardId)
+      newFavorite.favorite = true
+
     }
     this.setFavorites(newFavorite, cardId)
   }

@@ -4,14 +4,18 @@ import PropTypes from 'prop-types'
 
 const Planets = ({ planets, toggleFavorites }) => {
   const cards = planets.map((planet) => {
+    let favoriteID = 'no'
     const infoValue = Object.values(planet.info).map((plInfo) => {
       return (
         <p>{plInfo}</p>
       )
     })
-
+    if(planet.favorite === true) {
+      console.log(1)
+      favoriteID = 'favorite'
+    }
     return (
-      <div className="planet-card card">
+      <div className="planet-card card" id={favoriteID}>
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(planet.id)}>
           <i className="fas fa-jedi" />
         </button>

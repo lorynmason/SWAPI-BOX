@@ -4,14 +4,19 @@ import PropTypes from 'prop-types'
 
 const Vehicles = ({ vehicles, toggleFavorites }) => {
   const cards = vehicles.map((vehicle) => {
+    let favoriteID = 'no'
     const infoValue = Object.values(vehicle.info).map((vhInfo) => {
       return (
         <p>{vhInfo}</p>
       )
     })
+    if(vehicle.favorite === true) {
+      console.log(1)
+      favoriteID = 'favorite'
+    }
 
     return (
-      <div className="vehicle-card card">
+      <div className="vehicle-card card" id={favoriteID}>
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(vehicle.id)}>
           <i className="fas fa-jedi" />
         </button>

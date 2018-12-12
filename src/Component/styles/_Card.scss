@@ -8,7 +8,7 @@
                rgba(89, 250, 74, 0.61) 2px 5px 6px,
                rgba(89, 250, 74, 0.61) -2px 5px 6px,
                rgba(89, 250, 74, 0.61) 2px -5px 6px,
-               rgba(89, 250, 74, 0.61) -2px -5px 6px ;            
+               rgba(89, 250, 74, 0.61) -2px -5px 6px;            
   h1{
     color: white;
     font-size: 3em;
@@ -22,6 +22,10 @@
     font-size: 1.5em;
     padding: 0px 0px 0px 20px;
   }
+}
+
+#favorite {
+  background: rgba(3, 130, 248, 0.74);
 }
 
 .favorite-btn {
@@ -41,6 +45,7 @@
     }
   }
 }
+
 
 .yoda-card {
   background: url(https://www.sideshowtoy.com/wp-content/uploads/2014/05/400080-product-feature.jpg);
