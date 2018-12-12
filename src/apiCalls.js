@@ -68,16 +68,20 @@ export const fetchPlanets = async () => {
   if (response.ok) {
     const planetData = await response.json()
     return planetData
-  }
+  } else {
   throw new Error('Chewbacca- AGERUYEHSFG: translation, Error, planet not okay')
+  }
 }
 
 export const fetchPlanetResidents = (data) => {
   const residentsData = data.map(async (resident) => {
     const response = await fetch(resident)
-    const residents = await response.json()
+    if(response.ok) {const residents = await response.json()
+    // console.log(residents)
     return residents.name
-  })
+    } else {
+  throw new Error('Chewbacca- AGERUYEHSFG: translation, Error, planet2 not okay')
+  }})
   return Promise.all(residentsData)
 }
 

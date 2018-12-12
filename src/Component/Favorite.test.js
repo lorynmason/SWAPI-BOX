@@ -6,7 +6,6 @@ describe('Favorites', () => {
   let wrapper
   let mockToggleFavorites
   let mockFavorites
-  // let cards
 
   beforeEach(() => {
     mockFavorites = [
