@@ -6,7 +6,8 @@ describe('Plantes', () => {
   const toggleFavorites = jest.fn()
   let wrapper
   const mockPlanetData = [
-    {
+    {id: 'Alderaan',
+    category: 'planets',
       info: {
         Climate: 'Climate:  temperate',
         Name: 'Alderaan',
