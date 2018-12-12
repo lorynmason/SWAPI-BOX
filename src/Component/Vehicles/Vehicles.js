@@ -7,7 +7,7 @@ const Vehicles = ({ vehicles, toggleFavorites }) => {
     let favoriteID = 'no'
     const infoValue = Object.values(vehicle.info).map((vhInfo) => {
       return (
-        <p>{vhInfo}</p>
+        <p key={`${vhInfo[0]}-${index}`}>{vhInfo}</p>
       )
     })
     if(vehicle.favorite === true) {
@@ -16,7 +16,7 @@ const Vehicles = ({ vehicles, toggleFavorites }) => {
     }
 
     return (
-      <div className="vehicle-card card" id={favoriteID}>
+      <div className="vehicle-card card" id={favoriteID} key={`${vehicle.id}-${index}`}>
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(vehicle.id)}>
           <i className="fas fa-jedi" />
         </button>

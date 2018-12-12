@@ -3,11 +3,11 @@ import '../styles/main.scss'
 import PropTypes from 'prop-types'
 
 const Planets = ({ planets, toggleFavorites }) => {
-  const cards = planets.map((planet) => {
+const cards = planets.map((planet) => {
     let favoriteID = 'no'
     const infoValue = Object.values(planet.info).map((plInfo) => {
       return (
-        <p>{plInfo}</p>
+        <p key={`${plInfo[0]}-${index}`}>{plInfo}</p>
       )
     })
     if(planet.favorite === true) {
@@ -15,7 +15,8 @@ const Planets = ({ planets, toggleFavorites }) => {
       favoriteID = 'favorite'
     }
     return (
-      <div className="planet-card card" id={favoriteID}>
+
+      <div className="planet-card card" key={`${planet.id}-${index} id={favoriteID}>
         <button className="favorite-btn" type="button" onClick={() => toggleFavorites(planet.id)}>
           <i className="fas fa-jedi" />
         </button>

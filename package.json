@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/eslint/bin/eslint.js --ignore-pattern node_modules/ '**/*.js' --ignore-pattern /coverage --ignore-pattern /src/serviceWorker.js"
+    "lint": "./node_modules/eslint/bin/eslint.js ./src/**/**/*.js "
   },
   "eslintConfig": {
     "extends": [

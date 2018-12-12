@@ -7,6 +7,8 @@ ShallowWrapper {
     planets={
       Array [
         Object {
+          "category": "planets",
+          "id": "Alderaan",
           "info": Object {
             "Climate": "Climate:  temperate",
             "Name": "Alderaan",
@@ -74,7 +76,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "Alderaan-0",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -191,7 +193,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "C-0",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Climate:  temperate",
@@ -202,7 +204,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "A-1",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Alderaan",
@@ -213,7 +215,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "P-2",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Population: 2000000000",
@@ -224,7 +226,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "R-3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Residents:  Leia Organa,Bail Prestor Organa,Raymus Antilles",
@@ -235,7 +237,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "T-4",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Terrain:  grasslands, mountains",
@@ -303,7 +305,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "Alderaan-0",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -420,7 +422,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "C-0",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Climate:  temperate",
@@ -431,7 +433,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "A-1",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Alderaan",
@@ -442,7 +444,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "P-2",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Population: 2000000000",
@@ -453,7 +455,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "R-3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Residents:  Leia Organa,Bail Prestor Organa,Raymus Antilles",
@@ -464,7 +466,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "T-4",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Terrain:  grasslands, mountains",
