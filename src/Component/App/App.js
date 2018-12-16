@@ -17,23 +17,23 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      films: [],
+      splash: [],
       favorites: [],
-      activePage: 'home',
+      activePage: 'splash',
       characters: [],
       vehicles: [],
       planets: [],
-      localStorageKeys: ['characters', 'planets', 'vehicles', 'favorites', 'films']
+      localStorageKeys: ['characters', 'planets', 'vehicles', 'favorites', 'splash']
     }
   }
 
   async componentDidMount() {
-    const { localStorageKeys, films } = this.state
+    const { localStorageKeys, splash } = this.state
     await this.getLocalStorage(localStorageKeys)
-    if (films.length === 0) {
+    if (splash.length === 0) {
       const filmsData = await API.fetchData('https://swapi.co/api/films')
-      const films = Cleaner.cleanFilmsData(filmsData)
-      this.setState({ films }, this.addLocalStorage(films))
+      const splash = Cleaner.cleanFilmsData(filmsData)
+      this.setState({ splash }, this.addLocalStorage(splash))
     }
   }
 
@@ -48,12 +48,6 @@ class App extends Component {
     if (activePage === 'planets' && planets.length === 0) {
       this.setPlanetData()
     }
-  }
-
-  exitSplash = () => {
-    this.setState({
-      activePage: 'home'
-    })
   }
 
   setCharacterData = async () => {
@@ -83,13 +77,14 @@ class App extends Component {
 
   toggleFavorites = (cardId) => {
     const { favorites } = this.state
+    const newFavorites = [...favorites, cardId]
     if (!favorites.includes(cardId)) {
-      this.setState({ favorites: [...favorites, cardId] })
+      this.setState({ favorites: [...favorites, cardId] },this.handleFavoritesStorage(newFavorites))
     } else {
       const newState = favorites.filter((favorite) => {
         return favorite !== cardId
       })
-      this.setState({ favorites: newState })
+      this.setState({ favorites: newState }, this.handleFavoritesStorage(newState))
     }
   }
 
@@ -97,6 +92,11 @@ class App extends Component {
     const { activePage } = this.state
     const dataJson = JSON.stringify(data)
     localStorage.setItem(`${activePage}`, dataJson)
+  }
+
+  handleFavoritesStorage = (newFavorites) => {
+    const dataJson = JSON.stringify(newFavorites)
+    localStorage.setItem('favorites', dataJson)
   }
 
   getLocalStorage = (keyNames) => {
@@ -110,17 +110,17 @@ class App extends Component {
   }
 
   render() {
-    const { activePage, films, favorites } = this.state
+    const { activePage, splash, favorites } = this.state
     if (activePage === 'splash') {
       return (
-        <Splash exitSplash={this.exitSplash} films={films} />
+        <Splash changePage={this.changePage} splash={splash} />
       )
     }
     return (
       <div className="App">
         <Header />
         <Nav favorites={favorites} changePage={this.changePage} />
-        <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} favorites={favorites}/>
+        <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} favorites={favorites} />
       </div>
     )
     
