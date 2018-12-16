@@ -15,12 +15,10 @@ export const cleanCharacterData = (data) => {
       id: character.name,
       favorite: false,
       category: 'characters',
-      info: {
-        Name: character.name,
-        Homeworld: `Homeworld:  ${character.homeworld}`,
-        Population: `Population:  ${character.population}`,
-        Species: `Species:  ${character.species}`
-      }
+      name: character.name,
+      Homeworld: character.homeworld,
+      Population: character.population,
+      Species:  character.species
     }
   })
 }
@@ -31,32 +29,25 @@ export const cleanVehiclesData = (data) => {
       id: vehicle.name,
       category: 'vehicles',
       favorite: false,
-      info: {
-        Name: vehicle.name,
-        Model: `Model:  ${vehicle.model}`,
-        Class: `Class:  ${vehicle.vehicle_class}`,
-        Passengers: `Passengers:  ${vehicle.passengers}`
-      }
+      name: vehicle.name,
+      Model: vehicle.model,
+      Class: vehicle.vehicle_class,
+      Passengers: vehicle.passengers
     }
   })
 }
 
 export const cleanPlanetData = (data) => {
   return data.map((planet) => {
-    if (planet.residents.length <= 0) {
-      planet.residents = 'No known occupants'
-    }
     return {
       id: planet.name,
       category: 'planets',
       favorite: false,
-      info: {
-        Name: planet.name,
-        Terrain: `Terrain:  ${planet.terrain}`,
-        Population: `Population:  ${planet.population}`,
-        Climate: `Climate:  ${planet.climate}`,
-        Residents: `Residents:  ${planet.residents}`
-      }
+      name: planet.name,
+      Terrain: planet.terrain,
+      Population: planet.population,
+      Climate: planet.climate,
+      Residents: planet.residents
     }
   })
 }

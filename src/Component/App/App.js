@@ -10,6 +10,8 @@ import Vehicles from '../Vehicles/Vehicles'
 import Planets from '../Planets/Planets'
 import Favorites from '../Favorites/Favorites'
 import Home from '../Home/Home'
+import Nav from '../Nav'
+import CardContainer from '../CardContainer/CardContainer';
 
 class App extends Component {
   constructor() {
@@ -129,7 +131,7 @@ class App extends Component {
   }
 
   render() {
-    const { activePage, films, favorites, characters, vehicles, planets } = this.state
+    const { activePage, films, favorites } = this.state
     if (activePage === 'splash') {
       return (
         <Splash exitSplash={this.exitSplash} films={films} />
@@ -137,38 +139,46 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <div className="Header-section">
-          <Header />
-          <div className="nav">
-            <NavLink to="/characters" className="nav-link" onClick={() => this.changePage('characters')}>Characters</NavLink>
-            <NavLink to="/planets" className="nav-link" onClick={() => this.changePage('planets')}>Planets</NavLink>
-            <NavLink to="/vehicles" className="nav-link" onClick={() => this.changePage('vehicles')}>Vehicles</NavLink>
-            <NavLink to="/favorites" className="nav-link" onClick={() => this.changePage('favorites')}>
-            Favorites {favorites.length}
-            </NavLink>
-          </div>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route
-              path="/characters"
-              component={() => <Characters characters={characters} toggleFavorites={this.toggleFavorites} />}
-            />
-            <Route
-              path="/planets"
-              component={() => <Planets planets={planets} toggleFavorites={this.toggleFavorites} />}
-            />
-            <Route
-              path="/vehicles"
-              component={() => <Vehicles vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
-            />
-            <Route
-              path="/favorites"
-              component={() => <Favorites favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
-            />
-          </Switch>
-        </div>
+        <Header />
+        <Nav favorites={favorites} changePage={this.changePage} />
+        <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} />
       </div>
     )
+    
+    // return (
+    //   <div className="App">
+    //     <div className="Header-section">
+    //       <Header />
+    //       <div className="nav">
+    //         <NavLink to="/characters" className="nav-link" onClick={() => this.changePage('characters')}>Characters</NavLink>
+    //         <NavLink to="/planets" className="nav-link" onClick={() => this.changePage('planets')}>Planets</NavLink>
+    //         <NavLink to="/vehicles" className="nav-link" onClick={() => this.changePage('vehicles')}>Vehicles</NavLink>
+    //         <NavLink to="/favorites" className="nav-link" onClick={() => this.changePage('favorites')}>
+    //         Favorites {favorites.length}
+    //         </NavLink>
+    //       </div>
+    //       <Switch>
+    //         <Route exact path="/" component={Home} />
+    //         <Route
+    //           path="/characters"
+    //           component={() => <Characters characters={characters} toggleFavorites={this.toggleFavorites} />}
+    //         />
+    //         <Route
+    //           path="/planets"
+    //           component={() => <Planets planets={planets} toggleFavorites={this.toggleFavorites} />}
+    //         />
+    //         <Route
+    //           path="/vehicles"
+    //           component={() => <Vehicles vehicles={vehicles} toggleFavorites={this.toggleFavorites} />}
+    //         />
+    //         <Route
+    //           path="/favorites"
+    //           component={() => <Favorites favorites={favorites} activePage={this.activePage} toggleFavorites={this.toggleFavorites} />}
+    //         />
+    //       </Switch>
+    //     </div>
+    //   </div>
+    // )
   }
 }
 
