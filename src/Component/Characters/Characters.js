@@ -7,12 +7,11 @@ const Characters = ({ characters, toggleFavorites }) => {
     let favoriteID = 'no'
     const infoValue = Object.values(character.info).map((chInfo) => {
       return (
-        <p key={chInfo[0]}>{chInfo}</p>
+        <p>{chInfo}</p>
         )
       })
     if(character.favorite === true) {
-      console.log(1)
-      favoriteID = 'favorite'
+      favoriteID = 'favorite-card'
     }
     return (
       <div className="character-card card" id={favoriteID} key={character.id}>

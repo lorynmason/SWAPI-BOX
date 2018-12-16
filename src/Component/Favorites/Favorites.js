@@ -13,8 +13,7 @@ const Favorites = ({ favorites, toggleFavorites }) => {
         )
       })
       if(favorite.favorite === true) {
-        console.log(1)
-        favoriteID = 'favorite'
+        favoriteID = 'favorite-card'
       }
       return (
         <div className="character-card card"  id={favoriteID} key={favorite.id}>

@@ -96,7 +96,6 @@ class App extends Component {
     if (activePage === 'planets') {
       newFavorite = planets.find(planet => planet.id === cardId)
       newFavorite.favorite = true
-
     }
     this.setFavorites(newFavorite, cardId)
   }
