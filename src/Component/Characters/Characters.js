@@ -11,7 +11,6 @@ const Characters = ({ characters, toggleFavorites }) => {
         )
       })
     if(character.favorite === true) {
-      console.log(1)
       favoriteID = 'favorite-card'
     }
     return (

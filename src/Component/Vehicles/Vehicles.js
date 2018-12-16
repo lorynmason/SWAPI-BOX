@@ -11,7 +11,6 @@ const Vehicles = ({ vehicles, toggleFavorites }) => {
       )
     })
     if(vehicle.favorite === true) {
-      console.log(1)
       favoriteID = 'favorite-card'
     }
 

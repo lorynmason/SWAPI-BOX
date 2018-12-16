@@ -11,7 +11,6 @@ const cards = planets.map((planet) => {
       )
     })
     if(planet.favorite === true) {
-      console.log(1)
       favoriteID = 'favorite-card'
     }
     return (
