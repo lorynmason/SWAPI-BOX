@@ -20,7 +20,14 @@ const CardContainer = ({ appState, toggleFavorites, favorites }) => {
       const favoritePlanets = appState.planets.filter(planet => planet.id === favorite)
       const favoriteVehicles = appState.vehicles.filter(vehicle => vehicle.id === favorite)
       return [...arr, ...favoriteVehicles, ...favoriteCharacters, ...favoritePlanets]
-    },[]).map(card => <Card card={card} toggleFavorites={toggleFavorites} favorites={favorites}/>)
+    },[]).map(card => <Card card={card} toggleFavorites={toggleFavorites} favorites={favorites}/>) 
+    if (appState.favorites.length === 0) {
+      cards = (
+        <div className="yoda-card card">
+          <h1>selected favorites you have not</h1>
+        </div>
+      )
+    }
   }
   return (
     <section className="cardContainer">

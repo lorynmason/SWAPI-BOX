@@ -14,12 +14,14 @@ const Card = ({ card, toggleFavorites, favorites }) => {
     )
   })
   let favoriteID = ''
+  let favoriteBTN = ''
   if(favorites.includes(card.id)) {
     favoriteID = 'favorite-card'
+    favoriteBTN = 'favorite-on'
   }
   return (
     <div className="card" key={card.id} id={favoriteID}>
-      <button className="favorite-btn"  type="button" onClick={() => toggleFavorites(card.id)}>
+      <button className="favorite-btn"  title="select favorite" id={favoriteBTN} type="button" onClick={() => toggleFavorites(card.id)}>
         <i className="fas fa-jedi" />
       </button>
       <div className="info">
