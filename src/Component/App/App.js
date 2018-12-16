@@ -19,7 +19,7 @@ class App extends Component {
     this.state = {
       films: [],
       favorites: [],
-      activePage: 'splash',
+      activePage: 'home',
       characters: [],
       vehicles: [],
       planets: [],
@@ -29,9 +29,9 @@ class App extends Component {
 
   async componentDidMount() {
     const { localStorageKeys, films } = this.state
-    this.getLocalStorage(localStorageKeys)
+    await this.getLocalStorage(localStorageKeys)
     if (films.length === 0) {
-      const filmsData = await API.fetchScroll()
+      const filmsData = await API.fetchData('https://swapi.co/api/films')
       const films = Cleaner.cleanFilmsData(filmsData)
       this.setState({ films }, this.addLocalStorage(films))
     }
@@ -57,21 +57,19 @@ class App extends Component {
   }
 
   setCharacterData = async () => {
-    const characterData = await API.fetchCharacters()
-    const characterData2 = await API.fetchCharactersHomeWorld(characterData)
-    const characterData3 = await API.fetchCharactersSpecies(characterData2)
-    const characters = await Cleaner.cleanCharacterData(characterData3)
+    const characterData = await API.fetchData('https://swapi.co/api/people')
+    const characters = await API.getMoreCharacterData(characterData.results)
     this.setState({ characters }, this.addLocalStorage(characters))
   }
 
   setVehicleData = async () => {
-    const vehicleData = await API.fetchVehicles()
+    const vehicleData = await API.fetchData('https://swapi.co/api/vehicles')
     const vehicles = Cleaner.cleanVehiclesData(vehicleData)
     this.setState({ vehicles }, this.addLocalStorage(vehicles))
   }
 
   setPlanetData = async () => {
-    const planetData = await API.fetchPlanets()
+    const planetData = await API.fetchData('https://swapi.co/api/planets')
     const uncleanPlanets = await API.fetchNestedInfoPlanets(planetData)
     const planets = Cleaner.cleanPlanetData(uncleanPlanets)
     this.setState({ planets }, this.addLocalStorage(planets))
@@ -102,9 +100,9 @@ class App extends Component {
   }
 
   getLocalStorage = (keyNames) => {
-    return keyNames.map((keyName) => {
-      const retrievedData = localStorage.getItem(keyName)
-      const parsedData = JSON.parse(retrievedData)
+    return keyNames.map(async (keyName) => {
+      const retrievedData = await localStorage.getItem(keyName)
+      const parsedData = await JSON.parse(retrievedData)
       if (parsedData) {
         this.setState({ [keyName]: parsedData })
       }

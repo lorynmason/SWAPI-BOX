@@ -9,17 +9,6 @@ export const cleanFilmsData = (data) => {
   return films
 }
 
-export const cleanCharacterData = (data) => {
-  return data.map((character) => {
-    return {
-      id: character.name,
-      Homeworld: character.homeworld,
-      Population: character.population,
-      Species:  character.species
-    }
-  })
-}
-
 export const cleanVehiclesData = (data) => {
   return data.results.map((vehicle) => {
     return {
@@ -33,7 +22,7 @@ export const cleanVehiclesData = (data) => {
 
 export const cleanPlanetData = (data) => {
   return data.map((planet) => {
-    let residents = planet.residents.join(', ')
+    let residents = planet.residents.map(resident => resident.name).join(', ')
     if (planet.residents.length === 0) {
       residents = 'No Known Occupants'
     }
