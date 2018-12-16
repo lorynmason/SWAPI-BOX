@@ -13,9 +13,6 @@ export const cleanCharacterData = (data) => {
   return data.map((character) => {
     return {
       id: character.name,
-      favorite: false,
-      category: 'characters',
-      name: character.name,
       Homeworld: character.homeworld,
       Population: character.population,
       Species:  character.species
@@ -27,9 +24,6 @@ export const cleanVehiclesData = (data) => {
   return data.results.map((vehicle) => {
     return {
       id: vehicle.name,
-      category: 'vehicles',
-      favorite: false,
-      name: vehicle.name,
       Model: vehicle.model,
       Class: vehicle.vehicle_class,
       Passengers: vehicle.passengers
@@ -39,15 +33,16 @@ export const cleanVehiclesData = (data) => {
 
 export const cleanPlanetData = (data) => {
   return data.map((planet) => {
+    let residents = planet.residents.join(', ')
+    if (planet.residents.length === 0) {
+      residents = 'No Known Occupants'
+    }
     return {
       id: planet.name,
-      category: 'planets',
-      favorite: false,
-      name: planet.name,
       Terrain: planet.terrain,
       Population: planet.population,
       Climate: planet.climate,
-      Residents: planet.residents
+      Residents: residents
     }
   })
 }

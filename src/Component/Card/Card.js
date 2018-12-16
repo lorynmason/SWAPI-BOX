@@ -2,35 +2,30 @@ import React from 'react'
 import '../styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Card = ({ card, toggleFavorites }) => {
+const Card = ({ card, toggleFavorites, favorites }) => {
   const stats = Object.keys(card).map(key => {
-    if (key !== 'category' && key !== 'id' && key !== 'favorite') {
-      let stat = card[key]
-      let label =''
-      if (key !== 'name') {
-        label = key + ':'
-      }
-      if (key === 'Residents') {
-        stat = card[key].join(', ')
-        if (card[key].length === 0) {
-          stat = 'No Known Occupants'
-        }
-      }
+    if (key === 'id') {
       return (
-        <p>{label} {stat}</p>
+        <h3>{card[key]}</h3>
       )
     }
+    return (
+      <p>{key}: {card[key]}</p>
+    )
   })
-  
+  let favoriteID = ''
+  if(favorites.includes(card.id)) {
+    favoriteID = 'favorite-card'
+  }
   return (
-    <div className="card" key={card.id}>
-        <button className="favorite-btn"  type="button" onClick={() => toggleFavorites(card.id)}>
-          <i className="fas fa-jedi" />
-        </button>
-        <div className="info">
+    <div className="card" key={card.id} id={favoriteID}>
+      <button className="favorite-btn"  type="button" onClick={() => toggleFavorites(card.id)}>
+        <i className="fas fa-jedi" />
+      </button>
+      <div className="info">
         {stats}
-        </div>
       </div>
+    </div>
   )
 }
 

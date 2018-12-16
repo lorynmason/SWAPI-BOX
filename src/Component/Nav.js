@@ -9,7 +9,7 @@ const Nav = ( {favorites, changePage} ) => {
       <button className="nav-link" onClick={() => changePage('characters')} >Characters</button>
       <button className="nav-link" onClick={() => changePage('planets')}>Planets</button>
       <button className="nav-link" onClick={() => changePage('vehicles')}>Vehicles</button>
-      <button className="nav-link" >Favorites: {favorites.length}</button>
+      <button className="nav-link" onClick={() => changePage('favorites')}>Favorites: {favorites.length}</button>
     </nav>
   )
 }

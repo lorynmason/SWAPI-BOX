@@ -39,7 +39,6 @@ class App extends Component {
 
   async componentDidUpdate() {
     const { characters, activePage, vehicles, planets } = this.state
-
     if (activePage === 'characters' && characters.length === 0) {
       this.setCharacterData()
     }
@@ -85,30 +84,12 @@ class App extends Component {
   }
 
   toggleFavorites = (cardId) => {
-    const { activePage, characters, vehicles, planets } = this.state
-    let newFavorite
-    if (activePage === 'characters') {
-      newFavorite = characters.find(character => character.id === cardId)
-      newFavorite.favorite = true
-    }
-    if (activePage === 'vehicles') {
-      newFavorite = vehicles.find(vehicle => vehicle.id === cardId)
-      newFavorite.favorite = true
-    }
-    if (activePage === 'planets') {
-      newFavorite = planets.find(planet => planet.id === cardId)
-      newFavorite.favorite = true
-    }
-    this.setFavorites(newFavorite, cardId)
-  }
-
-  setFavorites = (newFavorite, cardId) => {
     const { favorites } = this.state
-    if (newFavorite && !favorites.includes(newFavorite)) {
-      this.setState({ favorites: [...favorites, newFavorite] })
+    if (!favorites.includes(cardId)) {
+      this.setState({ favorites: [...favorites, cardId] })
     } else {
       const newState = favorites.filter((favorite) => {
-        return favorite.id !== cardId
+        return favorite !== cardId
       })
       this.setState({ favorites: newState })
     }
@@ -141,7 +122,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Nav favorites={favorites} changePage={this.changePage} />
-        <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} />
+        <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} favorites={favorites}/>
       </div>
     )
     
