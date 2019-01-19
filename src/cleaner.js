@@ -9,54 +9,29 @@ export const cleanFilmsData = (data) => {
   return films
 }
 
-export const cleanCharacterData = (data) => {
-  return data.map((character) => {
-    return {
-      id: character.name,
-      favorite: false,
-      category: 'characters',
-      info: {
-        Name: character.name,
-        Homeworld: `Homeworld:  ${character.homeworld}`,
-        Population: `Population:  ${character.population}`,
-        Species: `Species:  ${character.species}`
-      }
-    }
-  })
-}
-
 export const cleanVehiclesData = (data) => {
   return data.results.map((vehicle) => {
     return {
       id: vehicle.name,
-      category: 'vehicles',
-      favorite: false,
-      info: {
-        Name: vehicle.name,
-        Model: `Model:  ${vehicle.model}`,
-        Class: `Class:  ${vehicle.vehicle_class}`,
-        Passengers: `Passengers:  ${vehicle.passengers}`
-      }
+      Model: vehicle.model,
+      Class: vehicle.vehicle_class,
+      Passengers: vehicle.passengers
     }
   })
 }
 
 export const cleanPlanetData = (data) => {
   return data.map((planet) => {
-    if (planet.residents.length <= 0) {
-      planet.residents = 'No known occupants'
+    let residents = planet.residents.map(resident => resident.name).join(', ')
+    if (planet.residents.length === 0) {
+      residents = 'No Known Occupants'
     }
     return {
       id: planet.name,
-      category: 'planets',
-      favorite: false,
-      info: {
-        Name: planet.name,
-        Terrain: `Terrain:  ${planet.terrain}`,
-        Population: `Population:  ${planet.population}`,
-        Climate: `Climate:  ${planet.climate}`,
-        Residents: `Residents:  ${planet.residents}`
-      }
+      Terrain: planet.terrain,
+      Population: planet.population,
+      Climate: planet.climate,
+      Residents: residents
     }
   })
 }

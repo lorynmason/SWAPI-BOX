@@ -2,9 +2,9 @@ import React from 'react'
 import '../styles/main.scss'
 import PropTypes from 'prop-types'
 
-const Splash = ({ exitSplash, films }) => {
+const Splash = ({ changePage, splash }) => {
   const randomNum = Math.floor(Math.random() * Math.floor(6))
-  const film = films[randomNum]
+  const film = splash[randomNum]
   if (film) {
     return (
       <section className="background">
@@ -12,7 +12,7 @@ const Splash = ({ exitSplash, films }) => {
           <div className="logo">
             <img
               alt="StarWars logo"
-              onClick={() => exitSplash()}
+              onClick={() => changePage('home')}
               src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG29.png"
               title="click to enter site"
             />
@@ -26,7 +26,7 @@ const Splash = ({ exitSplash, films }) => {
           </div>
         </section>
         <div className="button-div">
-          <button onClick={() => exitSplash()} className="enter-btn" type="button">ENTER</button>
+          <button onClick={() => changePage('home')} className="enter-btn" type="button">ENTER</button>
         </div>
       </section>
     )
@@ -39,8 +39,8 @@ const Splash = ({ exitSplash, films }) => {
 }
 
 Splash.propTypes = {
-  exitSplash: PropTypes.func.isRequired,
-  films: PropTypes.array.isRequired
+  changePage: PropTypes.func.isRequired,
+  splash: PropTypes.array.isRequired
 }
 
 export default Splash

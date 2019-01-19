@@ -17,8 +17,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "exitSplash": [Function],
-      "films": Array [],
+      "changePage": [Function],
+      "splash": "Hoth",
     },
     "ref": null,
     "rendered": null,
@@ -30,8 +30,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "exitSplash": [Function],
-        "films": Array [],
+        "changePage": [Function],
+        "splash": "Hoth",
       },
       "ref": null,
       "rendered": null,
@@ -75,8 +75,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "exitSplash": [Function],
-      "films": Array [],
+      "changePage": [Function],
+      "splash": Array [],
     },
     "ref": null,
     "rendered": null,
@@ -88,8 +88,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "exitSplash": [Function],
-        "films": Array [],
+        "changePage": [Function],
+        "splash": Array [],
       },
       "ref": null,
       "rendered": null,
