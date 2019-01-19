@@ -3,7 +3,7 @@ import '../styles/main.scss'
 
 const Home = () => {
   return (
-    <section className="cardContainer" />
+    <section className="cardContainer"></section>
   )
 }
 
