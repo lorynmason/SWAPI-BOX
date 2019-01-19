@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import '../styles/main.scss'
-// import { Route, NavLink, Switch } from 'react-router-dom'
 import * as API from '../../apiCalls'
 import * as Cleaner from '../../cleaner'
 import Splash from '../Splash/Splash'
 import Header from '../Header/Header'
 import Nav from '../Nav/Nav'
 import CardContainer from '../CardContainer/CardContainer'
+import { Route, Switch } from 'react-router-dom'
+import Home from '../Home/Home'
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,7 @@ class App extends Component {
     this.state = {
       splash: [],
       favorites: [],
-      activePage: 'splash',
+      activePage: 'home',
       characters: [],
       vehicles: [],
       planets: [],
@@ -115,6 +116,25 @@ class App extends Component {
       <div className="App">
         <Header />
         <Nav favorites={favorites} changePage={this.changePage} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+            <Route
+              path="/characters"
+              component={() => <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} favorites={favorites} />}
+            />
+            <Route
+              path="/planets"
+              component={() => <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} favorites={favorites} />}
+            />
+            <Route
+              path="/vehicles"
+              component={() => <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} favorites={favorites} />}
+            />
+            <Route
+              path="/favorites"
+              component={() => <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} favorites={favorites} />}
+            />
+          </Switch>
         <CardContainer appState={this.state} toggleFavorites={this.toggleFavorites} favorites={favorites} />
       </div>
     )

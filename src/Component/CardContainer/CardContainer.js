@@ -5,7 +5,7 @@ import Card from '../Card/Card'
 
 const CardContainer = ({ appState, toggleFavorites, favorites }) => {
   let cards;
-  if (appState.activePage === 'characters') {
+  if (appState.activePage === 'characters' || appState.activePage === 'home' ) {
     cards = appState.characters.map(card => <Card card={card} key={card.id} toggleFavorites={toggleFavorites} favorites={favorites} />)
   }
   if (appState.activePage === 'planets') {
