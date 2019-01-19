@@ -5,12 +5,7 @@ import * as API from '../../apiCalls'
 import * as Cleaner from '../../cleaner'
 import Splash from '../Splash/Splash'
 import Header from '../Header/Header'
-// import Characters from '../Characters/Characters'
-// import Vehicles from '../Vehicles/Vehicles'
-// import Planets from '../Planets/Planets'
-// import Favorites from '../Favorites/Favorites'
-// import Home from '../Home/Home'
-import Nav from '../Nav'
+import Nav from '../Nav/Nav'
 import CardContainer from '../CardContainer/CardContainer'
 
 class App extends Component {
