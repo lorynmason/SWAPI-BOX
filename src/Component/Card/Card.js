@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/main.scss'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 const Card = ({ card, toggleFavorites, favorites }) => {
   const stats = Object.keys(card).map(key => {

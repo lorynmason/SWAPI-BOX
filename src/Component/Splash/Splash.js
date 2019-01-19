@@ -39,8 +39,8 @@ const Splash = ({ changePage, splash }) => {
 }
 
 Splash.propTypes = {
-  exitSplash: PropTypes.func.isRequired,
-  films: PropTypes.array.isRequired
+  changePage: PropTypes.func.isRequired,
+  splash: PropTypes.array.isRequired
 }
 
 export default Splash

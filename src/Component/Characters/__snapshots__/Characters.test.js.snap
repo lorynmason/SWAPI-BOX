@@ -38,6 +38,7 @@ ShallowWrapper {
       "children": Array [
         <div
           className="character-card card"
+          id="no"
         >
           <button
             className="favorite-btn"
@@ -107,6 +108,7 @@ ShallowWrapper {
             </div>,
           ],
           "className": "character-card card",
+          "id": "no",
         },
         "ref": null,
         "rendered": Array [
@@ -182,7 +184,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "H",
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Homeworld:  Earth",
@@ -193,7 +195,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "P",
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Population:  123456789",
@@ -204,7 +206,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "S",
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Species:  human",
@@ -215,7 +217,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "N",
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Name:  bob",
@@ -244,6 +246,7 @@ ShallowWrapper {
         "children": Array [
           <div
             className="character-card card"
+            id="no"
           >
             <button
               className="favorite-btn"
@@ -313,6 +316,7 @@ ShallowWrapper {
               </div>,
             ],
             "className": "character-card card",
+            "id": "no",
           },
           "ref": null,
           "rendered": Array [
@@ -388,7 +392,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "H",
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Homeworld:  Earth",
@@ -399,7 +403,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "P",
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Population:  123456789",
@@ -410,7 +414,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "S",
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Species:  human",
@@ -421,7 +425,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "N",
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Name:  bob",

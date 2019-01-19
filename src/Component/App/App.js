@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import '../styles/main.scss'
-import { Route, NavLink, Switch } from 'react-router-dom'
+// import { Route, NavLink, Switch } from 'react-router-dom'
 import * as API from '../../apiCalls'
 import * as Cleaner from '../../cleaner'
 import Splash from '../Splash/Splash'
 import Header from '../Header/Header'
-import Characters from '../Characters/Characters'
-import Vehicles from '../Vehicles/Vehicles'
-import Planets from '../Planets/Planets'
-import Favorites from '../Favorites/Favorites'
-import Home from '../Home/Home'
+// import Characters from '../Characters/Characters'
+// import Vehicles from '../Vehicles/Vehicles'
+// import Planets from '../Planets/Planets'
+// import Favorites from '../Favorites/Favorites'
+// import Home from '../Home/Home'
 import Nav from '../Nav'
-import CardContainer from '../CardContainer/CardContainer';
+import CardContainer from '../CardContainer/CardContainer'
 
 class App extends Component {
   constructor() {

@@ -34,6 +34,7 @@ ShallowWrapper {
       "children": Array [
         <div
           className="vehicle-card card"
+          id="no"
         >
           <button
             className="favorite-btn"
@@ -70,7 +71,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "undefined-0",
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -103,6 +104,7 @@ ShallowWrapper {
             </div>,
           ],
           "className": "vehicle-card card",
+          "id": "no",
         },
         "ref": null,
         "rendered": Array [
@@ -178,7 +180,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "V-0",
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Vehicle:  wheeled",
@@ -189,7 +191,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "M-1",
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Model:  Digger Crawler",
@@ -200,7 +202,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "S-2",
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Sand Crawler",
@@ -211,7 +213,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "P-3",
+                  "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": "Passengers:  30",
@@ -240,6 +242,7 @@ ShallowWrapper {
         "children": Array [
           <div
             className="vehicle-card card"
+            id="no"
           >
             <button
               className="favorite-btn"
@@ -276,7 +279,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "undefined-0",
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -309,6 +312,7 @@ ShallowWrapper {
               </div>,
             ],
             "className": "vehicle-card card",
+            "id": "no",
           },
           "ref": null,
           "rendered": Array [
@@ -384,7 +388,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "V-0",
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Vehicle:  wheeled",
@@ -395,7 +399,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "M-1",
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Model:  Digger Crawler",
@@ -406,7 +410,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "S-2",
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Sand Crawler",
@@ -417,7 +421,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "P-3",
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Passengers:  30",
