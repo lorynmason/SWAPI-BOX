@@ -3,18 +3,18 @@ import '../styles/main.scss'
 // import PropTypes from 'prop-types'
 import Card from '../Card/Card'
 
-const CardContainer = ({ appState, toggleFavorites, favorites }) => {
+const CardContainer = ({ appState, toggleFavorites, favorites, location }) => {
   let cards;
-  if (appState.activePage === 'characters') {
+  if (location.location.pathname === '/characters') {
     cards = appState.characters.map(card => <Card card={card} key={card.id} toggleFavorites={toggleFavorites} favorites={favorites} />)
   }
-  if (appState.activePage === 'planets') {
+  if (location.location.pathname === '/planets') {
     cards = appState.planets.map(card => <Card card={card} key={card.id} toggleFavorites={toggleFavorites} favorites={favorites}/>)
   }
-  if (appState.activePage === 'vehicles') {
+  if (location.location.pathname === '/vehicles') {
     cards = appState.vehicles.map(card => <Card card={card} key={card.id} toggleFavorites={toggleFavorites} favorites={favorites}/>)
   }
-  if (appState.activePage === 'favorites') {
+  if (location.location.pathname === '/favorites') {
     cards = appState.favorites.reduce((arr, favorite) => {
       const favoriteCharacters = appState.characters.filter(character => character.id === favorite)
       const favoritePlanets = appState.planets.filter(planet => planet.id === favorite)
