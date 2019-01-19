@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       splash: [],
       favorites: [],
-      activePage: 'home',
+      activePage: 'splash',
       characters: [],
       vehicles: [],
       planets: [],
