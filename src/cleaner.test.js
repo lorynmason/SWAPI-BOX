@@ -1,6 +1,6 @@
 import * as Cleaner from './cleaner'
 
-describe('cleaner', () => {
+describe.skip('cleaner', () => {
   let mockFilmsData
   let mockCharacterData
   let mockVehicleData

@@ -73,9 +73,8 @@ class App extends Component {
 
   toggleFavorites = (cardId) => {
     const { favorites } = this.state
-    const newFavorites = [...favorites, cardId]
     if (!favorites.includes(cardId)) {
-      this.setState({ favorites: [...favorites, cardId] },this.handleFavoritesStorage(newFavorites))
+      this.setState({ favorites: [...favorites, cardId] },this.handleFavoritesStorage([...favorites, cardId]))
     } else {
       const newState = favorites.filter((favorite) => {
         return favorite !== cardId
@@ -96,9 +95,9 @@ class App extends Component {
   }
 
   getLocalStorage = (keyNames) => {
-    return keyNames.map(async (keyName) => {
-      const retrievedData = await localStorage.getItem(keyName)
-      const parsedData = await JSON.parse(retrievedData)
+    return keyNames.map((keyName) => {
+      const retrievedData = localStorage.getItem(keyName)
+      const parsedData = JSON.parse(retrievedData)
       if (parsedData) {
         this.setState({ [keyName]: parsedData })
       }

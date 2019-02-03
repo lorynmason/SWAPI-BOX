@@ -1,6 +1,6 @@
 import * as API from './apiCalls'
 
-describe('API', () => {
+describe.skip('API', () => {
   let mockFilmsData
   let mockCharacterData
   let mockVehicleData
