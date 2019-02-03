@@ -1,0 +1,2031 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot if path is /characters 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/characters",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            }
+          }
+          favorites={
+            Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+          "favorites": Array [
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+          ],
+          "toggleFavorites": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              }
+            }
+            favorites={
+              Array [
+                Object {
+                  "Homeworld": "Naboo",
+                  "Population": 4500000000,
+                  "Species": "Droi",
+                  "id": "R2-D2",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+            "favorites": Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ],
+            "toggleFavorites": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot if path is /favorites 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/favorites",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot if path is /favorites and favorite.length = 0 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "favorites": Array [],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/favorites",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="yoda-card card"
+      >
+        <h1>
+          selected favorites you have not
+        </h1>
+      </div>,
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <h1>
+          selected favorites you have not
+        </h1>,
+        "className": "yoda-card card",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "selected favorites you have not",
+        },
+        "ref": null,
+        "rendered": "selected favorites you have not",
+        "type": "h1",
+      },
+      "type": "div",
+    },
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="yoda-card card"
+        >
+          <h1>
+            selected favorites you have not
+          </h1>
+        </div>,
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <h1>
+            selected favorites you have not
+          </h1>,
+          "className": "yoda-card card",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "selected favorites you have not",
+          },
+          "ref": null,
+          "rendered": "selected favorites you have not",
+          "type": "h1",
+        },
+        "type": "div",
+      },
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot if path is /planets 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/planets",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            }
+          }
+          favorites={
+            Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+          "favorites": Array [
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+          ],
+          "toggleFavorites": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              }
+            }
+            favorites={
+              Array [
+                Object {
+                  "Homeworld": "Naboo",
+                  "Population": 4500000000,
+                  "Species": "Droi",
+                  "id": "R2-D2",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+            "favorites": Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ],
+            "toggleFavorites": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot if path is /planets 2`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/planets",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            }
+          }
+          favorites={
+            Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+          "favorites": Array [
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+          ],
+          "toggleFavorites": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              }
+            }
+            favorites={
+              Array [
+                Object {
+                  "Homeworld": "Naboo",
+                  "Population": 4500000000,
+                  "Species": "Droi",
+                  "id": "R2-D2",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+            "favorites": Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ],
+            "toggleFavorites": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot if path is /vehicles 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/vehicles",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            }
+          }
+          favorites={
+            Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+          "favorites": Array [
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+          ],
+          "toggleFavorites": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              }
+            }
+            favorites={
+              Array [
+                Object {
+                  "Homeworld": "Naboo",
+                  "Population": 4500000000,
+                  "Species": "Droi",
+                  "id": "R2-D2",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+            "favorites": Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ],
+            "toggleFavorites": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot if path is /vehicles 2`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/vehicles",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            }
+          }
+          favorites={
+            Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+          "favorites": Array [
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+          ],
+          "toggleFavorites": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              }
+            }
+            favorites={
+              Array [
+                Object {
+                  "Homeworld": "Naboo",
+                  "Population": 4500000000,
+                  "Species": "Droi",
+                  "id": "R2-D2",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+            "favorites": Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ],
+            "toggleFavorites": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CardContainer should match snapshot if path is /characters 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/characters",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            }
+          }
+          favorites={
+            Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+          "favorites": Array [
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+          ],
+          "toggleFavorites": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              }
+            }
+            favorites={
+              Array [
+                Object {
+                  "Homeworld": "Naboo",
+                  "Population": 4500000000,
+                  "Species": "Droi",
+                  "id": "R2-D2",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+            "favorites": Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ],
+            "toggleFavorites": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CardContainer should match snapshot if path is /favorites 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/favorites",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CardContainer should match snapshot if path is /favorites and favorite.length = 0 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "favorites": Array [],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/favorites",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="yoda-card card"
+      >
+        <h1>
+          selected favorites you have not
+        </h1>
+      </div>,
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <h1>
+          selected favorites you have not
+        </h1>,
+        "className": "yoda-card card",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "selected favorites you have not",
+        },
+        "ref": null,
+        "rendered": "selected favorites you have not",
+        "type": "h1",
+      },
+      "type": "div",
+    },
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="yoda-card card"
+        >
+          <h1>
+            selected favorites you have not
+          </h1>
+        </div>,
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <h1>
+            selected favorites you have not
+          </h1>,
+          "className": "yoda-card card",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "selected favorites you have not",
+          },
+          "ref": null,
+          "rendered": "selected favorites you have not",
+          "type": "h1",
+        },
+        "type": "div",
+      },
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CardContainer should match snapshot if path is /planets 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/planets",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            }
+          }
+          favorites={
+            Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+          "favorites": Array [
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+          ],
+          "toggleFavorites": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              }
+            }
+            favorites={
+              Array [
+                Object {
+                  "Homeworld": "Naboo",
+                  "Population": 4500000000,
+                  "Species": "Droi",
+                  "id": "R2-D2",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+            "favorites": Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ],
+            "toggleFavorites": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CardContainer should match snapshot if path is /vehicles 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    appState={
+      Object {
+        "characters": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "favorites": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "planets": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+        "vehicles": Array [
+          Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+        ],
+      }
+    }
+    location={
+      Object {
+        "location": Object {
+          "pathname": "/vehicles",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          card={
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            }
+          }
+          favorites={
+            Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "R2-D2",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "Homeworld": "Naboo",
+            "Population": 4500000000,
+            "Species": "Droi",
+            "id": "R2-D2",
+          },
+          "favorites": Array [
+            Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+          ],
+          "toggleFavorites": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            card={
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              }
+            }
+            favorites={
+              Array [
+                Object {
+                  "Homeworld": "Naboo",
+                  "Population": 4500000000,
+                  "Species": "Droi",
+                  "id": "R2-D2",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "R2-D2",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "Homeworld": "Naboo",
+              "Population": 4500000000,
+              "Species": "Droi",
+              "id": "R2-D2",
+            },
+            "favorites": Array [
+              Object {
+                "Homeworld": "Naboo",
+                "Population": 4500000000,
+                "Species": "Droi",
+                "id": "R2-D2",
+              },
+            ],
+            "toggleFavorites": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
