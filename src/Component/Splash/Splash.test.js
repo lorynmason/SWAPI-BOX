@@ -38,7 +38,7 @@ describe('Splash', () => {
       text: 'A Long Time Ago...',
       date: '1976'
     }]
-    wrapper = mount(<Splash exitSplash={mockExitSplash} films={mockfilms} />)
+    wrapper = mount(<Splash changePage={mockExitSplash} splash={mockfilms} />)
   })
 
   it('should match the snapshot', () => {
@@ -61,7 +61,7 @@ describe('Splash', () => {
 
   it('Should render backgound if no film', () => {
     mockfilms = []
-    wrapper = shallow(<Splash exitSplash={mockExitSplash} films={mockfilms} />)
+    wrapper = shallow(<Splash changePage={mockExitSplash} splash={mockfilms} />)
     expect(wrapper).toMatchSnapshot()
   })
 })

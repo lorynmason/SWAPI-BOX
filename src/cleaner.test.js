@@ -2,7 +2,6 @@ import * as Cleaner from './cleaner'
 
 describe('cleaner', () => {
   let mockFilmsData
-  let mockCharacterData
   let mockVehicleData
   let mockPlanetData
 
@@ -30,49 +29,6 @@ describe('cleaner', () => {
     })
   })
 
-  describe('cleanCharacterData', () => {
-    it('returns a list of objects with the correct properties', () => {
-      mockCharacterData = [
-        {
-          homeworld: 'Earth',
-          population: '123456789',
-          species: 'human',
-          name: 'bob'
-        },
-        {
-          homeworld: 'Venus',
-          population: '32',
-          species: 'K-9',
-          name: 'we call him alien'
-        }
-      ]
-      const expected = [
-        {
-          id: 'bob',
-          category: 'characters',
-          info: {
-            Homeworld: 'Homeworld:  Earth',
-            Population: 'Population:  123456789',
-            Species: 'Species:  human',
-            Name: 'bob'
-          }
-        },
-        {
-          id: 'we call him alien',
-          category: 'characters',
-          info: {
-            Homeworld: 'Homeworld:  Venus',
-            Population: 'Population:  32',
-            Species: 'Species:  K-9',
-            Name: 'we call him alien'
-          }
-        }
-      ]
-
-      expect(Cleaner.cleanCharacterData(mockCharacterData)).toEqual(expected)
-    })
-  })
-
   describe('cleansVehiclesData', () => {
     it('returns a list of objects with the correct properties', () => {
       mockVehicleData = {
@@ -96,23 +52,15 @@ describe('cleaner', () => {
       const expected = [
         {
           id: 'Ford',
-          category: 'vehicles',
-          info: {
-            Name: 'Ford',
-            Model: 'Model:  Explorer',
-            Class: 'Class:  wheeled',
-            Passengers: 'Passengers:  3'
-          }
+          Model: 'Explorer',
+          Class: 'wheeled',
+          Passengers: 3
         },
         {
           id: 'Chevy',
-          category: 'vehicles',
-          info: {
-            Name: 'Chevy',
-            Model: 'Model:  Tahoe',
-            Class: 'Class:  wheeled',
-            Passengers: 'Passengers:  3'
-          }
+          Model: 'Tahoe',
+          Class: 'wheeled',
+          Passengers: 3
         }
       ]
       expect(Cleaner.cleanVehiclesData(mockVehicleData)).toEqual(expected)
@@ -127,7 +75,7 @@ describe('cleaner', () => {
           terrain: 'Rocky',
           population: 34,
           climate: 'hot',
-          residents: ['bob', 'sally', 'yoda'],
+          residents: [],
           somethingToRemove: 'blah blah'
         },
         {
@@ -143,25 +91,17 @@ describe('cleaner', () => {
       const expected = [
         {
           id: 'Earth',
-          category: 'planets',
-          info: {
-            Name: 'Earth',
-            Terrain: 'Terrain:  Rocky',
-            Population: 'Population:  34',
-            Climate: 'Climate:  hot',
-            Residents: 'Residents:  bob,sally,yoda'
-          }
+          Terrain: 'Rocky',
+          Population: 34,
+          Climate: 'hot',
+          Residents: 'No Known Occupants'
         },
         {
           id: 'Pluto',
-          category: 'planets',
-          info: {
-            Name: 'Pluto',
-            Terrain: 'Terrain:  water',
-            Population: 'Population:  1',
-            Climate: 'Climate:  cold',
-            Residents: 'Residents:  No known occupants'
-          }
+          Terrain: 'water',
+          Population: 1,
+          Climate: 'cold',
+          Residents: 'No Known Occupants'
         }
       ]
       expect(Cleaner.cleanPlanetData(mockPlanetData)).toEqual(expected)

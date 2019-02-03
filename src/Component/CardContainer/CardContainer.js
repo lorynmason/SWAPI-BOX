@@ -1,18 +1,21 @@
 import React from 'react'
 import '../styles/main.scss'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import Card from '../Card/Card'
 
-const CardContainer = ({ appState, toggleFavorites, favorites, location }) => {
+const CardContainer = ({ appState, toggleFavorites, location }) => {
+  const makeCards = (card) => {
+    return <Card card={card} key={card.id} toggleFavorites={toggleFavorites} favorites={appState.favorites} />
+  }
   let cards;
   if (location.location.pathname === '/characters') {
-    cards = appState.characters.map(card => <Card card={card} key={card.id} toggleFavorites={toggleFavorites} favorites={favorites} />)
+    cards = appState.characters.map(card => makeCards(card))
   }
   if (location.location.pathname === '/planets') {
-    cards = appState.planets.map(card => <Card card={card} key={card.id} toggleFavorites={toggleFavorites} favorites={favorites}/>)
+    cards = appState.planets.map(card => makeCards(card))
   }
   if (location.location.pathname === '/vehicles') {
-    cards = appState.vehicles.map(card => <Card card={card} key={card.id} toggleFavorites={toggleFavorites} favorites={favorites}/>)
+    cards = appState.vehicles.map(card => makeCards(card))
   }
   if (location.location.pathname === '/favorites') {
     cards = appState.favorites.reduce((arr, favorite) => {
@@ -20,7 +23,7 @@ const CardContainer = ({ appState, toggleFavorites, favorites, location }) => {
       const favoritePlanets = appState.planets.filter(planet => planet.id === favorite)
       const favoriteVehicles = appState.vehicles.filter(vehicle => vehicle.id === favorite)
       return [...arr, ...favoriteVehicles, ...favoriteCharacters, ...favoritePlanets]
-    },[]).map(card => <Card card={card} toggleFavorites={toggleFavorites} key={card.id} favorites={favorites}/>) 
+    },[]).map(card => makeCards(card)) 
     if (appState.favorites.length === 0) {
       cards = (
         <div className="yoda-card card">
@@ -34,6 +37,12 @@ const CardContainer = ({ appState, toggleFavorites, favorites, location }) => {
       {cards}
     </section>
   )
+}
+
+CardContainer.propTypes = {
+  toggleFavorites: PropTypes.func.isRequired,
+  location: PropTypes.object.isRequired,
+  appState: PropTypes.object.isRequired
 }
 
 export default CardContainer

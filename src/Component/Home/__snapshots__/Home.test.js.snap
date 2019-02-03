@@ -17,10 +17,40 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "cardContainer",
+      "children": <div
+        className="card home-card"
+      >
+        <h3>
+          Click on a Category to Get Started
+        </h3>
+      </div>,
+      "className": "home",
     },
     "ref": null,
-    "rendered": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <h3>
+          Click on a Category to Get Started
+        </h3>,
+        "className": "card home-card",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Click on a Category to Get Started",
+        },
+        "ref": null,
+        "rendered": "Click on a Category to Get Started",
+        "type": "h3",
+      },
+      "type": "div",
+    },
     "type": "section",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +59,40 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "cardContainer",
+        "children": <div
+          className="card home-card"
+        >
+          <h3>
+            Click on a Category to Get Started
+          </h3>
+        </div>,
+        "className": "home",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <h3>
+            Click on a Category to Get Started
+          </h3>,
+          "className": "card home-card",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Click on a Category to Get Started",
+          },
+          "ref": null,
+          "rendered": "Click on a Category to Get Started",
+          "type": "h3",
+        },
+        "type": "div",
+      },
       "type": "section",
     },
   ],

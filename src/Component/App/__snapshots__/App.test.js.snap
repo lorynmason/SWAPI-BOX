@@ -15,27 +15,331 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "changePage": [Function],
-      "splash": "Hoth",
+      "children": Array [
+        <Header />,
+        <Nav
+          changePage={[Function]}
+          favorites={
+            Array [
+              "Luke Skywalker",
+            ]
+          }
+        />,
+        <Switch>
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/"
+          />
+          <Route
+            path="/characters"
+            render={[Function]}
+          />
+          <Route
+            path="/planets"
+            render={[Function]}
+          />
+          <Route
+            path="/vehicles"
+            render={[Function]}
+          />
+          <Route
+            path="/favorites"
+            render={[Function]}
+          />
+        </Switch>,
+      ],
+      "className": "App",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "changePage": [Function],
+          "favorites": Array [
+            "Luke Skywalker",
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/"
+            />,
+            <Route
+              path="/characters"
+              render={[Function]}
+            />,
+            <Route
+              path="/planets"
+              render={[Function]}
+            />,
+            <Route
+              path="/vehicles"
+              render={[Function]}
+            />,
+            <Route
+              path="/favorites"
+              render={[Function]}
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "path": "/characters",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "path": "/planets",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "path": "/vehicles",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "path": "/favorites",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "changePage": [Function],
-        "splash": "Hoth",
+        "children": Array [
+          <Header />,
+          <Nav
+            changePage={[Function]}
+            favorites={
+              Array [
+                "Luke Skywalker",
+              ]
+            }
+          />,
+          <Switch>
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/"
+            />
+            <Route
+              path="/characters"
+              render={[Function]}
+            />
+            <Route
+              path="/planets"
+              render={[Function]}
+            />
+            <Route
+              path="/vehicles"
+              render={[Function]}
+            />
+            <Route
+              path="/favorites"
+              render={[Function]}
+            />
+          </Switch>,
+        ],
+        "className": "App",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "changePage": [Function],
+            "favorites": Array [
+              "Luke Skywalker",
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
+              />,
+              <Route
+                path="/characters"
+                render={[Function]}
+              />,
+              <Route
+                path="/planets"
+                render={[Function]}
+              />,
+              <Route
+                path="/vehicles"
+                render={[Function]}
+              />,
+              <Route
+                path="/favorites"
+                render={[Function]}
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "path": "/characters",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "path": "/planets",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "path": "/vehicles",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "path": "/favorites",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
