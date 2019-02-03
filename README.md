@@ -6,11 +6,16 @@ SWapi-Box is a web application designed to allow the user to create a collection
 This project is part of the Front End Engineering Program at the Turing School of Software Design.  You can find specs for it at http://frontend.turing.io/projects/swapi-box.html
 
 ## Installation
+```
 Create a directory for the project and cd into it.
+
 Clone down the repo for this project:
   git clone https://github.com/saraebbers/StarWarsAPI.git
+  
 npm install
+
 npm start
+```
 
 ## Contributors and roles
 
@@ -19,13 +24,12 @@ npm start
 ### Loryn Mason
 
 ## Technologies and Resources Used
-  React
-  React Router
-  API
-  Enzyme/Jest
-  HTML/SCSS
-  Git/GitHub
-  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    * React
+    * React Router
+    * API
+    * Enzyme/Jest
+    * HTML/SCSS
+    * Git/GitHub
 
 ## Design and Comps (Wire-frame, Application Screen shots)
 #### WIREFRAMES
