@@ -1,0 +1,807 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot if it is a favorite 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    card={
+      Object {
+        "Homeworld": "Naboo",
+        "Population": 4500000000,
+        "Species": "Droi",
+        "id": "R2-D2",
+      }
+    }
+    favorites={
+      Array [
+        Object {
+          "id": "R2-D2",
+        },
+      ]
+    }
+    toggleFavorites={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "R2-D2",
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="favorite-btn"
+          id=""
+          onClick={[Function]}
+          title="select favorite"
+          type="button"
+        >
+          <i
+            className="fas fa-jedi"
+          />
+        </button>,
+        <div
+          className="info"
+        >
+          <h3>
+            R2-D2
+          </h3>
+          <p>
+            Homeworld
+            : 
+            Naboo
+          </p>
+          <p>
+            Population
+            : 
+            4500000000
+          </p>
+          <p>
+            Species
+            : 
+            Droi
+          </p>
+        </div>,
+      ],
+      "className": "card",
+      "id": "",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <i
+            className="fas fa-jedi"
+          />,
+          "className": "favorite-btn",
+          "id": "",
+          "onClick": [Function],
+          "title": "select favorite",
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fas fa-jedi",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "i",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              R2-D2
+            </h3>,
+            <p>
+              Homeworld
+              : 
+              Naboo
+            </p>,
+            <p>
+              Population
+              : 
+              4500000000
+            </p>,
+            <p>
+              Species
+              : 
+              Droi
+            </p>,
+          ],
+          "className": "info",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "R2-D2",
+            },
+            "ref": null,
+            "rendered": "R2-D2",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Homeworld",
+                ": ",
+                "Naboo",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Homeworld",
+              ": ",
+              "Naboo",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Population",
+                ": ",
+                4500000000,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Population",
+              ": ",
+              4500000000,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Species",
+                ": ",
+                "Droi",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Species",
+              ": ",
+              "Droi",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "R2-D2",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="favorite-btn"
+            id=""
+            onClick={[Function]}
+            title="select favorite"
+            type="button"
+          >
+            <i
+              className="fas fa-jedi"
+            />
+          </button>,
+          <div
+            className="info"
+          >
+            <h3>
+              R2-D2
+            </h3>
+            <p>
+              Homeworld
+              : 
+              Naboo
+            </p>
+            <p>
+              Population
+              : 
+              4500000000
+            </p>
+            <p>
+              Species
+              : 
+              Droi
+            </p>
+          </div>,
+        ],
+        "className": "card",
+        "id": "",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <i
+              className="fas fa-jedi"
+            />,
+            "className": "favorite-btn",
+            "id": "",
+            "onClick": [Function],
+            "title": "select favorite",
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-jedi",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                R2-D2
+              </h3>,
+              <p>
+                Homeworld
+                : 
+                Naboo
+              </p>,
+              <p>
+                Population
+                : 
+                4500000000
+              </p>,
+              <p>
+                Species
+                : 
+                Droi
+              </p>,
+            ],
+            "className": "info",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "R2-D2",
+              },
+              "ref": null,
+              "rendered": "R2-D2",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Homeworld",
+                  ": ",
+                  "Naboo",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Homeworld",
+                ": ",
+                "Naboo",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Population",
+                  ": ",
+                  4500000000,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Population",
+                ": ",
+                4500000000,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Species",
+                  ": ",
+                  "Droi",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Species",
+                ": ",
+                "Droi",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot if it is not a favorite 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    card={
+      Object {
+        "Homeworld": "Naboo",
+        "Population": 4500000000,
+        "Species": "Droi",
+        "id": "R2-D2",
+      }
+    }
+    favorites={
+      Array [
+        Object {
+          "id": "R2-D2",
+        },
+      ]
+    }
+    toggleFavorites={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "R2-D2",
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="favorite-btn"
+          id=""
+          onClick={[Function]}
+          title="select favorite"
+          type="button"
+        >
+          <i
+            className="fas fa-jedi"
+          />
+        </button>,
+        <div
+          className="info"
+        >
+          <h3>
+            R2-D2
+          </h3>
+          <p>
+            Homeworld
+            : 
+            Naboo
+          </p>
+          <p>
+            Population
+            : 
+            4500000000
+          </p>
+          <p>
+            Species
+            : 
+            Droi
+          </p>
+        </div>,
+      ],
+      "className": "card",
+      "id": "",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <i
+            className="fas fa-jedi"
+          />,
+          "className": "favorite-btn",
+          "id": "",
+          "onClick": [Function],
+          "title": "select favorite",
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fas fa-jedi",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "i",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              R2-D2
+            </h3>,
+            <p>
+              Homeworld
+              : 
+              Naboo
+            </p>,
+            <p>
+              Population
+              : 
+              4500000000
+            </p>,
+            <p>
+              Species
+              : 
+              Droi
+            </p>,
+          ],
+          "className": "info",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "R2-D2",
+            },
+            "ref": null,
+            "rendered": "R2-D2",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Homeworld",
+                ": ",
+                "Naboo",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Homeworld",
+              ": ",
+              "Naboo",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Population",
+                ": ",
+                4500000000,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Population",
+              ": ",
+              4500000000,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Species",
+                ": ",
+                "Droi",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Species",
+              ": ",
+              "Droi",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "R2-D2",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="favorite-btn"
+            id=""
+            onClick={[Function]}
+            title="select favorite"
+            type="button"
+          >
+            <i
+              className="fas fa-jedi"
+            />
+          </button>,
+          <div
+            className="info"
+          >
+            <h3>
+              R2-D2
+            </h3>
+            <p>
+              Homeworld
+              : 
+              Naboo
+            </p>
+            <p>
+              Population
+              : 
+              4500000000
+            </p>
+            <p>
+              Species
+              : 
+              Droi
+            </p>
+          </div>,
+        ],
+        "className": "card",
+        "id": "",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <i
+              className="fas fa-jedi"
+            />,
+            "className": "favorite-btn",
+            "id": "",
+            "onClick": [Function],
+            "title": "select favorite",
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-jedi",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                R2-D2
+              </h3>,
+              <p>
+                Homeworld
+                : 
+                Naboo
+              </p>,
+              <p>
+                Population
+                : 
+                4500000000
+              </p>,
+              <p>
+                Species
+                : 
+                Droi
+              </p>,
+            ],
+            "className": "info",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "R2-D2",
+              },
+              "ref": null,
+              "rendered": "R2-D2",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Homeworld",
+                  ": ",
+                  "Naboo",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Homeworld",
+                ": ",
+                "Naboo",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Population",
+                  ": ",
+                  4500000000,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Population",
+                ": ",
+                4500000000,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Species",
+                  ": ",
+                  "Droi",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Species",
+                ": ",
+                "Droi",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

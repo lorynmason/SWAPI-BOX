@@ -14,8 +14,10 @@ describe('App', () => {
   })
 
   describe('componentDidMount', () => {
-    it.skip('ComponentDidMount should update state with films array', () => {
-      expect(wrapper.state('films')).toHaveLength(7)
+    it.skip('ComponentDidMount should update state with films array', async() => {
+      await wrapper.instance()
+      console.log(wrapper.state())
+      expect(wrapper.state('splash')).toHaveLength(7)
     })
 
     it.skip('calls cleanFilmsData', () => {
@@ -26,7 +28,7 @@ describe('App', () => {
   })
 
   describe('setCharacterData', () => {
-    it('Should call API function', async () => {
+    it.only('Should call API function', async () => {
       API.fetchCharacters = jest.fn()
       API.fetchCharactersHomeWorld = jest.fn()
       API.fetchCharactersSpecies = jest.fn()
