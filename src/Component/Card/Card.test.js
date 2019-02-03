@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import Card from './Card'
 
 describe('Card', () => {
@@ -14,8 +14,6 @@ describe('Card', () => {
     id: 'R2-D2'
   }]
   const mockFunc = jest.fn()
-  let favoriteID = ''
-  let favoriteBTN = ''
 
   beforeEach(() => {
     wrapper = shallow(<Card card={mockCard} favorites={mockFavorites} toggleFavorites={mockFunc}/>)
@@ -36,6 +34,4 @@ describe('Card', () => {
     wrapper.find('button').simulate('click');
     expect(mockFunc).toHaveBeenCalled()
   })
-  
-  
 })

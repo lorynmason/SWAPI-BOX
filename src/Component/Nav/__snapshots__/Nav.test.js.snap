@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Nav
+    changePage={[MockFunction]}
+    favorites={
+      Array [
+        Object {
+          "id": "R2-D2",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          id="characters-link"
+          onClick={[Function]}
+          to="/characters"
+        >
+          Characters
+        </NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          id="planets-link"
+          onClick={[Function]}
+          to="/planets"
+        >
+          Planets
+        </NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          id="vehicles-link"
+          onClick={[Function]}
+          to="/vehicles"
+        >
+          Vehicles
+        </NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          id="favorites-link"
+          onClick={[Function]}
+          to="/favorites"
+        >
+          Favorites: 
+          1
+        </NavLink>,
+      ],
+      "className": "nav",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Characters",
+          "className": "nav-link",
+          "id": "characters-link",
+          "onClick": [Function],
+          "to": "/characters",
+        },
+        "ref": null,
+        "rendered": "Characters",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Planets",
+          "className": "nav-link",
+          "id": "planets-link",
+          "onClick": [Function],
+          "to": "/planets",
+        },
+        "ref": null,
+        "rendered": "Planets",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Vehicles",
+          "className": "nav-link",
+          "id": "vehicles-link",
+          "onClick": [Function],
+          "to": "/vehicles",
+        },
+        "ref": null,
+        "rendered": "Vehicles",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": Array [
+            "Favorites: ",
+            1,
+          ],
+          "className": "nav-link",
+          "id": "favorites-link",
+          "onClick": [Function],
+          "to": "/favorites",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Favorites: ",
+          1,
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            id="characters-link"
+            onClick={[Function]}
+            to="/characters"
+          >
+            Characters
+          </NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            id="planets-link"
+            onClick={[Function]}
+            to="/planets"
+          >
+            Planets
+          </NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            id="vehicles-link"
+            onClick={[Function]}
+            to="/vehicles"
+          >
+            Vehicles
+          </NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            id="favorites-link"
+            onClick={[Function]}
+            to="/favorites"
+          >
+            Favorites: 
+            1
+          </NavLink>,
+        ],
+        "className": "nav",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Characters",
+            "className": "nav-link",
+            "id": "characters-link",
+            "onClick": [Function],
+            "to": "/characters",
+          },
+          "ref": null,
+          "rendered": "Characters",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Planets",
+            "className": "nav-link",
+            "id": "planets-link",
+            "onClick": [Function],
+            "to": "/planets",
+          },
+          "ref": null,
+          "rendered": "Planets",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Vehicles",
+            "className": "nav-link",
+            "id": "vehicles-link",
+            "onClick": [Function],
+            "to": "/vehicles",
+          },
+          "ref": null,
+          "rendered": "Vehicles",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": Array [
+              "Favorites: ",
+              1,
+            ],
+            "className": "nav-link",
+            "id": "favorites-link",
+            "onClick": [Function],
+            "to": "/favorites",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Favorites: ",
+            1,
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
