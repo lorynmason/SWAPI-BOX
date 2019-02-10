@@ -1,35 +1,39 @@
-# SWAPIBox
+# SWAPI-BOX
+StarWars API base app, for true StarWars fans to track favorite Characters, Planets, and Vehicles.
 
-## Description
-SWapi-Box is a web application designed to allow the user to create a collection of their favorite Star Wars characters, vehicles and planets.  Users can view descriptions of each item and then save their favorites.  Favorites are saved in local storage.  Information is populated via the Star Wars API.  
+View [live site](https://lm-swapi-box.herokuapp.com)
 
-This project is part of the Front End Engineering Program at the Turing School of Software Design.  You can find specs for it at http://frontend.turing.io/projects/swapi-box.html
-
-## Installation
+### Installation and Setup Instructions
 ```
-Create a directory for the project and cd into it.
-
-Clone down the repo for this project:
-  git clone https://github.com/saraebbers/StarWarsAPI.git
+git clone https://github.com/lorynmason/SWAPI-BOX.git
+ 
+cd SWAPI-BOX
   
 npm install
 
 npm start
 ```
 
-## Contributors and roles
+### Abstract
+SWapi-Box is a web application designed to allow the user to create a collection of their favorite Star Wars characters, vehicles and planets.  Users can view descriptions of each item and then save their favorites.  Favorites are saved in local storage.  Information is populated via the Star Wars API.
 
-### Sara Ebbers 
+### Project Goals & Requirements:
+  * Write squeaky clean, well refactored code using ES6 & ES7 syntax.
+  * Make informed design decisions to create a user-friendly application.
+  * Keep state based components to a minimum and leverage more functional components.
+  * Use a modular architecture for application file structure.
+  * Think deeply about React Lifecycle Methods.
+  * Use propTypes for every component receiving props.
 
-### Loryn Mason
-
-## Technologies and Resources Used
-    * React
-    * React Router
-    * API
-    * Enzyme/Jest
-    * HTML/SCSS
-    * Git/GitHub
+### Technologies and Resources Used
+  * React
+  * React Router
+  * Enzyme/Jest
+  * REST API
+  * HTML5
+  * SASS
+  * Git Rebase Workflow
+  * Github
 
 ## Design and Comps (Wire-frame, Application Screen shots)
 #### WIREFRAMES
@@ -39,3 +43,9 @@ npm start
 #### FINISHED DESIGN
 <img width="1393" alt="screen shot 2018-12-12 at 9 05 06 am" src="https://user-images.githubusercontent.com/39168394/49882110-2420b580-fded-11e8-9232-7822c08e94f6.png">
 <img width="1374" alt="screen shot 2018-12-12 at 9 04 45 am" src="https://user-images.githubusercontent.com/39168394/49882113-25ea7900-fded-11e8-8e7a-f3a8262347c1.png">
+
+### Contributors
+
+Loryn Mason [Github](https://github.com/lorynmason)
+
+Sara Ebbers [Github](https://github.com/saraebbers)
